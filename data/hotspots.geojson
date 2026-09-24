@@ -1,0 +1,559 @@
+{
+ "type": "FeatureCollection",
+ "name": "Hotspots drogue de la Région de Bruxelles-Capitale (septembre 2026)",
+ "license": "CC BY-NC-SA 4.0",
+ "source": "https://ouaisfieu.github.io/hotspots/hotspots/",
+ "features": [
+  {
+   "type": "Feature",
+   "id": "chaussee-anvers",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3527,
+     50.8612
+    ]
+   },
+   "properties": {
+    "id": "chaussee-anvers",
+    "categorie": "hotspot",
+    "rang": 1,
+    "nom": "Chaussée d'Anvers",
+    "commune": "Bruxelles-Ville",
+    "zone_police": "Bruxelles-Capitale-Ixelles",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Axe du quartier Nord, entre Yser et la gare du Nord ; vente de rue et consommation dans l'espace public.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "matonge",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3634,
+     50.8337
+    ]
+   },
+   "properties": {
+    "id": "matonge",
+    "categorie": "hotspot",
+    "rang": 2,
+    "nom": "Matongé",
+    "commune": "Ixelles",
+    "zone_police": "Bruxelles-Capitale-Ixelles",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Point de deal jugé en 2026 (« procès Matonge », 44 à 46 prévenus, produit estimé à plus de 6 M€ par le parquet).",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "yser",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3497,
+     50.8555
+    ]
+   },
+   "properties": {
+    "id": "yser",
+    "categorie": "hotspot",
+    "rang": 3,
+    "nom": "Yser",
+    "commune": "Bruxelles-Ville",
+    "zone_police": "Bruxelles-Capitale-Ixelles",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Station et abords : scène de consommation ouverte, notamment de crack, à proximité du canal.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "querelle",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3438,
+     50.8372
+    ]
+   },
+   "properties": {
+    "id": "querelle",
+    "categorie": "hotspot",
+    "rang": 4,
+    "nom": "Querelle (Marolles)",
+    "commune": "Bruxelles-Ville",
+    "zone_police": "Bruxelles-Capitale-Ixelles",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Quartier de logements sociaux des Marolles.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "versailles",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3935,
+     50.901
+    ]
+   },
+   "properties": {
+    "id": "versailles",
+    "categorie": "hotspot",
+    "rang": 5,
+    "nom": "Versailles (Neder-Over-Heembeek)",
+    "commune": "Bruxelles-Ville",
+    "zone_police": "Bruxelles-Capitale-Ixelles",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Cité de logements sociaux au nord de la Région.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "porte-de-hal",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3445,
+     50.8333
+    ]
+   },
+   "properties": {
+    "id": "porte-de-hal",
+    "categorie": "hotspot",
+    "rang": 6,
+    "nom": "Porte de Hal",
+    "commune": "Bruxelles-Ville / Saint-Gilles",
+    "zone_police": "Bruxelles-Capitale-Ixelles / Midi",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "À cheval sur deux communes et deux zones de police ; lieu de fusillades répétées (27 douilles relevées le 23 août 2026).",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "clemenceau",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.329,
+     50.8374
+    ]
+   },
+   "properties": {
+    "id": "clemenceau",
+    "categorie": "hotspot",
+    "rang": 7,
+    "nom": "Clemenceau",
+    "commune": "Anderlecht",
+    "zone_police": "Midi",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Tirs à l'arme automatique près de la station en février 2025 ; 26 % des fusillades régionales de 2025, 17 % en 2026.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "peterbos",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.286,
+     50.833
+    ]
+   },
+   "properties": {
+    "id": "peterbos",
+    "categorie": "hotspot",
+    "rang": 8,
+    "nom": "Peterbos",
+    "commune": "Anderlecht",
+    "zone_police": "Midi",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Grand ensemble de logements sociaux ; 45 prévenus renvoyés en correctionnelle en 2026 (liens présumés avec Marseille et le Panama).",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "saint-antoine",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3274,
+     50.8195
+    ]
+   },
+   "properties": {
+    "id": "saint-antoine",
+    "categorie": "hotspot",
+    "rang": 9,
+    "nom": "Saint-Antoine",
+    "commune": "Forest",
+    "zone_police": "Midi",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Quartier autour de la place Saint-Antoine.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "gare-du-midi",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.336,
+     50.8359
+    ]
+   },
+   "properties": {
+    "id": "gare-du-midi",
+    "categorie": "hotspot",
+    "rang": 10,
+    "nom": "Gare du Midi",
+    "commune": "Saint-Gilles / Anderlecht",
+    "zone_police": "Midi",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Premier nœud ferroviaire du pays ; patrouilles mixtes police-armée dans la gare et le métro depuis 2026.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "gare-du-nord",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3614,
+     50.86
+    ]
+   },
+   "properties": {
+    "id": "gare-du-nord",
+    "categorie": "hotspot",
+    "rang": 11,
+    "nom": "Gare du Nord",
+    "commune": "Schaerbeek / Saint-Josse / Bruxelles-Ville",
+    "zone_police": "Nord / Bruxelles-Capitale-Ixelles",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Fermetures nocturnes imposées aux commerces (1 h–6 h) ; précarité et consommation de rue.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "etangs-noirs",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3334,
+     50.8563
+    ]
+   },
+   "properties": {
+    "id": "etangs-noirs",
+    "categorie": "hotspot",
+    "rang": 12,
+    "nom": "Étangs Noirs",
+    "commune": "Molenbeek-Saint-Jean",
+    "zone_police": "Bruxelles-Ouest",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Station de métro et chaussée de Gand.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "ribaucourt",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3447,
+     50.8623
+    ]
+   },
+   "properties": {
+    "id": "ribaucourt",
+    "categorie": "hotspot",
+    "rang": 13,
+    "nom": "Ribaucourt",
+    "commune": "Molenbeek-Saint-Jean / Bruxelles-Ville",
+    "zone_police": "Bruxelles-Ouest",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Scène de consommation ouverte ; la salle LINKup a ouvert à proximité le 15 décembre 2025.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "bonnevie",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3312,
+     50.8528
+    ]
+   },
+   "properties": {
+    "id": "bonnevie",
+    "categorie": "hotspot",
+    "rang": 14,
+    "nom": "Bonnevie",
+    "commune": "Molenbeek-Saint-Jean",
+    "zone_police": "Bruxelles-Ouest",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Quartier résidentiel dense du vieux Molenbeek.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "borne-colonne",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3397,
+     50.8546
+    ]
+   },
+   "properties": {
+    "id": "borne-colonne",
+    "categorie": "hotspot",
+    "rang": 15,
+    "nom": "Borne / Colonne (Paal/Kolom)",
+    "commune": "Molenbeek-Saint-Jean",
+    "zone_police": "Bruxelles-Ouest",
+    "ajout_iso": "2024-03-28",
+    "ajout": "mars 2024 (liste initiale)",
+    "resume": "Rues de la Borne et de la Colonne, près du canal.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "aumale",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3163,
+     50.8352
+    ]
+   },
+   "properties": {
+    "id": "aumale",
+    "categorie": "hotspot",
+    "rang": 16,
+    "nom": "Aumale",
+    "commune": "Anderlecht",
+    "zone_police": "Midi",
+    "ajout_iso": "2024-12",
+    "ajout": "fin 2024",
+    "resume": "Premier ajout à la liste initiale ; tirs mortels près de la station en décembre 2024 (89e fusillade régionale de l'année).",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "parc-elisabeth",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.329,
+     50.8645
+    ]
+   },
+   "properties": {
+    "id": "parc-elisabeth",
+    "categorie": "hotspot",
+    "rang": 17,
+    "nom": "Parc Élisabeth",
+    "commune": "Koekelberg / Ganshoren",
+    "zone_police": "Bruxelles-Ouest",
+    "ajout_iso": "2025-02",
+    "ajout": "début 2025",
+    "resume": "Abords de la basilique de Koekelberg ; surveillance renforcée et patrouilles communales.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "marbotin",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.377,
+     50.8625
+    ]
+   },
+   "properties": {
+    "id": "marbotin",
+    "categorie": "hotspot",
+    "rang": 18,
+    "nom": "Quartier Marbotin",
+    "commune": "Schaerbeek",
+    "zone_police": "Nord",
+    "ajout_iso": "2026-01",
+    "ajout": "janvier 2026",
+    "resume": "Interdiction des rassemblements de plus de cinq personnes dès novembre 2025, après une fusillade mortelle le 7 novembre.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "gray",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.379,
+     50.8322
+    ]
+   },
+   "properties": {
+    "id": "gray",
+    "categorie": "hotspot",
+    "rang": 19,
+    "nom": "Quartier Gray",
+    "commune": "Ixelles",
+    "zone_police": "Bruxelles-Capitale-Ixelles",
+    "ajout_iso": "2026-09-18",
+    "ajout": "18 septembre 2026",
+    "resume": "Périmètre rues Gray, Maria Malibran, de la Levure et de la Brasserie ; trafic prolongé de cannabis et de cocaïne.",
+    "precision": "centre indicatif du périmètre"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "gate",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.344,
+     50.8433
+    ]
+   },
+   "properties": {
+    "id": "gate",
+    "categorie": "rdr",
+    "nom": "GATE (salle de consommation à moindre risque)",
+    "commune": "Bruxelles-Ville",
+    "resume": "Rue de Woeringen 9. Ouverte en mai 2022 (Transit et MASS). 33 559 consommations retirées de l'espace public entre mai 2022 et juin 2025.",
+    "precision": "position approximative"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "linkup",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3462,
+     50.86
+    ]
+   },
+   "properties": {
+    "id": "linkup",
+    "categorie": "rdr",
+    "nom": "LINKup (salle de consommation et halte soins)",
+    "commune": "Molenbeek-Saint-Jean",
+    "resume": "Boulevard Léopold II 63, près de Ribaucourt. Ouverte le 15 décembre 2025 (Transit et Projet Lama) ; environ 15 places ; hébergement d'urgence prévu.",
+    "precision": "position approximative"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "bethleem",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3431,
+     50.8288
+    ]
+   },
+   "properties": {
+    "id": "bethleem",
+    "categorie": "cite",
+    "nom": "Place Bethléem",
+    "commune": "Saint-Gilles",
+    "resume": "Citée par l'article « Flopgunz » comme zone sensible non officielle ; fusillade le 16 décembre 2025.",
+    "precision": "position approximative"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "aerschot",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3598,
+     50.8627
+    ]
+   },
+   "properties": {
+    "id": "aerschot",
+    "categorie": "cite",
+    "nom": "Rue d'Aerschot",
+    "commune": "Schaerbeek",
+    "resume": "Quartier Nord, citée par l'article « Flopgunz » comme zone non officielle.",
+    "precision": "position approximative"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "anneessens",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3432,
+     50.8446
+    ]
+   },
+   "properties": {
+    "id": "anneessens",
+    "categorie": "cite",
+    "nom": "Anneessens",
+    "commune": "Bruxelles-Ville",
+    "resume": "Citée par l'article « Flopgunz » parmi les zones du centre.",
+    "precision": "position approximative"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "lemmens",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3268,
+     50.841
+    ]
+   },
+   "properties": {
+    "id": "lemmens",
+    "categorie": "cite",
+    "nom": "Place Lemmens",
+    "commune": "Anderlecht",
+    "resume": "Citée par l'article « Flopgunz ».",
+    "precision": "position approximative"
+   }
+  }
+ ]
+}

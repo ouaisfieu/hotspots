@@ -1,0 +1,24 @@
+# Hotspots — Trafic de drogue et lutte antidrogue à Bruxelles
+
+> Dossier documentaire en français sur le trafic de stupéfiants en Région de Bruxelles-Capitale (2022-2026) et les politiques de lutte : marchés, réseaux, fusillades, 19 hotspots, police, justice, santé publique et débats. Rédigé par Claude (IA, Anthropic). Chaque chiffre est sourcé. État au 2026-09-24.
+
+## Pages
+- [Trafic de drogue à Bruxelles : état des lieux et lutte](https://ouaisfieu.github.io/hotspots/): Dossier documenté et sourcé sur le trafic de stupéfiants en Région de Bruxelles-Capitale : marchés, réseaux, fusillades, 19 hotspots, réponses policières, judiciaires, sanitaires et débats (2022-2026).
+- [Le trafic de drogue à Bruxelles : d’Anvers au point de deal](https://ouaisfieu.github.io/hotspots/trafic/): Comment la drogue arrive à Bruxelles et s’y vend : port d’Anvers, cocaïne et crack, organisations criminelles, points de deal, recrutement de mineurs et circuits de blanchiment.
+- [Fusillades liées au trafic de drogue à Bruxelles](https://ouaisfieu.github.io/hotspots/violences/): Les fusillades liées au trafic de drogue à Bruxelles : évolution annuelle 2022-2026, communes touchées, déplacement hors des hotspots, profils des tireurs et réponse judiciaire.
+- [Les 19 hotspots drogue de la Région bruxelloise](https://ouaisfieu.github.io/hotspots/hotspots/): Carte interactive et liste des 19 hotspots régionaux de lutte contre le trafic de drogue à Bruxelles : dates de désignation, communes, mesures (alcool, contrôles, amendes de 500 €) et bilan.
+- [La lutte contre le trafic de drogue à Bruxelles](https://ouaisfieu.github.io/hotspots/lutte/): Qui lutte contre le trafic de drogue à Bruxelles et comment : parquet, polices et fusion des zones, gouvernement bruxellois, plan Grandes Villes, militaires, nouveau Code pénal, approche administrative, Sky ECC, mineurs.
+- [Santé publique et réduction des risques face aux drogues à Bruxelles](https://ouaisfieu.github.io/hotspots/sante/): Le volet sanitaire de la politique drogues à Bruxelles : crise du crack, salles de consommation GATE et LINKup, réduction des risques, 63 places de revalidation, eaux usées et acteurs de terrain.
+- [Politique drogues à Bruxelles : les débats](https://ouaisfieu.github.io/hotspots/debats/): Les arguments en présence sur la politique drogues à Bruxelles : sanctionner les consommateurs, efficacité des hotspots, militaires en rue, expulsions, précarité, traitement médiatique, budget et modèles portugais, suisse et néerlandais.
+- [Chronologie du trafic de drogue et de la lutte à Bruxelles](https://ouaisfieu.github.io/hotspots/chronologie/): Frise chronologique 2021-2026 : fusillades, hotspots, procès, lois, plan Grandes Villes, militaires, salles de consommation, fusion des polices à Bruxelles.
+- [Chiffres du trafic de drogue à Bruxelles et données ouvertes](https://ouaisfieu.github.io/hotspots/chiffres/): Tableau de bord des chiffres clés du trafic de drogue et de la lutte à Bruxelles (fusillades, saisies, justice, santé), avec sources, écarts entre sources et jeux de données ouverts à télécharger.
+- [Glossaire du trafic de drogue et de la lutte antidrogue à Bruxelles](https://ouaisfieu.github.io/hotspots/glossaire/): Définitions des termes du trafic et de la lutte antidrogue à Bruxelles : hotspot, four, guetteur, jobbeur, crack, SCMR, perception immédiate, DEIPP, CTIF, IPPJ, Sky ECC…
+- [Sources du dossier Hotspots](https://ouaisfieu.github.io/hotspots/sources/): Bibliographie complète du site Hotspots : corpus de départ, données officielles (police, douane, CTIF), textes de loi, recherches, secteur associatif et presse belge.
+- [À propos du site Hotspots](https://ouaisfieu.github.io/hotspots/a-propos/): Comment ce dossier a été réalisé : corpus de départ, recherches complémentaires, règles de vérification, corrections apportées, auteur (Claude, IA d’Anthropic), licence et contact.
+
+## Données
+- [Hotspots (GeoJSON)](https://ouaisfieu.github.io/hotspots/data/hotspots.geojson)
+- [Hotspots (CSV)](https://ouaisfieu.github.io/hotspots/data/hotspots.csv)
+- [Indicateurs (CSV)](https://ouaisfieu.github.io/hotspots/data/indicateurs.csv)
+- [Fusillades (CSV)](https://ouaisfieu.github.io/hotspots/data/fusillades.csv)
+- [Chronologie (CSV)](https://ouaisfieu.github.io/hotspots/data/chronologie.csv)

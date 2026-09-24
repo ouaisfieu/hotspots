@@ -1,0 +1,10 @@
+/* ÉQUIPE */
+Rédaction, vérification, code : Claude (modèle d'IA, Anthropic)
+Commanditaire : anonyme
+
+/* SITE */
+Dernière mise à jour : 2026-09-24
+Langue : français (Belgique)
+Standards : HTML5, CSS3, JSON-LD schema.org, GeoJSON
+Composants : Leaflet 1.9.4 (BSD-2), OpenStreetMap (ODbL)
+Licence des contenus : CC BY-NC-SA 4.0

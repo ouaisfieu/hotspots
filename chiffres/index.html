@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr-BE" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chiffres du trafic de drogue à Bruxelles et données ouvertes (CSV, GeoJSON)</title>
+<meta name="description" content="Tableau de bord des chiffres clés du trafic de drogue et de la lutte à Bruxelles (fusillades, saisies, justice, santé), avec sources, écarts entre sources et jeux de données ouverts à télécharger.">
+<meta name="author" content="Claude (IA, Anthropic)">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://ouaisfieu.github.io/hotspots/chiffres/">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17191d" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Hotspots — Trafic de drogue et lutte antidrogue à Bruxelles">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:title" content="Chiffres du trafic de drogue à Bruxelles et données ouvertes (CSV, GeoJSON)">
+<meta property="og:description" content="Tableau de bord des chiffres clés du trafic de drogue et de la lutte à Bruxelles (fusillades, saisies, justice, santé), avec sources, écarts entre sources et jeux de données ouverts à télécharger.">
+<meta property="og:url" content="https://ouaisfieu.github.io/hotspots/chiffres/">
+<meta property="og:image" content="https://ouaisfieu.github.io/hotspots/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hotspots — trafic de drogue et lutte antidrogue à Bruxelles">
+<meta property="article:published_time" content="2026-09-24">
+<meta property="article:modified_time" content="2026-09-24">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">
+<link rel="author" href="../humans.txt" type="text/plain">
+<link rel="alternate" type="application/geo+json" href="../data/hotspots.geojson" title="Hotspots (GeoJSON)">
+<link rel="sitemap" type="application/xml" href="../sitemap.xml">
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://ouaisfieu.github.io/hotspots/#site",
+   "url": "https://ouaisfieu.github.io/hotspots/",
+   "name": "Hotspots — Trafic de drogue et lutte antidrogue à Bruxelles",
+   "alternateName": "Hotspots",
+   "inLanguage": "fr-BE",
+   "author": {
+    "@id": "https://ouaisfieu.github.io/hotspots/a-propos/#auteur"
+   },
+   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr",
+   "about": [
+    {
+     "@type": "Place",
+     "name": "Région de Bruxelles-Capitale",
+     "sameAs": "https://www.wikidata.org/wiki/Q240"
+    }
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://ouaisfieu.github.io/hotspots/a-propos/#auteur",
+   "name": "Claude",
+   "description": "Modèle d'intelligence artificielle développé par Anthropic, auteur de la rédaction et de la vérification de ce site.",
+   "affiliation": {
+    "@type": "Organization",
+    "name": "Anthropic",
+    "url": "https://www.anthropic.com"
+   }
+  },
+  {
+   "@type": "Dataset",
+   "@id": "https://ouaisfieu.github.io/hotspots/chiffres/#main",
+   "url": "https://ouaisfieu.github.io/hotspots/chiffres/",
+   "name": "Indicateurs du trafic de drogue et de la lutte antidrogue à Bruxelles (2022-2026)",
+   "description": "Tableau de bord des chiffres clés du trafic de drogue et de la lutte à Bruxelles (fusillades, saisies, justice, santé), avec sources, écarts entre sources et jeux de données ouverts à télécharger.",
+   "inLanguage": "fr-BE",
+   "datePublished": "2026-09-24",
+   "dateModified": "2026-09-24",
+   "author": {
+    "@id": "https://ouaisfieu.github.io/hotspots/a-propos/#auteur"
+   },
+   "publisher": {
+    "@id": "https://ouaisfieu.github.io/hotspots/a-propos/#auteur"
+   },
+   "isPartOf": {
+    "@id": "https://ouaisfieu.github.io/hotspots/#site"
+   },
+   "image": "https://ouaisfieu.github.io/hotspots/assets/img/og-image.png",
+   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr",
+   "spatialCoverage": {
+    "@type": "Place",
+    "name": "Région de Bruxelles-Capitale, Belgique",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 50.8467,
+     "longitude": 4.3525
+    }
+   },
+   "citation": [
+    {
+     "@type": "CreativeWork",
+     "name": "Fusillades à Bruxelles : voici les cartes qui témoignent d'une augmentation des violences liées à la drogue dans la capitale",
+     "url": "https://www.rtbf.be/article/fusillades-a-bruxelles-cartographie-d-une-augmentation-des-violences-liees-a-la-drogue-dans-la-capitale-11507104",
+     "publisher": {
+      "@type": "Organization",
+      "name": "RTBF"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "L'auteur des tirs à Anderlecht toujours recherché : c'est la 89e fusillade en 2024 à Bruxelles pour 9 décès et 48 blessés",
+     "url": "https://www.dhnet.be/actu/faits/2024/12/23/lauteur-des-tirs-a-anderlecht-toujours-recherche-cest-la-89e-fusillade-en-2024-a-bruxelles-pour-9-deces-et-48-blesses-6SLLPYMKD5GHDIKUJPSYOJZXAE/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "La DH"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "97 fusillades en 2025 à Bruxelles : « Chaque personne qui circule à Bruxelles peut prendre une balle perdue »",
+     "url": "https://www.moustique.be/notre-epoque/nos-explications/2025/12/23/97-fusillades-en-2025-a-bruxelles-chaque-personne-qui-circule-a-bruxelles-peut-prendre-une-balle-perdue-3ZGC6JZLYNE3VD7PDHJ5J666NI/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "Moustique"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Plus de 100 fusillades et 195 millions d'euros d'avoirs criminels saisis à Bruxelles en 2025",
+     "url": "https://www.bruxellestoday.be/actualite/rapport-police-federale-101-fusillades-2025.html",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BruxellesToday"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Deux ans après sa mise en place, où en est la stratégie des « hotspots » en Région bruxelloise ?",
+     "url": "https://bx1.be/categories/news/deux-ans-apres-sa-mise-en-place-ou-en-est-la-strategie-des-hotspots-en-region-bruxelloise/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BX1"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Près de 50 fusillades depuis la rentrée à Bruxelles : les « sanctions administratives » prolongées dans les 18 hotspots de la région bruxelloise",
+     "url": "https://www.dhnet.be/regions/bruxelles/2026/03/17/pres-de-50-fusillades-depuis-la-rentree-les-sanctions-administratives-prolongees-dans-les-18-hotspots-de-la-region-bruxelloise-G4NE2J3L5BD3BABAEYDGXISPIU/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "La DH"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Bruxelles : 63 % des fusillades de 2026 ont eu lieu hors des hotspots drogue",
+     "url": "https://bx1.be/categories/news/bruxelles-63-des-fusillades-de-2026-ont-eu-lieu-hors-des-hotspots-drogue/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BX1"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Bruxelles : 57 fusillades recensées au cours des sept premiers mois de 2026",
+     "url": "https://bx1.be/categories/news/bruxelles-57-fusillades-recensees-au-cours-des-sept-premiers-mois-de-2026/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BX1"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "« Il y a des risques pour les citoyens » : Julien Moinil fait le point sur les 69 fusillades depuis le début de l'année et réclame des moyens",
+     "url": "https://www.lalibre.be/belgique/judiciaire/2026/08/28/il-y-a-des-risques-pour-les-citoyens-julien-moinil-fait-le-point-sur-les-69-fusillades-depuis-le-debut-de-lannee-et-reclame-des-moyens-P6AJ4TQ6JJHSRKYCWXOFX4ECTI/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "La Libre Belgique"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Lutte contre le trafic de drogue dans la capitale : un 19e hotspot à Bruxelles, voici où il se trouve",
+     "url": "https://www.dhnet.be/regions/bruxelles/2026/09/18/lutte-contre-le-trafic-de-drogue-dans-la-capitale-un-19e-hotspot-a-bruxelles-voici-ou-il-se-trouve-SMEFIOS2KRCM3MOE7VJPXDYFQI/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "La DH"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Moins de cocaïne saisie dans le port d'Anvers, plus de saisies en Amérique latine",
+     "url": "https://finances.belgium.be/sites/default/files/Customs/Over-de-AADA/Persberichten/Communiqu%C3%A9%20de%20presse-9-01-2025-FR.pdf",
+     "publisher": {
+      "@type": "Organization",
+      "name": "SPF Finances – Douanes et Accises"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Au port d'Anvers, la douane a saisi 55 tonnes de cocaïne et de plus en plus de marijuana en 2025",
+     "url": "https://www.vrt.be/vrtnws/fr/2026/01/21/au-port-d_anvers-la-douane-a-saisi-55-tonnes-de-cocaine-et-de-p/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "VRT NWS"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Mules financières, établissements de paiement, sociétés écrans : les déclarations de soupçons de blanchiment en hausse",
+     "url": "https://www.lalibre.be/belgique/judiciaire/2026/06/23/mules-financieres-etablissements-de-paiement-societes-ecrans-les-declarations-de-soupcons-de-blanchiment-en-hausse-6HZTISJ3SJELNDSO7IQLMAU6II/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "La Libre Belgique"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Rapport annuel 2025 de la Police fédérale",
+     "url": "https://www.police.be/rapportannuel-policefederale/sites/jaarverslag/files/media/file/2026-03/20260316-JVRA2025-FR.pdf",
+     "publisher": {
+      "@type": "Organization",
+      "name": "Police fédérale"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "En 2025, la criminalité liée à la drogue a occupé la majeure partie des enquêtes de la Police judiciaire fédérale",
+     "url": "https://bx1.be/categories/news/en-2025-la-criminalite-liee-a-la-drogue-a-occupe-la-majeure-partie-des-enquetes-de-la-police-judiciaire-federale/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BX1"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Au lendemain d'une fusillade, le procureur du Roi Julien Moinil tire un premier bilan : « ni une star, ni un politicien, je fais juste mon travail »",
+     "url": "https://www.lavenir.net/regions/bruxelles/2026/01/31/au-lendemain-dune-fusillade-le-procureur-du-roi-julien-moinil-tire-un-premier-bilan-ni-une-star-ni-un-politicien-je-fais-juste-mon-travail-BXGRUUL2GJH5XL6UAAPLEMJFTU/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "L'Avenir"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Cinq ans après SKY ECC : les résultats de cinq années d'enquête sur les données SKY ECC",
+     "url": "https://www.police.be/5998/fr/actualites/cinq-ans-apres-sky-ecc-les-resultats-de-cinq-annees-denquete-sur-les-donnees-sky-ecc",
+     "publisher": {
+      "@type": "Organization",
+      "name": "Police fédérale"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Narcotrafic dans les grandes villes : des milliers d'arrestations suite aux opérations « coups de poing », mais la chaîne pénale peine à suivre le rythme",
+     "url": "https://www.dhnet.be/actu/belgique/2026/06/04/narcotrafic-dans-les-grandes-villes-des-milliers-darrestations-suite-aux-operations-coups-de-poing-mais-la-chaine-penale-peine-a-suivre-le-rythme-HYPAHUTG2RGT5EAMOEO3ZQX3SA/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "La DH"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Lancée en 2025, la collaboration entre le parquet de Bruxelles et l'Office des étrangers a permis l'éloignement de 94 délinquants illégaux en un an",
+     "url": "https://www.lalibre.be/belgique/2026/06/26/lancee-en-2025-la-collaboration-entre-le-parquet-de-bruxelles-et-loffice-des-etrangers-a-permis-leloignement-de-94-delinquants-illegaux-en-un-an-X4JRXJPBTNBTTNKXJBJFEBEGN4/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "La Libre Belgique"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "À Bruxelles, la consommation de crack a considérablement augmenté",
+     "url": "https://bx1.be/categories/news/a-bruxelles-la-consommation-de-crack-a-considerablement-augmente/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BX1"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "À Bruxelles, l'analyse des eaux usées nuance l'image d'un « épicentre » du crack",
+     "url": "https://bx1.be/categories/news/a-bruxelles-lanalyse-des-eaux-usees-nuance-limage-dun-epicentre-du-crack-il-ny-a-pas-de-profil-type-du-consommateur-de-drogues/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BX1"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "La deuxième salle de consommation à moindre risque bruxelloise a ouvert à Molenbeek",
+     "url": "https://www.iriscare.brussels/fr/2025/12/15/la-deuxieme-salle-de-consommation-a-moindre-risque-bruxelloise-a-ouvert-a-molenbeek/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "Iriscare"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Revalidation des toxicomanes à Bruxelles : « La capacité d'accueil est restée inchangée pendant 3 ans »",
+     "url": "https://www.lavenir.net/regions/bruxelles/bruxelles/2026/09/11/revalidation-des-toxicomanes-a-bruxelles-la-capacite-daccueil-est-restee-inchangee-pendant-3-ans-7JVE7HAOKFEOVI6NX3PSBPLMUQ/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "L'Avenir"
+     }
+    }
+   ],
+   "creator": {
+    "@id": "https://ouaisfieu.github.io/hotspots/a-propos/#auteur"
+   },
+   "temporalCoverage": "2022/2026",
+   "isAccessibleForFree": true,
+   "distribution": [
+    {
+     "@type": "DataDownload",
+     "encodingFormat": "text/csv",
+     "contentUrl": "https://ouaisfieu.github.io/hotspots/data/indicateurs.csv",
+     "name": "Indicateurs (CSV)"
+    },
+    {
+     "@type": "DataDownload",
+     "encodingFormat": "text/csv",
+     "contentUrl": "https://ouaisfieu.github.io/hotspots/data/fusillades.csv",
+     "name": "Fusillades par année (CSV)"
+    },
+    {
+     "@type": "DataDownload",
+     "encodingFormat": "application/geo+json",
+     "contentUrl": "https://ouaisfieu.github.io/hotspots/data/hotspots.geojson",
+     "name": "Hotspots (GeoJSON)"
+    },
+    {
+     "@type": "DataDownload",
+     "encodingFormat": "text/csv",
+     "contentUrl": "https://ouaisfieu.github.io/hotspots/data/hotspots.csv",
+     "name": "Hotspots (CSV)"
+    },
+    {
+     "@type": "DataDownload",
+     "encodingFormat": "text/csv",
+     "contentUrl": "https://ouaisfieu.github.io/hotspots/data/chronologie.csv",
+     "name": "Chronologie (CSV)"
+    }
+   ],
+   "variableMeasured": [
+    "Fusillades",
+    "Saisies de cocaïne",
+    "Hotspots",
+    "Places de revalidation",
+    "Déclarations de soupçon CTIF"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://ouaisfieu.github.io/hotspots/chiffres/",
+   "url": "https://ouaisfieu.github.io/hotspots/chiffres/",
+   "name": "Chiffres du trafic de drogue à Bruxelles et données ouvertes (CSV, GeoJSON)",
+   "inLanguage": "fr-BE",
+   "isPartOf": {
+    "@id": "https://ouaisfieu.github.io/hotspots/#site"
+   },
+   "mainEntity": {
+    "@id": "https://ouaisfieu.github.io/hotspots/chiffres/#main"
+   },
+   "breadcrumb": {
+    "@id": "https://ouaisfieu.github.io/hotspots/chiffres/#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://ouaisfieu.github.io/hotspots/chiffres/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Accueil",
+     "item": "https://ouaisfieu.github.io/hotspots/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Chiffres",
+     "item": "https://ouaisfieu.github.io/hotspots/chiffres/"
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="../" aria-label="Hotspots — accueil"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="9" fill="none" stroke="#eb6834" stroke-width="2"/><circle cx="16" cy="16" r="3.5" fill="#eb6834"/></svg><span class="brand-text"><span class="brand-name">Hotspots</span><span class="brand-tag">Trafic de drogue &amp; lutte antidrogue à Bruxelles</span></span></a>
+<button class="theme-toggle" type="button" hidden aria-pressed="false">Mode sombre</button>
+<button class="nav-toggle" type="button" hidden aria-expanded="false" aria-controls="site-nav">Menu</button>
+<nav class="site-nav" id="site-nav" aria-label="Navigation principale"><ul><li><a href="../">Accueil</a></li><li><a href="../trafic/">Le trafic</a></li><li><a href="../violences/">Violences</a></li><li><a href="../hotspots/">Hotspots &amp; carte</a></li><li><a href="../lutte/">La lutte</a></li><li><a href="../sante/">Santé &amp; RdR</a></li><li><a href="../debats/">Débats</a></li><li><a href="../chronologie/">Chronologie</a></li><li><a href="../chiffres/" aria-current="page">Chiffres</a></li><li><a href="../glossaire/">Glossaire</a></li><li><a href="../sources/">Sources</a></li><li><a href="../a-propos/">À propos</a></li></ul></nav>
+</div>
+</header>
+<main id="contenu" class="wrap" tabindex="-1">
+<article>
+<header class="page-head"><nav class="breadcrumb" aria-label="Fil d’Ariane"><ol><li><a href="../">Accueil</a></li><li aria-current="page">Chiffres</li></ol></nav><p class="kicker">Outil · Données</p><h1>Chiffres et données ouvertes</h1><p class="lede">Les principaux indicateurs réunis en un seul endroit, avec leur source, leur date et, quand elles existent, les divergences entre sources.</p><p class="meta-line"><span>Par <a href="../a-propos/#auteur" rel="author">Claude</a> (IA, Anthropic)</span><span>Publié le <time datetime="2026-09-24">24 septembre 2026</time></span><span>Mis à jour le <time datetime="2026-09-24">24 septembre 2026</time></span></p></header>
+<div class="layout has-toc"><div class="prose-col"><div class="prose">
+<h2 id="donnees-ouvertes">Données ouvertes</h2>
+<p>Toutes les données du site sont réutilisables sous licence CC BY-NC-SA 4.0 :</p>
+<ul>
+<li><a href="../data/indicateurs.csv" download>indicateurs.csv</a> — les indicateurs de cette page, avec source et URL ;</li>
+<li><a href="../data/fusillades.csv" download>fusillades.csv</a> — série annuelle des fusillades et variantes selon les sources ;</li>
+<li><a href="../data/hotspots.geojson" download>hotspots.geojson</a> et <a href="../data/hotspots.csv" download>hotspots.csv</a> — les 19 hotspots, 2 salles de consommation et 4 zones citées (positions indicatives) ;</li>
+<li><a href="../data/chronologie.csv" download>chronologie.csv</a> — la frise chronologique.</li>
+</ul>
+
+<h2 id="violence-armee">Violence armée</h2>
+<div class="table-wrap"><table><caption>Fusillades en Région de Bruxelles-Capitale</caption>
+<thead><tr><th scope="col">Période</th><th scope="col" class="num">Valeur</th><th scope="col">Détail</th><th scope="col">Source</th></tr></thead><tbody>
+<tr><th scope="row">2022</th><td class="num">56</td><td>—</td><td><span class="cite">[<a href="#ref-1" aria-label="Source 1">1</a>]</span></td></tr>
+<tr><th scope="row">2024</th><td class="num">89 / 92</td><td>89 au 23/12 (9 morts, 48 blessés) ; 92 au bilan annuel</td><td><span class="cite">[<a href="#ref-2" aria-label="Source 2">2</a>,<a href="#ref-1" aria-label="Source 1">1</a>]</span></td></tr>
+<tr><th scope="row">2025</th><td class="num">97 / &gt;100</td><td>97 au 15/12 ; plus de 100 au rapport annuel de la police fédérale</td><td><span class="cite">[<a href="#ref-3" aria-label="Source 3">3</a>,<a href="#ref-4" aria-label="Source 4">4</a>]</span></td></tr>
+<tr><th scope="row">4 sept. 2025 – 19 févr. 2026</th><td class="num">43</td><td>2 morts, 17 blessés (chiffres provisoires)</td><td><span class="cite">[<a href="#ref-5" aria-label="Source 5">5</a>,<a href="#ref-6" aria-label="Source 6">6</a>]</span></td></tr>
+<tr><th scope="row">3 oct. 2024 – juin 2026</th><td class="num">160</td><td>—</td><td><span class="cite">[<a href="#ref-7" aria-label="Source 7">7</a>]</span></td></tr>
+<tr><th scope="row">2026, janvier-juillet</th><td class="num">57</td><td>—</td><td><span class="cite">[<a href="#ref-8" aria-label="Source 8">8</a>]</span></td></tr>
+<tr><th scope="row">2026, au 28 août</th><td class="num">69</td><td>22 explosions ; 93 personnes sous mandat d’arrêt ; 14 mineurs arrêtés</td><td><span class="cite">[<a href="#ref-9" aria-label="Source 9">9</a>]</span></td></tr>
+<tr><th scope="row">2026, janvier-août</th><td class="num">70</td><td>71 % liées au trafic de drogue</td><td><span class="cite">[<a href="#ref-10" aria-label="Source 10">10</a>]</span></td></tr>
+<tr><th scope="row">Part hors hotspots</th><td class="num">46 % → 63 %</td><td>2025 → 2026</td><td><span class="cite">[<a href="#ref-7" aria-label="Source 7">7</a>]</span></td></tr>
+</tbody></table></div>
+
+<h2 id="trafic-et-saisies">Trafic et saisies</h2>
+<div class="table-wrap"><table><caption>Trafic, saisies et blanchiment</caption>
+<thead><tr><th scope="col">Indicateur</th><th scope="col" class="num">Valeur</th><th scope="col">Périmètre</th><th scope="col">Source</th></tr></thead><tbody>
+<tr><th scope="row">Cocaïne saisie à Anvers</th><td class="num">116 t / 44 t / 55 t</td><td>2023 / 2024 / 2025</td><td><span class="cite">[<a href="#ref-11" aria-label="Source 11">11</a>,<a href="#ref-12" aria-label="Source 12">12</a>]</span></td></tr>
+<tr><th scope="row">Marijuana saisie à Anvers</th><td class="num">~5 t → &gt;20 t</td><td>2024 → 2025</td><td><span class="cite">[<a href="#ref-12" aria-label="Source 12">12</a>]</span></td></tr>
+<tr><th scope="row">Arrestations dans le port (dont mineurs)</th><td class="num">207 (41)</td><td>2025</td><td><span class="cite">[<a href="#ref-12" aria-label="Source 12">12</a>]</span></td></tr>
+<tr><th scope="row">Déclarations de soupçon reçues par la CTIF</th><td class="num">102 312</td><td>2025, Belgique, toutes criminalités</td><td><span class="cite">[<a href="#ref-13" aria-label="Source 13">13</a>]</span></td></tr>
+<tr><th scope="row">Dossiers transmis par la CTIF</th><td class="num">1 334 (2,13 Md€)</td><td>2025, Belgique</td><td><span class="cite">[<a href="#ref-13" aria-label="Source 13">13</a>]</span></td></tr>
+<tr><th scope="row">Avoirs saisis par la PJF</th><td class="num">195 M€</td><td>2025, Belgique</td><td><span class="cite">[<a href="#ref-14" aria-label="Source 14">14</a>,<a href="#ref-15" aria-label="Source 15">15</a>]</span></td></tr>
+<tr><th scope="row">Avoirs saisis (parquet de Bruxelles)</th><td class="num">125 M€ / 203 M€</td><td>2025 / janvier 2025 – août 2026</td><td><span class="cite">[<a href="#ref-16" aria-label="Source 16">16</a>,<a href="#ref-9" aria-label="Source 9">9</a>]</span></td></tr>
+<tr><th scope="row">Sky ECC, bilan à 5 ans</th><td class="num">224 M€ ; 1 206 condamnés</td><td>Belgique, 2021-2026</td><td><span class="cite">[<a href="#ref-17" aria-label="Source 17">17</a>]</span></td></tr>
+</tbody></table></div>
+
+<h2 id="justice-et-police">Justice et police</h2>
+<div class="table-wrap"><table><caption>Activité judiciaire et policière</caption>
+<thead><tr><th scope="col">Indicateur</th><th scope="col" class="num">Valeur</th><th scope="col">Périmètre</th><th scope="col">Source</th></tr></thead><tbody>
+<tr><th scope="row">Suspects déférés au parquet</th><td class="num">&gt;10 500 (+174 %)</td><td>Bruxelles, 2025</td><td><span class="cite">[<a href="#ref-16" aria-label="Source 16">16</a>]</span></td></tr>
+<tr><th scope="row">Mandats d’arrêt</th><td class="num">2 222</td><td>Bruxelles, 2025</td><td><span class="cite">[<a href="#ref-16" aria-label="Source 16">16</a>]</span></td></tr>
+<tr><th scope="row">Commerces fermés pour vente de drogue</th><td class="num">350</td><td>Bruxelles, cumul au 28/08/2026</td><td><span class="cite">[<a href="#ref-9" aria-label="Source 9">9</a>]</span></td></tr>
+<tr><th scope="row">Plan Grandes Villes : arrestations</th><td class="num">7 300</td><td>7 villes, sept. 2025 – juin 2026</td><td><span class="cite">[<a href="#ref-18" aria-label="Source 18">18</a>]</span></td></tr>
+<tr><th scope="row">Éloignements (parquet + OE)</th><td class="num">94</td><td>Bruxelles, mars 2025 – mars 2026</td><td><span class="cite">[<a href="#ref-19" aria-label="Source 19">19</a>]</span></td></tr>
+<tr><th scope="row">Mineurs sans place en institution</th><td class="num">365</td><td>Bruxelles, janvier 2026</td><td><span class="cite">[<a href="#ref-16" aria-label="Source 16">16</a>]</span></td></tr>
+</tbody></table></div>
+
+<h2 id="sante">Santé</h2>
+<div class="table-wrap"><table><caption>Usage et prise en charge</caption>
+<thead><tr><th scope="col">Indicateur</th><th scope="col" class="num">Valeur</th><th scope="col">Périmètre</th><th scope="col">Source</th></tr></thead><tbody>
+<tr><th scope="row">Pipes à crack distribuées par Transit</th><td class="num">600 → 14 300</td><td>2015 → 2021</td><td><span class="cite">[<a href="#ref-20" aria-label="Source 20">20</a>]</span></td></tr>
+<tr><th scope="row">Part du crack dans les demandes de traitement</th><td class="num">27 %</td><td>Bruxelles (Wallonie 15 %, Flandre 6 %)</td><td><span class="cite">[<a href="#ref-21" aria-label="Source 21">21</a>]</span></td></tr>
+<tr><th scope="row">Cocaïne dans les eaux usées</th><td class="num">~1 g/jour/1 000 hab.</td><td>Bruxelles-Nord, 2e site belge</td><td><span class="cite">[<a href="#ref-21" aria-label="Source 21">21</a>]</span></td></tr>
+<tr><th scope="row">Consommations retirées de la rue (GATE)</th><td class="num">33 559</td><td>mai 2022 – juin 2025</td><td><span class="cite">[<a href="#ref-22" aria-label="Source 22">22</a>]</span></td></tr>
+<tr><th scope="row">Places résidentielles agréées</th><td class="num">63</td><td>Bruxelles, 2023-2025</td><td><span class="cite">[<a href="#ref-23" aria-label="Source 23">23</a>]</span></td></tr>
+</tbody></table></div>
+
+<h2 id="chiffres-du-corpus-non-recoupes">Chiffres du corpus non recoupés</h2>
+<p>Certains chiffres du corpus de départ n’ont pas pu être rattachés à une source publique vérifiable. Ils ne sont pas repris dans les analyses du site :</p>
+<ul>
+<li>77&nbsp;238 pipes à crack distribuées en 2024 et « 74&nbsp;% d’usagers de crack » chez Transit ;</li>
+<li>la part de 62&nbsp;% du budget drogues consacrée à la répression et 3&nbsp;% à la prévention (voir <a href="../debats/#repression-ou-prevention-la-question-du-budget">Débats</a>) ;</li>
+<li>« 7&nbsp;542 interventions » du projet SubLINK dans le métro en 2024 ;</li>
+<li>la répartition des perceptions immédiates par zone de police en 2025 ;</li>
+<li>un « circuit hawala » Bruxelles-Dubaï de « plusieurs centaines de millions d’euros ».</li>
+</ul>
+</div><section class="page-sources" aria-labelledby="ps-title"><h2 id="ps-title">Sources citées sur cette page</h2><ol><li id="ref-1"><cite>Fusillades à Bruxelles : voici les cartes qui témoignent d&#x27;une augmentation des violences liées à la drogue dans la capitale</cite>, <span class="src-pub">RTBF</span>, <time datetime="2025">2025</time>. <a href="https://www.rtbf.be/article/fusillades-a-bruxelles-cartographie-d-une-augmentation-des-violences-liees-a-la-drogue-dans-la-capitale-11507104" rel="noopener">Consulter</a> · <a href="../sources/#rtbf-cartes">fiche</a></li><li id="ref-2"><cite>L&#x27;auteur des tirs à Anderlecht toujours recherché : c&#x27;est la 89e fusillade en 2024 à Bruxelles pour 9 décès et 48 blessés</cite>, <span class="src-pub">La DH</span>, <time datetime="2024-12-23">23 décembre 2024</time>. <a href="https://www.dhnet.be/actu/faits/2024/12/23/lauteur-des-tirs-a-anderlecht-toujours-recherche-cest-la-89e-fusillade-en-2024-a-bruxelles-pour-9-deces-et-48-blesses-6SLLPYMKD5GHDIKUJPSYOJZXAE/" rel="noopener">Consulter</a> · <a href="../sources/#dh-89">fiche</a></li><li id="ref-3"><cite>97 fusillades en 2025 à Bruxelles : « Chaque personne qui circule à Bruxelles peut prendre une balle perdue »</cite>, <span class="src-pub">Moustique</span>, <time datetime="2025-12-23">23 décembre 2025</time>. <a href="https://www.moustique.be/notre-epoque/nos-explications/2025/12/23/97-fusillades-en-2025-a-bruxelles-chaque-personne-qui-circule-a-bruxelles-peut-prendre-une-balle-perdue-3ZGC6JZLYNE3VD7PDHJ5J666NI/" rel="noopener">Consulter</a> · <a href="../sources/#moustique-97">fiche</a></li><li id="ref-4"><cite>Plus de 100 fusillades et 195 millions d&#x27;euros d&#x27;avoirs criminels saisis à Bruxelles en 2025</cite>, <span class="src-pub">BruxellesToday</span>, <time datetime="2026-03">mars 2026</time>. <a href="https://www.bruxellestoday.be/actualite/rapport-police-federale-101-fusillades-2025.html" rel="noopener">Consulter</a> · <a href="../sources/#bt-101">fiche</a></li><li id="ref-5"><cite>Deux ans après sa mise en place, où en est la stratégie des « hotspots » en Région bruxelloise ?</cite>, <span class="src-pub">BX1</span>, <time datetime="2026-03-21">21 mars 2026</time>. <a href="https://bx1.be/categories/news/deux-ans-apres-sa-mise-en-place-ou-en-est-la-strategie-des-hotspots-en-region-bruxelloise/" rel="noopener">Consulter</a> · <a href="../sources/#bx1-2ans">fiche</a></li><li id="ref-6"><cite>Près de 50 fusillades depuis la rentrée à Bruxelles : les « sanctions administratives » prolongées dans les 18 hotspots de la région bruxelloise</cite>, <span class="src-pub">La DH</span>, <time datetime="2026-03-17">17 mars 2026</time>. <a href="https://www.dhnet.be/regions/bruxelles/2026/03/17/pres-de-50-fusillades-depuis-la-rentree-les-sanctions-administratives-prolongees-dans-les-18-hotspots-de-la-region-bruxelloise-G4NE2J3L5BD3BABAEYDGXISPIU/" rel="noopener">Consulter</a> · <a href="../sources/#dh-18">fiche</a></li><li id="ref-7"><cite>Bruxelles : 63 % des fusillades de 2026 ont eu lieu hors des hotspots drogue</cite>, <span class="src-pub">BX1</span>, <time datetime="2026-06-29">29 juin 2026</time>. <a href="https://bx1.be/categories/news/bruxelles-63-des-fusillades-de-2026-ont-eu-lieu-hors-des-hotspots-drogue/" rel="noopener">Consulter</a> · <a href="../sources/#bx1-63">fiche</a></li><li id="ref-8"><cite>Bruxelles : 57 fusillades recensées au cours des sept premiers mois de 2026</cite>, <span class="src-pub">BX1</span>, <time datetime="2026-08">août 2026</time>. <a href="https://bx1.be/categories/news/bruxelles-57-fusillades-recensees-au-cours-des-sept-premiers-mois-de-2026/" rel="noopener">Consulter</a> · <a href="../sources/#bx1-57">fiche</a></li><li id="ref-9"><cite>« Il y a des risques pour les citoyens » : Julien Moinil fait le point sur les 69 fusillades depuis le début de l&#x27;année et réclame des moyens</cite>, <span class="src-pub">La Libre Belgique</span>, <time datetime="2026-08-28">28 août 2026</time>. <a href="https://www.lalibre.be/belgique/judiciaire/2026/08/28/il-y-a-des-risques-pour-les-citoyens-julien-moinil-fait-le-point-sur-les-69-fusillades-depuis-le-debut-de-lannee-et-reclame-des-moyens-P6AJ4TQ6JJHSRKYCWXOFX4ECTI/" rel="noopener">Consulter</a> · <a href="../sources/#lalibre-69">fiche</a></li><li id="ref-10"><cite>Lutte contre le trafic de drogue dans la capitale : un 19e hotspot à Bruxelles, voici où il se trouve</cite>, <span class="src-pub">La DH</span>, <time datetime="2026-09-18">18 septembre 2026</time>. <a href="https://www.dhnet.be/regions/bruxelles/2026/09/18/lutte-contre-le-trafic-de-drogue-dans-la-capitale-un-19e-hotspot-a-bruxelles-voici-ou-il-se-trouve-SMEFIOS2KRCM3MOE7VJPXDYFQI/" rel="noopener">Consulter</a> · <a href="../sources/#dh-19">fiche</a></li><li id="ref-11"><cite>Moins de cocaïne saisie dans le port d&#x27;Anvers, plus de saisies en Amérique latine</cite>, <span class="src-pub">SPF Finances – Douanes et Accises</span>, <time datetime="2025-01-09">9 janvier 2025</time>. <a href="https://finances.belgium.be/sites/default/files/Customs/Over-de-AADA/Persberichten/Communiqu%C3%A9%20de%20presse-9-01-2025-FR.pdf" rel="noopener">Consulter</a> · <a href="../sources/#douane-2024">fiche</a></li><li id="ref-12"><cite>Au port d&#x27;Anvers, la douane a saisi 55 tonnes de cocaïne et de plus en plus de marijuana en 2025</cite>, <span class="src-pub">VRT NWS</span>, <time datetime="2026-01-21">21 janvier 2026</time>. <a href="https://www.vrt.be/vrtnws/fr/2026/01/21/au-port-d_anvers-la-douane-a-saisi-55-tonnes-de-cocaine-et-de-p/" rel="noopener">Consulter</a> · <a href="../sources/#vrt-douane">fiche</a></li><li id="ref-13"><cite>Mules financières, établissements de paiement, sociétés écrans : les déclarations de soupçons de blanchiment en hausse</cite>, <span class="src-pub">La Libre Belgique</span>, <time datetime="2026-06-23">23 juin 2026</time>. <a href="https://www.lalibre.be/belgique/judiciaire/2026/06/23/mules-financieres-etablissements-de-paiement-societes-ecrans-les-declarations-de-soupcons-de-blanchiment-en-hausse-6HZTISJ3SJELNDSO7IQLMAU6II/" rel="noopener">Consulter</a> · <a href="../sources/#lalibre-ctif">fiche</a></li><li id="ref-14"><cite>Rapport annuel 2025 de la Police fédérale</cite>, <span class="src-pub">Police fédérale</span>, <time datetime="2026-03-16">16 mars 2026</time>. <a href="https://www.police.be/rapportannuel-policefederale/sites/jaarverslag/files/media/file/2026-03/20260316-JVRA2025-FR.pdf" rel="noopener">Consulter</a> · <a href="../sources/#police-ra2025">fiche</a></li><li id="ref-15"><cite>En 2025, la criminalité liée à la drogue a occupé la majeure partie des enquêtes de la Police judiciaire fédérale</cite>, <span class="src-pub">BX1</span>, <time datetime="2026">2026</time>. <a href="https://bx1.be/categories/news/en-2025-la-criminalite-liee-a-la-drogue-a-occupe-la-majeure-partie-des-enquetes-de-la-police-judiciaire-federale/" rel="noopener">Consulter</a> · <a href="../sources/#bx1-pjf">fiche</a></li><li id="ref-16"><cite>Au lendemain d&#x27;une fusillade, le procureur du Roi Julien Moinil tire un premier bilan : « ni une star, ni un politicien, je fais juste mon travail »</cite>, <span class="src-pub">L&#x27;Avenir</span>, <time datetime="2026-01-31">31 janvier 2026</time>. <a href="https://www.lavenir.net/regions/bruxelles/2026/01/31/au-lendemain-dune-fusillade-le-procureur-du-roi-julien-moinil-tire-un-premier-bilan-ni-une-star-ni-un-politicien-je-fais-juste-mon-travail-BXGRUUL2GJH5XL6UAAPLEMJFTU/" rel="noopener">Consulter</a> · <a href="../sources/#lavenir-moinil">fiche</a></li><li id="ref-17"><cite>Cinq ans après SKY ECC : les résultats de cinq années d&#x27;enquête sur les données SKY ECC</cite>, <span class="src-pub">Police fédérale</span>, <time datetime="2026-02-27">27 février 2026</time>. <a href="https://www.police.be/5998/fr/actualites/cinq-ans-apres-sky-ecc-les-resultats-de-cinq-annees-denquete-sur-les-donnees-sky-ecc" rel="noopener">Consulter</a> · <a href="../sources/#police-skyecc">fiche</a></li><li id="ref-18"><cite>Narcotrafic dans les grandes villes : des milliers d&#x27;arrestations suite aux opérations « coups de poing », mais la chaîne pénale peine à suivre le rythme</cite>, <span class="src-pub">La DH</span>, <time datetime="2026-06-04">4 juin 2026</time>. <a href="https://www.dhnet.be/actu/belgique/2026/06/04/narcotrafic-dans-les-grandes-villes-des-milliers-darrestations-suite-aux-operations-coups-de-poing-mais-la-chaine-penale-peine-a-suivre-le-rythme-HYPAHUTG2RGT5EAMOEO3ZQX3SA/" rel="noopener">Consulter</a> · <a href="../sources/#dh-pgv-bilan">fiche</a></li><li id="ref-19"><cite>Lancée en 2025, la collaboration entre le parquet de Bruxelles et l&#x27;Office des étrangers a permis l&#x27;éloignement de 94 délinquants illégaux en un an</cite>, <span class="src-pub">La Libre Belgique</span>, <time datetime="2026-06-26">26 juin 2026</time>. <a href="https://www.lalibre.be/belgique/2026/06/26/lancee-en-2025-la-collaboration-entre-le-parquet-de-bruxelles-et-loffice-des-etrangers-a-permis-leloignement-de-94-delinquants-illegaux-en-un-an-X4JRXJPBTNBTTNKXJBJFEBEGN4/" rel="noopener">Consulter</a> · <a href="../sources/#lalibre-ofe">fiche</a></li><li id="ref-20"><cite>À Bruxelles, la consommation de crack a considérablement augmenté</cite>, <span class="src-pub">BX1</span>, <time datetime="2022-12-08">8 décembre 2022</time>. <a href="https://bx1.be/categories/news/a-bruxelles-la-consommation-de-crack-a-considerablement-augmente/" rel="noopener">Consulter</a> · <a href="../sources/#bx1-crack">fiche</a></li><li id="ref-21"><cite>À Bruxelles, l&#x27;analyse des eaux usées nuance l&#x27;image d&#x27;un « épicentre » du crack</cite>, <span class="src-pub">BX1</span>, <time datetime="2026-03-11">11 mars 2026</time>. <a href="https://bx1.be/categories/news/a-bruxelles-lanalyse-des-eaux-usees-nuance-limage-dun-epicentre-du-crack-il-ny-a-pas-de-profil-type-du-consommateur-de-drogues/" rel="noopener">Consulter</a> · <a href="../sources/#bx1-eaux">fiche</a></li><li id="ref-22"><cite>La deuxième salle de consommation à moindre risque bruxelloise a ouvert à Molenbeek</cite>, <span class="src-pub">Iriscare</span>, <time datetime="2025-12-15">15 décembre 2025</time>. <a href="https://www.iriscare.brussels/fr/2025/12/15/la-deuxieme-salle-de-consommation-a-moindre-risque-bruxelloise-a-ouvert-a-molenbeek/" rel="noopener">Consulter</a> · <a href="../sources/#iriscare-linkup">fiche</a></li><li id="ref-23"><cite>Revalidation des toxicomanes à Bruxelles : « La capacité d&#x27;accueil est restée inchangée pendant 3 ans »</cite>, <span class="src-pub">L&#x27;Avenir</span>, <time datetime="2026-09-11">11 septembre 2026</time>. <a href="https://www.lavenir.net/regions/bruxelles/bruxelles/2026/09/11/revalidation-des-toxicomanes-a-bruxelles-la-capacite-daccueil-est-restee-inchangee-pendant-3-ans-7JVE7HAOKFEOVI6NX3PSBPLMUQ/" rel="noopener">Consulter</a> · <a href="../sources/#lavenir-63">fiche</a></li></ol></section></div><nav class="toc" aria-labelledby="toc-title"><h2 id="toc-title">Sur cette page</h2><ol><li><a href="#donnees-ouvertes">Données ouvertes</a></li><li><a href="#violence-armee">Violence armée</a></li><li><a href="#trafic-et-saisies">Trafic et saisies</a></li><li><a href="#justice-et-police">Justice et police</a></li><li><a href="#sante">Santé</a></li><li><a href="#chiffres-du-corpus-non-recoupes">Chiffres du corpus non recoupés</a></li></ol></nav></div>
+</article>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<section aria-labelledby="f1"><h2 id="f1">Le site</h2><p>Dossier documentaire indépendant sur le trafic de stupéfiants et les politiques de lutte en Région de Bruxelles-Capitale. Rédigé par <a href="../a-propos/#auteur">Claude</a>, modèle d’IA d’Anthropic, à partir d’un corpus fourni et de recherches complémentaires.</p></section>
+<section aria-labelledby="f2"><h2 id="f2">Dossiers</h2><ul><li><a href="../trafic/">Le trafic</a></li><li><a href="../violences/">Violences armées</a></li><li><a href="../hotspots/">Hotspots &amp; carte</a></li><li><a href="../lutte/">La lutte</a></li><li><a href="../sante/">Santé &amp; réduction des risques</a></li><li><a href="../debats/">Débats</a></li></ul></section>
+<section aria-labelledby="f3"><h2 id="f3">Outils</h2><ul><li><a href="../chronologie/">Chronologie</a></li><li><a href="../chiffres/">Chiffres &amp; données ouvertes</a></li><li><a href="../glossaire/">Glossaire</a></li><li><a href="../sources/">Sources</a></li><li><a href="../a-propos/">Méthode &amp; corrections</a></li></ul></section>
+<section aria-labelledby="f4"><h2 id="f4">Aide</h2><p>Besoin d’écoute ou d’information sur les drogues ? <a href="https://infordrogues.be/" rel="noopener">Infor-Drogues &amp; Addictions</a> : 02 227 52 52 (24 h/24). Urgence : 112.</p></section>
+</div>
+<p class="footer-bottom">Textes sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a> · Fonds de carte © contributeurs OpenStreetMap · Aucun traceur, aucun cookie · Dernière mise à jour : <time datetime="2026-09-24">24 septembre 2026</time></p>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+
+</body>
+</html>

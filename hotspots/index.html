@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="fr-BE" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les 19 hotspots drogue de Bruxelles : carte, liste et mesures (2024-2026)</title>
+<meta name="description" content="Carte interactive et liste des 19 hotspots régionaux de lutte contre le trafic de drogue à Bruxelles : dates de désignation, communes, mesures (alcool, contrôles, amendes de 500 €) et bilan.">
+<meta name="author" content="Claude (IA, Anthropic)">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://ouaisfieu.github.io/hotspots/hotspots/">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17191d" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Hotspots — Trafic de drogue et lutte antidrogue à Bruxelles">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:title" content="Les 19 hotspots drogue de Bruxelles : carte, liste et mesures (2024-2026)">
+<meta property="og:description" content="Carte interactive et liste des 19 hotspots régionaux de lutte contre le trafic de drogue à Bruxelles : dates de désignation, communes, mesures (alcool, contrôles, amendes de 500 €) et bilan.">
+<meta property="og:url" content="https://ouaisfieu.github.io/hotspots/hotspots/">
+<meta property="og:image" content="https://ouaisfieu.github.io/hotspots/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hotspots — trafic de drogue et lutte antidrogue à Bruxelles">
+<meta property="article:published_time" content="2026-09-24">
+<meta property="article:modified_time" content="2026-09-24">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">
+<link rel="author" href="../humans.txt" type="text/plain">
+<link rel="alternate" type="application/geo+json" href="../data/hotspots.geojson" title="Hotspots (GeoJSON)">
+<link rel="sitemap" type="application/xml" href="../sitemap.xml">
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/vendor/leaflet/leaflet.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://ouaisfieu.github.io/hotspots/#site",
+   "url": "https://ouaisfieu.github.io/hotspots/",
+   "name": "Hotspots — Trafic de drogue et lutte antidrogue à Bruxelles",
+   "alternateName": "Hotspots",
+   "inLanguage": "fr-BE",
+   "author": {
+    "@id": "https://ouaisfieu.github.io/hotspots/a-propos/#auteur"
+   },
+   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr",
+   "about": [
+    {
+     "@type": "Place",
+     "name": "Région de Bruxelles-Capitale",
+     "sameAs": "https://www.wikidata.org/wiki/Q240"
+    }
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://ouaisfieu.github.io/hotspots/a-propos/#auteur",
+   "name": "Claude",
+   "description": "Modèle d'intelligence artificielle développé par Anthropic, auteur de la rédaction et de la vérification de ce site.",
+   "affiliation": {
+    "@type": "Organization",
+    "name": "Anthropic",
+    "url": "https://www.anthropic.com"
+   }
+  },
+  {
+   "@type": "Article",
+   "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#main",
+   "url": "https://ouaisfieu.github.io/hotspots/hotspots/",
+   "headline": "Les 19 hotspots drogue de la Région bruxelloise",
+   "description": "Carte interactive et liste des 19 hotspots régionaux de lutte contre le trafic de drogue à Bruxelles : dates de désignation, communes, mesures (alcool, contrôles, amendes de 500 €) et bilan.",
+   "inLanguage": "fr-BE",
+   "datePublished": "2026-09-24",
+   "dateModified": "2026-09-24",
+   "author": {
+    "@id": "https://ouaisfieu.github.io/hotspots/a-propos/#auteur"
+   },
+   "publisher": {
+    "@id": "https://ouaisfieu.github.io/hotspots/a-propos/#auteur"
+   },
+   "isPartOf": {
+    "@id": "https://ouaisfieu.github.io/hotspots/#site"
+   },
+   "image": "https://ouaisfieu.github.io/hotspots/assets/img/og-image.png",
+   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr",
+   "spatialCoverage": {
+    "@type": "Place",
+    "name": "Région de Bruxelles-Capitale, Belgique",
+    "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": 50.8467,
+     "longitude": 4.3525
+    }
+   },
+   "keywords": "hotspots Bruxelles, carte, CORES, safe.brussels, Clemenceau, Peterbos, Gare du Midi, Matongé, Marbotin, Gray",
+   "citation": [
+    {
+     "@type": "CreativeWork",
+     "name": "Lutte contre le trafic de drogue à Bruxelles : voici les quinze hotspots validés en Conseil régional de sécurité",
+     "url": "https://www.lalibre.be/regions/bruxelles/2024/03/28/lutte-contre-le-trafic-de-drogue-a-bruxelles-voici-les-quinze-hotspots-valides-en-conseil-regional-de-securite-BVJ47X5KCREXBPOWHJUEO4KFNI/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "La Libre Belgique"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Bruxelles : où se trouvent les hotspots de la lutte anti-drogue ?",
+     "url": "https://www.moustique.be/notre-epoque/les-infos/2024/03/29/bruxelles-ou-se-trouvent-les-hotspots-de-la-lutte-anti-drogue-CBWREFPU35G2RIPDGMITQAK5LQ/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "Moustique"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Deux ans après sa mise en place, où en est la stratégie des « hotspots » en Région bruxelloise ?",
+     "url": "https://bx1.be/categories/news/deux-ans-apres-sa-mise-en-place-ou-en-est-la-strategie-des-hotspots-en-region-bruxelloise/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BX1"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Trafic de drogue : le parc Elisabeth traité en hotspot",
+     "url": "https://bx1.be/categories/reportages/trafic-de-drogue-le-parc-elisabeth-traite-en-hotspot/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BX1"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Drogue et fusillades à Bruxelles : la stratégie des hotspots prolongée de 6 mois, mais « on ne pourra pas tenir ce rythme pendant 20 ans »",
+     "url": "https://www.lavenir.net/regions/bruxelles/2025/02/12/drogue-et-fusillades-a-bruxelles-la-strategie-des-hotspots-prolongee-de-6-mois-mais-on-ne-pourra-pas-tenir-ce-rythme-pendant-20-ans-TAEAZN44ABD27HG5QBGG3FDG3I/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "L'Avenir"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Contrôle d'identité, interdiction de rassemblement… : à Schaerbeek, la sécurité renforcée dans le quartier Marbotin",
+     "url": "https://bx1.be/categories/news/controle-didentite-intediction-de-rassemblement-a-schaerbeek-la-securite-renforcee-dans-le-quartier-marbotin/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BX1"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "« La situation est devenue inacceptable pour les habitants » : un quartier de Schaerbeek deviendra un hotspot régional en janvier 2026",
+     "url": "https://www.lalibre.be/belgique/2025/11/27/la-situation-est-devenue-inacceptable-pour-les-habitants-un-quartier-de-schaerbeek-deviendra-un-hotspot-regional-en-janvier-2026-GXAI7T4I6NF7PHNSZH4K66DBRE/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "La Libre Belgique"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Près de 50 fusillades depuis la rentrée à Bruxelles : les « sanctions administratives » prolongées dans les 18 hotspots de la région bruxelloise",
+     "url": "https://www.dhnet.be/regions/bruxelles/2026/03/17/pres-de-50-fusillades-depuis-la-rentree-les-sanctions-administratives-prolongees-dans-les-18-hotspots-de-la-region-bruxelloise-G4NE2J3L5BD3BABAEYDGXISPIU/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "La DH"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Lutte contre le trafic de drogue dans la capitale : un 19e hotspot à Bruxelles, voici où il se trouve",
+     "url": "https://www.dhnet.be/regions/bruxelles/2026/09/18/lutte-contre-le-trafic-de-drogue-dans-la-capitale-un-19e-hotspot-a-bruxelles-voici-ou-il-se-trouve-SMEFIOS2KRCM3MOE7VJPXDYFQI/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "La DH"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Couverture médiatique des hotspots bruxellois et sort des « petits dealers » (dossier annexe)",
+     "url": "https://dl.ouaisfi.eu/biologia/posts/2025/09/hotspots-ii-flopgunz/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "ouaisfi.eu (Biologia)"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Bruxelles : 63 % des fusillades de 2026 ont eu lieu hors des hotspots drogue",
+     "url": "https://bx1.be/categories/news/bruxelles-63-des-fusillades-de-2026-ont-eu-lieu-hors-des-hotspots-drogue/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BX1"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Anderlecht : à cause des hotspots, les dealers déplacent leurs activités dans les quartiers voisins",
+     "url": "https://bx1.be/categories/news/anderlecht-a-cause-des-hotspots-les-dealers-deplacent-leurs-activites-dans-les-quartiers-voisins/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "BX1"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "Hotspots II à Bruxelles : Flopgunz",
+     "url": "https://dl.ouaisfi.eu/biologia/posts/2025/09/hotspots-ii-flopgunz/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "ouaisfi.eu (Biologia)"
+     }
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "97 fusillades en 2025 à Bruxelles : « Chaque personne qui circule à Bruxelles peut prendre une balle perdue »",
+     "url": "https://www.moustique.be/notre-epoque/nos-explications/2025/12/23/97-fusillades-en-2025-a-bruxelles-chaque-personne-qui-circule-a-bruxelles-peut-prendre-une-balle-perdue-3ZGC6JZLYNE3VD7PDHJ5J666NI/",
+     "publisher": {
+      "@type": "Organization",
+      "name": "Moustique"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://ouaisfieu.github.io/hotspots/hotspots/",
+   "url": "https://ouaisfieu.github.io/hotspots/hotspots/",
+   "name": "Les 19 hotspots drogue de Bruxelles : carte, liste et mesures (2024-2026)",
+   "inLanguage": "fr-BE",
+   "isPartOf": {
+    "@id": "https://ouaisfieu.github.io/hotspots/#site"
+   },
+   "mainEntity": {
+    "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#main"
+   },
+   "breadcrumb": {
+    "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Accueil",
+     "item": "https://ouaisfieu.github.io/hotspots/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Hotspots & carte",
+     "item": "https://ouaisfieu.github.io/hotspots/hotspots/"
+    }
+   ]
+  },
+  {
+   "@type": "ItemList",
+   "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#liste",
+   "name": "Hotspots régionaux de lutte contre le trafic de drogue — Région de Bruxelles-Capitale",
+   "numberOfItems": 19,
+   "itemListOrder": "https://schema.org/ItemListOrderAscending",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-chaussee-anvers",
+      "name": "Chaussée d'Anvers",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Bruxelles-Ville",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8612,
+       "longitude": 4.3527
+      },
+      "description": "Axe du quartier Nord, entre Yser et la gare du Nord ; vente de rue et consommation dans l'espace public.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Capitale-Ixelles"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-matonge",
+      "name": "Matongé",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Ixelles",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8337,
+       "longitude": 4.3634
+      },
+      "description": "Point de deal jugé en 2026 (« procès Matonge », 44 à 46 prévenus, produit estimé à plus de 6 M€ par le parquet).",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Capitale-Ixelles"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-yser",
+      "name": "Yser",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Bruxelles-Ville",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8555,
+       "longitude": 4.3497
+      },
+      "description": "Station et abords : scène de consommation ouverte, notamment de crack, à proximité du canal.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Capitale-Ixelles"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-querelle",
+      "name": "Querelle (Marolles)",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Bruxelles-Ville",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8372,
+       "longitude": 4.3438
+      },
+      "description": "Quartier de logements sociaux des Marolles.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Capitale-Ixelles"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-versailles",
+      "name": "Versailles (Neder-Over-Heembeek)",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Bruxelles-Ville",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.901,
+       "longitude": 4.3935
+      },
+      "description": "Cité de logements sociaux au nord de la Région.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Capitale-Ixelles"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-porte-de-hal",
+      "name": "Porte de Hal",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Bruxelles-Ville / Saint-Gilles",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8333,
+       "longitude": 4.3445
+      },
+      "description": "À cheval sur deux communes et deux zones de police ; lieu de fusillades répétées (27 douilles relevées le 23 août 2026).",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Capitale-Ixelles / Midi"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 7,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-clemenceau",
+      "name": "Clemenceau",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Anderlecht",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8374,
+       "longitude": 4.329
+      },
+      "description": "Tirs à l'arme automatique près de la station en février 2025 ; 26 % des fusillades régionales de 2025, 17 % en 2026.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Midi"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 8,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-peterbos",
+      "name": "Peterbos",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Anderlecht",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.833,
+       "longitude": 4.286
+      },
+      "description": "Grand ensemble de logements sociaux ; 45 prévenus renvoyés en correctionnelle en 2026 (liens présumés avec Marseille et le Panama).",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Midi"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 9,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-saint-antoine",
+      "name": "Saint-Antoine",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Forest",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8195,
+       "longitude": 4.3274
+      },
+      "description": "Quartier autour de la place Saint-Antoine.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Midi"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 10,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-gare-du-midi",
+      "name": "Gare du Midi",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Saint-Gilles / Anderlecht",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8359,
+       "longitude": 4.336
+      },
+      "description": "Premier nœud ferroviaire du pays ; patrouilles mixtes police-armée dans la gare et le métro depuis 2026.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Midi"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 11,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-gare-du-nord",
+      "name": "Gare du Nord",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Schaerbeek / Saint-Josse / Bruxelles-Ville",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.86,
+       "longitude": 4.3614
+      },
+      "description": "Fermetures nocturnes imposées aux commerces (1 h–6 h) ; précarité et consommation de rue.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Nord / Bruxelles-Capitale-Ixelles"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 12,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-etangs-noirs",
+      "name": "Étangs Noirs",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Molenbeek-Saint-Jean",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8563,
+       "longitude": 4.3334
+      },
+      "description": "Station de métro et chaussée de Gand.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Ouest"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 13,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-ribaucourt",
+      "name": "Ribaucourt",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Molenbeek-Saint-Jean / Bruxelles-Ville",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8623,
+       "longitude": 4.3447
+      },
+      "description": "Scène de consommation ouverte ; la salle LINKup a ouvert à proximité le 15 décembre 2025.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Ouest"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 14,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-bonnevie",
+      "name": "Bonnevie",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Molenbeek-Saint-Jean",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8528,
+       "longitude": 4.3312
+      },
+      "description": "Quartier résidentiel dense du vieux Molenbeek.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Ouest"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 15,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-borne-colonne",
+      "name": "Borne / Colonne (Paal/Kolom)",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Molenbeek-Saint-Jean",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8546,
+       "longitude": 4.3397
+      },
+      "description": "Rues de la Borne et de la Colonne, près du canal.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-03-28"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Ouest"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 16,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-aumale",
+      "name": "Aumale",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Anderlecht",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8352,
+       "longitude": 4.3163
+      },
+      "description": "Premier ajout à la liste initiale ; tirs mortels près de la station en décembre 2024 (89e fusillade régionale de l'année).",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2024-12"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Midi"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 17,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-parc-elisabeth",
+      "name": "Parc Élisabeth",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Koekelberg / Ganshoren",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8645,
+       "longitude": 4.329
+      },
+      "description": "Abords de la basilique de Koekelberg ; surveillance renforcée et patrouilles communales.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2025-02"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Ouest"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 18,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-marbotin",
+      "name": "Quartier Marbotin",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Schaerbeek",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8625,
+       "longitude": 4.377
+      },
+      "description": "Interdiction des rassemblements de plus de cinq personnes dès novembre 2025, après une fusillade mortelle le 7 novembre.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2026-01"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Nord"
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 19,
+     "item": {
+      "@type": "Place",
+      "@id": "https://ouaisfieu.github.io/hotspots/hotspots/#hs-gray",
+      "name": "Quartier Gray",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Ixelles",
+       "addressRegion": "Région de Bruxelles-Capitale",
+       "addressCountry": "BE"
+      },
+      "geo": {
+       "@type": "GeoCoordinates",
+       "latitude": 50.8322,
+       "longitude": 4.379
+      },
+      "description": "Périmètre rues Gray, Maria Malibran, de la Levure et de la Brasserie ; trafic prolongé de cannabis et de cocaïne.",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Date de désignation",
+        "value": "2026-09-18"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Zone de police",
+        "value": "Bruxelles-Capitale-Ixelles"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="../" aria-label="Hotspots — accueil"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="9" fill="none" stroke="#eb6834" stroke-width="2"/><circle cx="16" cy="16" r="3.5" fill="#eb6834"/></svg><span class="brand-text"><span class="brand-name">Hotspots</span><span class="brand-tag">Trafic de drogue &amp; lutte antidrogue à Bruxelles</span></span></a>
+<button class="theme-toggle" type="button" hidden aria-pressed="false">Mode sombre</button>
+<button class="nav-toggle" type="button" hidden aria-expanded="false" aria-controls="site-nav">Menu</button>
+<nav class="site-nav" id="site-nav" aria-label="Navigation principale"><ul><li><a href="../">Accueil</a></li><li><a href="../trafic/">Le trafic</a></li><li><a href="../violences/">Violences</a></li><li><a href="../hotspots/" aria-current="page">Hotspots &amp; carte</a></li><li><a href="../lutte/">La lutte</a></li><li><a href="../sante/">Santé &amp; RdR</a></li><li><a href="../debats/">Débats</a></li><li><a href="../chronologie/">Chronologie</a></li><li><a href="../chiffres/">Chiffres</a></li><li><a href="../glossaire/">Glossaire</a></li><li><a href="../sources/">Sources</a></li><li><a href="../a-propos/">À propos</a></li></ul></nav>
+</div>
+</header>
+<main id="contenu" class="wrap" tabindex="-1">
+<article>
+<header class="page-head"><nav class="breadcrumb" aria-label="Fil d’Ariane"><ol><li><a href="../">Accueil</a></li><li aria-current="page">Hotspots &amp; carte</li></ol></nav><p class="kicker">Dossier 3 · Territoires</p><h1>Les hotspots : carte et mode d’emploi</h1><p class="lede">Depuis mars 2024, la Région concentre ses moyens sur des périmètres prioritaires où s’appliquent des règles d’exception. Ils étaient 15 ; ils sont 19 depuis le 18 septembre 2026.</p><p class="meta-line"><span>Par <a href="../a-propos/#auteur" rel="author">Claude</a> (IA, Anthropic)</span><span>Publié le <time datetime="2026-09-24">24 septembre 2026</time></span><span>Mis à jour le <time datetime="2026-09-24">24 septembre 2026</time></span></p></header>
+<div class="layout has-toc"><div class="prose-col"><div class="prose">
+<h2 id="qu-est-ce-qu-un-hotspot">Qu’est-ce qu’un hotspot ?</h2>
+<p>Un <dfn>hotspot</dfn> est un périmètre désigné par les autorités régionales, sur proposition du Conseil régional de sécurité (CORES), où le trafic de drogue et les nuisances qui l’accompagnent justifient une action renforcée et coordonnée. La stratégie annoncée repose sur trois axes : <strong>sécurité</strong>, <strong>prévention</strong> et <strong>cadre de vie</strong>, avec des cellules de coordination et des <em>task forces</em> locales<span class="cite">[<a href="#ref-1" aria-label="Source 1">1</a>]</span>.</p>
+<p>La liste initiale de quinze zones a été validée le 28 mars 2024<span class="cite">[<a href="#ref-1" aria-label="Source 1">1</a>,<a href="#ref-2" aria-label="Source 2">2</a>]</span>. Les périmètres exacts sont fixés par ordonnances de police locales ; ils ne sont pas publiés sous forme de données ouvertes. Les positions de la carte ci-dessous sont donc <strong>indicatives</strong>.</p>
+
+<h2 id="la-carte">La carte</h2>
+<div class="map-shell">
+<div id="map" role="region" aria-label="Carte interactive des hotspots de Bruxelles"><noscript><p class="map-note" style="padding:1rem">La carte nécessite JavaScript. La liste complète figure ci-dessous et les données sont téléchargeables en <a href="../data/hotspots.geojson">GeoJSON</a> et <a href="../data/hotspots.csv">CSV</a>.</p></noscript></div>
+<ul class="map-legend" aria-label="Légende de la carte">
+<li><span class="mk hs" aria-hidden="true"></span>Hotspot régional officiel (19)</li>
+<li><span class="mk rdr" aria-hidden="true"></span>Salle de consommation à moindre risque (2)</li>
+<li><span class="mk cit" aria-hidden="true"></span>Zone citée hors liste officielle (article « Flopgunz »)</li>
+</ul>
+<p class="map-note">Positions indicatives (centre approximatif du périmètre). Fond de carte © contributeurs OpenStreetMap. Données : <a href="../data/hotspots.geojson">GeoJSON</a> · <a href="../data/hotspots.csv">CSV</a>.</p>
+</div>
+
+<h2 id="de-15-a-19-zones">De 15 à 19 zones</h2>
+<ol class="timeline">
+<li><time datetime="2024-03-28">28 mars 2024</time><p>Le CORES valide 15 hotspots : Chaussée d’Anvers, Matongé, Yser, Querelle, Versailles, Porte de Hal, Clemenceau, Peterbos, Saint-Antoine, Gare du Midi, Gare du Nord, Étangs Noirs, Ribaucourt, Bonnevie, Borne/Colonne<span class="cite">[<a href="#ref-1" aria-label="Source 1">1</a>,<a href="#ref-2" aria-label="Source 2">2</a>]</span>.</p></li>
+<li><time datetime="2024-12">Fin 2024</time><p>Ajout d’<strong>Aumale</strong> (Anderlecht)<span class="cite">[<a href="#ref-3" aria-label="Source 3">3</a>]</span>.</p></li>
+<li><time datetime="2025-02">Février 2025</time><p>Le <strong>parc Élisabeth</strong> (Koekelberg/Ganshoren) est traité en hotspot ; la stratégie est prolongée de six mois<span class="cite">[<a href="#ref-4" aria-label="Source 4">4</a>,<a href="#ref-3" aria-label="Source 3">3</a>,<a href="#ref-5" aria-label="Source 5">5</a>]</span>.</p></li>
+<li><time datetime="2026-01">Janvier 2026</time><p>Le <strong>quartier Marbotin</strong> (Schaerbeek) devient hotspot régional, après une fusillade mortelle le 7 novembre 2025 et une interdiction des rassemblements de plus de cinq personnes<span class="cite">[<a href="#ref-6" aria-label="Source 6">6</a>,<a href="#ref-7" aria-label="Source 7">7</a>]</span>.</p></li>
+<li><time datetime="2026-03-17">Mars 2026</time><p>Les sanctions administratives sont prolongées dans les 18 hotspots jusqu’en septembre 2026<span class="cite">[<a href="#ref-8" aria-label="Source 8">8</a>,<a href="#ref-3" aria-label="Source 3">3</a>]</span>.</p></li>
+<li><time datetime="2026-09-18">18 septembre 2026</time><p>Le ministre-président Boris Dilliès signe la désignation du <strong>quartier Gray</strong> (Ixelles), 19e hotspot<span class="cite">[<a href="#ref-9" aria-label="Source 9">9</a>]</span>.</p></li>
+</ol>
+
+<h2 id="ce-qui-change-dans-un-hotspot">Ce qui change dans un hotspot</h2>
+<div class="table-wrap"><table>
+<caption>Principales mesures applicables dans les hotspots</caption>
+<thead><tr><th scope="col">Mesure</th><th scope="col">Contenu</th><th scope="col">Source</th></tr></thead>
+<tbody>
+<tr><th scope="row">Alcool</th><td>Interdiction de consommation sur la voie publique ; vente à emporter interdite de 22 h à 6 h (selon les arrêtés).</td><td><span class="cite">[<a href="#ref-1" aria-label="Source 1">1</a>,<a href="#ref-9" aria-label="Source 9">9</a>]</span></td></tr>
+<tr><th scope="row">Contrôles</th><td>Contrôles d’identité et fouilles de sécurité possibles 24 h/24 ; saisie d’objets dangereux ou de matériel lié à la drogue.</td><td><span class="cite">[<a href="#ref-2" aria-label="Source 2">2</a>,<a href="#ref-8" aria-label="Source 8">8</a>]</span></td></tr>
+<tr><th scope="row">Acheteurs</th><td>Amende administrative de 500&nbsp;€ pour les personnes venues acheter de la drogue.</td><td><span class="cite">[<a href="#ref-8" aria-label="Source 8">8</a>]</span></td></tr>
+<tr><th scope="row">Lieux</th><td>Interdictions de lieu individuelles ; interdictions de rassemblement (ex. Marbotin : plus de cinq personnes).</td><td><span class="cite">[<a href="#ref-3" aria-label="Source 3">3</a>,<a href="#ref-6" aria-label="Source 6">6</a>]</span></td></tr>
+<tr><th scope="row">Commerces</th><td>Fermetures nocturnes imposées (ex. gare du Nord : 1 h–6 h).</td><td><span class="cite">[<a href="#ref-3" aria-label="Source 3">3</a>]</span></td></tr>
+<tr><th scope="row">« Drive-in »</th><td>Lutte ciblée contre la vente aux automobilistes.</td><td><span class="cite">[<a href="#ref-2" aria-label="Source 2">2</a>]</span></td></tr>
+</tbody></table></div>
+
+<h2 id="les-19-zones-une-par-une">Les 19 zones, une par une</h2>
+<ol class="hs-list" aria-label="Les 19 hotspots régionaux"><li class="hs-item" id="hs-chaussee-anvers"><h3><span class="hs-num">n° 1</span> Chaussée d&#x27;Anvers</h3><dl><dt>Commune</dt><dd>Bruxelles-Ville</dd><dt>Zone de police</dt><dd>Bruxelles-Capitale-Ixelles</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Axe du quartier Nord, entre Yser et la gare du Nord ; vente de rue et consommation dans l&#x27;espace public.</p><button class="locate" type="button" data-id="chaussee-anvers" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-matonge"><h3><span class="hs-num">n° 2</span> Matongé</h3><dl><dt>Commune</dt><dd>Ixelles</dd><dt>Zone de police</dt><dd>Bruxelles-Capitale-Ixelles</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Point de deal jugé en 2026 (« procès Matonge », 44 à 46 prévenus, produit estimé à plus de 6 M€ par le parquet).</p><button class="locate" type="button" data-id="matonge" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-yser"><h3><span class="hs-num">n° 3</span> Yser</h3><dl><dt>Commune</dt><dd>Bruxelles-Ville</dd><dt>Zone de police</dt><dd>Bruxelles-Capitale-Ixelles</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Station et abords : scène de consommation ouverte, notamment de crack, à proximité du canal.</p><button class="locate" type="button" data-id="yser" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-querelle"><h3><span class="hs-num">n° 4</span> Querelle (Marolles)</h3><dl><dt>Commune</dt><dd>Bruxelles-Ville</dd><dt>Zone de police</dt><dd>Bruxelles-Capitale-Ixelles</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Quartier de logements sociaux des Marolles.</p><button class="locate" type="button" data-id="querelle" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-versailles"><h3><span class="hs-num">n° 5</span> Versailles (Neder-Over-Heembeek)</h3><dl><dt>Commune</dt><dd>Bruxelles-Ville</dd><dt>Zone de police</dt><dd>Bruxelles-Capitale-Ixelles</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Cité de logements sociaux au nord de la Région.</p><button class="locate" type="button" data-id="versailles" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-porte-de-hal"><h3><span class="hs-num">n° 6</span> Porte de Hal</h3><dl><dt>Commune</dt><dd>Bruxelles-Ville / Saint-Gilles</dd><dt>Zone de police</dt><dd>Bruxelles-Capitale-Ixelles / Midi</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>À cheval sur deux communes et deux zones de police ; lieu de fusillades répétées (27 douilles relevées le 23 août 2026).</p><button class="locate" type="button" data-id="porte-de-hal" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-clemenceau"><h3><span class="hs-num">n° 7</span> Clemenceau</h3><dl><dt>Commune</dt><dd>Anderlecht</dd><dt>Zone de police</dt><dd>Midi</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Tirs à l&#x27;arme automatique près de la station en février 2025 ; 26 % des fusillades régionales de 2025, 17 % en 2026.</p><button class="locate" type="button" data-id="clemenceau" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-peterbos"><h3><span class="hs-num">n° 8</span> Peterbos</h3><dl><dt>Commune</dt><dd>Anderlecht</dd><dt>Zone de police</dt><dd>Midi</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Grand ensemble de logements sociaux ; 45 prévenus renvoyés en correctionnelle en 2026 (liens présumés avec Marseille et le Panama).</p><button class="locate" type="button" data-id="peterbos" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-saint-antoine"><h3><span class="hs-num">n° 9</span> Saint-Antoine</h3><dl><dt>Commune</dt><dd>Forest</dd><dt>Zone de police</dt><dd>Midi</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Quartier autour de la place Saint-Antoine.</p><button class="locate" type="button" data-id="saint-antoine" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-gare-du-midi"><h3><span class="hs-num">n° 10</span> Gare du Midi</h3><dl><dt>Commune</dt><dd>Saint-Gilles / Anderlecht</dd><dt>Zone de police</dt><dd>Midi</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Premier nœud ferroviaire du pays ; patrouilles mixtes police-armée dans la gare et le métro depuis 2026.</p><button class="locate" type="button" data-id="gare-du-midi" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-gare-du-nord"><h3><span class="hs-num">n° 11</span> Gare du Nord</h3><dl><dt>Commune</dt><dd>Schaerbeek / Saint-Josse / Bruxelles-Ville</dd><dt>Zone de police</dt><dd>Nord / Bruxelles-Capitale-Ixelles</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Fermetures nocturnes imposées aux commerces (1 h–6 h) ; précarité et consommation de rue.</p><button class="locate" type="button" data-id="gare-du-nord" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-etangs-noirs"><h3><span class="hs-num">n° 12</span> Étangs Noirs</h3><dl><dt>Commune</dt><dd>Molenbeek-Saint-Jean</dd><dt>Zone de police</dt><dd>Bruxelles-Ouest</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Station de métro et chaussée de Gand.</p><button class="locate" type="button" data-id="etangs-noirs" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-ribaucourt"><h3><span class="hs-num">n° 13</span> Ribaucourt</h3><dl><dt>Commune</dt><dd>Molenbeek-Saint-Jean / Bruxelles-Ville</dd><dt>Zone de police</dt><dd>Bruxelles-Ouest</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Scène de consommation ouverte ; la salle LINKup a ouvert à proximité le 15 décembre 2025.</p><button class="locate" type="button" data-id="ribaucourt" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-bonnevie"><h3><span class="hs-num">n° 14</span> Bonnevie</h3><dl><dt>Commune</dt><dd>Molenbeek-Saint-Jean</dd><dt>Zone de police</dt><dd>Bruxelles-Ouest</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Quartier résidentiel dense du vieux Molenbeek.</p><button class="locate" type="button" data-id="bonnevie" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-borne-colonne"><h3><span class="hs-num">n° 15</span> Borne / Colonne (Paal/Kolom)</h3><dl><dt>Commune</dt><dd>Molenbeek-Saint-Jean</dd><dt>Zone de police</dt><dd>Bruxelles-Ouest</dd><dt>Désigné</dt><dd><time datetime="2024-03-28">mars 2024 (liste initiale)</time></dd></dl><p>Rues de la Borne et de la Colonne, près du canal.</p><button class="locate" type="button" data-id="borne-colonne" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-aumale"><h3><span class="hs-num">n° 16</span> Aumale <span class="pill new">ajout</span></h3><dl><dt>Commune</dt><dd>Anderlecht</dd><dt>Zone de police</dt><dd>Midi</dd><dt>Désigné</dt><dd><time datetime="2024-12">fin 2024</time></dd></dl><p>Premier ajout à la liste initiale ; tirs mortels près de la station en décembre 2024 (89e fusillade régionale de l&#x27;année).</p><button class="locate" type="button" data-id="aumale" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-parc-elisabeth"><h3><span class="hs-num">n° 17</span> Parc Élisabeth <span class="pill new">ajout</span></h3><dl><dt>Commune</dt><dd>Koekelberg / Ganshoren</dd><dt>Zone de police</dt><dd>Bruxelles-Ouest</dd><dt>Désigné</dt><dd><time datetime="2025-02">début 2025</time></dd></dl><p>Abords de la basilique de Koekelberg ; surveillance renforcée et patrouilles communales.</p><button class="locate" type="button" data-id="parc-elisabeth" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-marbotin"><h3><span class="hs-num">n° 18</span> Quartier Marbotin <span class="pill new">ajout</span></h3><dl><dt>Commune</dt><dd>Schaerbeek</dd><dt>Zone de police</dt><dd>Nord</dd><dt>Désigné</dt><dd><time datetime="2026-01">janvier 2026</time></dd></dl><p>Interdiction des rassemblements de plus de cinq personnes dès novembre 2025, après une fusillade mortelle le 7 novembre.</p><button class="locate" type="button" data-id="marbotin" hidden>Voir sur la carte</button></li><li class="hs-item" id="hs-gray"><h3><span class="hs-num">n° 19</span> Quartier Gray <span class="pill new">ajout</span></h3><dl><dt>Commune</dt><dd>Ixelles</dd><dt>Zone de police</dt><dd>Bruxelles-Capitale-Ixelles</dd><dt>Désigné</dt><dd><time datetime="2026-09-18">18 septembre 2026</time></dd></dl><p>Périmètre rues Gray, Maria Malibran, de la Levure et de la Brasserie ; trafic prolongé de cannabis et de cocaïne.</p><button class="locate" type="button" data-id="gray" hidden>Voir sur la carte</button></li></ol>
+
+<h2 id="ce-que-disent-les-bilans">Ce que disent les bilans</h2>
+<p>Les autorités défendent un dispositif qui « fonctionne » pour désorganiser les réseaux, avec une coordination renforcée entre polices, parquet et communes<span class="cite">[<a href="#ref-10" aria-label="Source 10">10</a>,<a href="#ref-3" aria-label="Source 3">3</a>]</span>. Mais trois limites reviennent :</p>
+<ul>
+<li><strong>Le déplacement</strong> : 63&nbsp;% des fusillades de 2026 ont eu lieu hors des hotspots (46&nbsp;% en 2025), et la part du seul Clemenceau a reculé de 26&nbsp;% à 17&nbsp;%<span class="cite">[<a href="#ref-11" aria-label="Source 11">11</a>]</span>. Dès 2024, le bourgmestre d’Anderlecht reconnaissait que « le trafic se déplace »<span class="cite">[<a href="#ref-12" aria-label="Source 12">12</a>]</span>.</li>
+<li><strong>La durée</strong> : « on ne pourra pas tenir ce rythme pendant 20 ans », prévenait-on lors de la prolongation de février 2025<span class="cite">[<a href="#ref-5" aria-label="Source 5">5</a>]</span>.</li>
+<li><strong>Les moyens locaux</strong> : le bourgmestre d’Anderlecht juge l’appui judiciaire fédéral solide mais réclame un financement de la police locale plutôt que des renforts ponctuels<span class="cite">[<a href="#ref-3" aria-label="Source 3">3</a>]</span>.</li>
+</ul>
+
+<h2 id="les-zones-hors-liste">Les zones « hors liste »</h2>
+<p>L’article « Flopgunz » (septembre 2025) cite aussi des lieux qui ne figurent pas, ou plus, dans la liste officielle : place Bethléem à Saint-Gilles, rue d’Aerschot dans le quartier Nord, Anneessens, place Lemmens<span class="cite">[<a href="#ref-13" aria-label="Source 13">13</a>]</span>. Ils apparaissent sur la carte avec un symbole distinct. La place Bethléem a encore connu une fusillade le 16 décembre 2025<span class="cite">[<a href="#ref-14" aria-label="Source 14">14</a>]</span>.</p>
+
+<script type="application/geo+json" id="geo-data">{"type": "FeatureCollection", "name": "Hotspots drogue de la Région de Bruxelles-Capitale (septembre 2026)", "license": "CC BY-NC-SA 4.0", "source": "https://ouaisfieu.github.io/hotspots/hotspots/", "features": [{"type": "Feature", "id": "chaussee-anvers", "geometry": {"type": "Point", "coordinates": [4.3527, 50.8612]}, "properties": {"id": "chaussee-anvers", "categorie": "hotspot", "rang": 1, "nom": "Chaussée d'Anvers", "commune": "Bruxelles-Ville", "zone_police": "Bruxelles-Capitale-Ixelles", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Axe du quartier Nord, entre Yser et la gare du Nord ; vente de rue et consommation dans l'espace public.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "matonge", "geometry": {"type": "Point", "coordinates": [4.3634, 50.8337]}, "properties": {"id": "matonge", "categorie": "hotspot", "rang": 2, "nom": "Matongé", "commune": "Ixelles", "zone_police": "Bruxelles-Capitale-Ixelles", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Point de deal jugé en 2026 (« procès Matonge », 44 à 46 prévenus, produit estimé à plus de 6 M€ par le parquet).", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "yser", "geometry": {"type": "Point", "coordinates": [4.3497, 50.8555]}, "properties": {"id": "yser", "categorie": "hotspot", "rang": 3, "nom": "Yser", "commune": "Bruxelles-Ville", "zone_police": "Bruxelles-Capitale-Ixelles", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Station et abords : scène de consommation ouverte, notamment de crack, à proximité du canal.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "querelle", "geometry": {"type": "Point", "coordinates": [4.3438, 50.8372]}, "properties": {"id": "querelle", "categorie": "hotspot", "rang": 4, "nom": "Querelle (Marolles)", "commune": "Bruxelles-Ville", "zone_police": "Bruxelles-Capitale-Ixelles", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Quartier de logements sociaux des Marolles.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "versailles", "geometry": {"type": "Point", "coordinates": [4.3935, 50.901]}, "properties": {"id": "versailles", "categorie": "hotspot", "rang": 5, "nom": "Versailles (Neder-Over-Heembeek)", "commune": "Bruxelles-Ville", "zone_police": "Bruxelles-Capitale-Ixelles", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Cité de logements sociaux au nord de la Région.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "porte-de-hal", "geometry": {"type": "Point", "coordinates": [4.3445, 50.8333]}, "properties": {"id": "porte-de-hal", "categorie": "hotspot", "rang": 6, "nom": "Porte de Hal", "commune": "Bruxelles-Ville / Saint-Gilles", "zone_police": "Bruxelles-Capitale-Ixelles / Midi", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "À cheval sur deux communes et deux zones de police ; lieu de fusillades répétées (27 douilles relevées le 23 août 2026).", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "clemenceau", "geometry": {"type": "Point", "coordinates": [4.329, 50.8374]}, "properties": {"id": "clemenceau", "categorie": "hotspot", "rang": 7, "nom": "Clemenceau", "commune": "Anderlecht", "zone_police": "Midi", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Tirs à l'arme automatique près de la station en février 2025 ; 26 % des fusillades régionales de 2025, 17 % en 2026.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "peterbos", "geometry": {"type": "Point", "coordinates": [4.286, 50.833]}, "properties": {"id": "peterbos", "categorie": "hotspot", "rang": 8, "nom": "Peterbos", "commune": "Anderlecht", "zone_police": "Midi", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Grand ensemble de logements sociaux ; 45 prévenus renvoyés en correctionnelle en 2026 (liens présumés avec Marseille et le Panama).", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "saint-antoine", "geometry": {"type": "Point", "coordinates": [4.3274, 50.8195]}, "properties": {"id": "saint-antoine", "categorie": "hotspot", "rang": 9, "nom": "Saint-Antoine", "commune": "Forest", "zone_police": "Midi", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Quartier autour de la place Saint-Antoine.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "gare-du-midi", "geometry": {"type": "Point", "coordinates": [4.336, 50.8359]}, "properties": {"id": "gare-du-midi", "categorie": "hotspot", "rang": 10, "nom": "Gare du Midi", "commune": "Saint-Gilles / Anderlecht", "zone_police": "Midi", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Premier nœud ferroviaire du pays ; patrouilles mixtes police-armée dans la gare et le métro depuis 2026.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "gare-du-nord", "geometry": {"type": "Point", "coordinates": [4.3614, 50.86]}, "properties": {"id": "gare-du-nord", "categorie": "hotspot", "rang": 11, "nom": "Gare du Nord", "commune": "Schaerbeek / Saint-Josse / Bruxelles-Ville", "zone_police": "Nord / Bruxelles-Capitale-Ixelles", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Fermetures nocturnes imposées aux commerces (1 h–6 h) ; précarité et consommation de rue.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "etangs-noirs", "geometry": {"type": "Point", "coordinates": [4.3334, 50.8563]}, "properties": {"id": "etangs-noirs", "categorie": "hotspot", "rang": 12, "nom": "Étangs Noirs", "commune": "Molenbeek-Saint-Jean", "zone_police": "Bruxelles-Ouest", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Station de métro et chaussée de Gand.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "ribaucourt", "geometry": {"type": "Point", "coordinates": [4.3447, 50.8623]}, "properties": {"id": "ribaucourt", "categorie": "hotspot", "rang": 13, "nom": "Ribaucourt", "commune": "Molenbeek-Saint-Jean / Bruxelles-Ville", "zone_police": "Bruxelles-Ouest", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Scène de consommation ouverte ; la salle LINKup a ouvert à proximité le 15 décembre 2025.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "bonnevie", "geometry": {"type": "Point", "coordinates": [4.3312, 50.8528]}, "properties": {"id": "bonnevie", "categorie": "hotspot", "rang": 14, "nom": "Bonnevie", "commune": "Molenbeek-Saint-Jean", "zone_police": "Bruxelles-Ouest", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Quartier résidentiel dense du vieux Molenbeek.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "borne-colonne", "geometry": {"type": "Point", "coordinates": [4.3397, 50.8546]}, "properties": {"id": "borne-colonne", "categorie": "hotspot", "rang": 15, "nom": "Borne / Colonne (Paal/Kolom)", "commune": "Molenbeek-Saint-Jean", "zone_police": "Bruxelles-Ouest", "ajout_iso": "2024-03-28", "ajout": "mars 2024 (liste initiale)", "resume": "Rues de la Borne et de la Colonne, près du canal.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "aumale", "geometry": {"type": "Point", "coordinates": [4.3163, 50.8352]}, "properties": {"id": "aumale", "categorie": "hotspot", "rang": 16, "nom": "Aumale", "commune": "Anderlecht", "zone_police": "Midi", "ajout_iso": "2024-12", "ajout": "fin 2024", "resume": "Premier ajout à la liste initiale ; tirs mortels près de la station en décembre 2024 (89e fusillade régionale de l'année).", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "parc-elisabeth", "geometry": {"type": "Point", "coordinates": [4.329, 50.8645]}, "properties": {"id": "parc-elisabeth", "categorie": "hotspot", "rang": 17, "nom": "Parc Élisabeth", "commune": "Koekelberg / Ganshoren", "zone_police": "Bruxelles-Ouest", "ajout_iso": "2025-02", "ajout": "début 2025", "resume": "Abords de la basilique de Koekelberg ; surveillance renforcée et patrouilles communales.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "marbotin", "geometry": {"type": "Point", "coordinates": [4.377, 50.8625]}, "properties": {"id": "marbotin", "categorie": "hotspot", "rang": 18, "nom": "Quartier Marbotin", "commune": "Schaerbeek", "zone_police": "Nord", "ajout_iso": "2026-01", "ajout": "janvier 2026", "resume": "Interdiction des rassemblements de plus de cinq personnes dès novembre 2025, après une fusillade mortelle le 7 novembre.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "gray", "geometry": {"type": "Point", "coordinates": [4.379, 50.8322]}, "properties": {"id": "gray", "categorie": "hotspot", "rang": 19, "nom": "Quartier Gray", "commune": "Ixelles", "zone_police": "Bruxelles-Capitale-Ixelles", "ajout_iso": "2026-09-18", "ajout": "18 septembre 2026", "resume": "Périmètre rues Gray, Maria Malibran, de la Levure et de la Brasserie ; trafic prolongé de cannabis et de cocaïne.", "precision": "centre indicatif du périmètre"}}, {"type": "Feature", "id": "gate", "geometry": {"type": "Point", "coordinates": [4.344, 50.8433]}, "properties": {"id": "gate", "categorie": "rdr", "nom": "GATE (salle de consommation à moindre risque)", "commune": "Bruxelles-Ville", "resume": "Rue de Woeringen 9. Ouverte en mai 2022 (Transit et MASS). 33 559 consommations retirées de l'espace public entre mai 2022 et juin 2025.", "precision": "position approximative"}}, {"type": "Feature", "id": "linkup", "geometry": {"type": "Point", "coordinates": [4.3462, 50.86]}, "properties": {"id": "linkup", "categorie": "rdr", "nom": "LINKup (salle de consommation et halte soins)", "commune": "Molenbeek-Saint-Jean", "resume": "Boulevard Léopold II 63, près de Ribaucourt. Ouverte le 15 décembre 2025 (Transit et Projet Lama) ; environ 15 places ; hébergement d'urgence prévu.", "precision": "position approximative"}}, {"type": "Feature", "id": "bethleem", "geometry": {"type": "Point", "coordinates": [4.3431, 50.8288]}, "properties": {"id": "bethleem", "categorie": "cite", "nom": "Place Bethléem", "commune": "Saint-Gilles", "resume": "Citée par l'article « Flopgunz » comme zone sensible non officielle ; fusillade le 16 décembre 2025.", "precision": "position approximative"}}, {"type": "Feature", "id": "aerschot", "geometry": {"type": "Point", "coordinates": [4.3598, 50.8627]}, "properties": {"id": "aerschot", "categorie": "cite", "nom": "Rue d'Aerschot", "commune": "Schaerbeek", "resume": "Quartier Nord, citée par l'article « Flopgunz » comme zone non officielle.", "precision": "position approximative"}}, {"type": "Feature", "id": "anneessens", "geometry": {"type": "Point", "coordinates": [4.3432, 50.8446]}, "properties": {"id": "anneessens", "categorie": "cite", "nom": "Anneessens", "commune": "Bruxelles-Ville", "resume": "Citée par l'article « Flopgunz » parmi les zones du centre.", "precision": "position approximative"}}, {"type": "Feature", "id": "lemmens", "geometry": {"type": "Point", "coordinates": [4.3268, 50.841]}, "properties": {"id": "lemmens", "categorie": "cite", "nom": "Place Lemmens", "commune": "Anderlecht", "resume": "Citée par l'article « Flopgunz ».", "precision": "position approximative"}}]}</script>
+</div><section class="page-sources" aria-labelledby="ps-title"><h2 id="ps-title">Sources citées sur cette page</h2><ol><li id="ref-1"><cite>Lutte contre le trafic de drogue à Bruxelles : voici les quinze hotspots validés en Conseil régional de sécurité</cite>, <span class="src-pub">La Libre Belgique</span>, <time datetime="2024-03-28">28 mars 2024</time>. <a href="https://www.lalibre.be/regions/bruxelles/2024/03/28/lutte-contre-le-trafic-de-drogue-a-bruxelles-voici-les-quinze-hotspots-valides-en-conseil-regional-de-securite-BVJ47X5KCREXBPOWHJUEO4KFNI/" rel="noopener">Consulter</a> · <a href="../sources/#lalibre-15">fiche</a></li><li id="ref-2"><cite>Bruxelles : où se trouvent les hotspots de la lutte anti-drogue ?</cite>, <span class="src-pub">Moustique</span>, <time datetime="2024-03-29">29 mars 2024</time>. <a href="https://www.moustique.be/notre-epoque/les-infos/2024/03/29/bruxelles-ou-se-trouvent-les-hotspots-de-la-lutte-anti-drogue-CBWREFPU35G2RIPDGMITQAK5LQ/" rel="noopener">Consulter</a> · <a href="../sources/#moustique-15">fiche</a></li><li id="ref-3"><cite>Deux ans après sa mise en place, où en est la stratégie des « hotspots » en Région bruxelloise ?</cite>, <span class="src-pub">BX1</span>, <time datetime="2026-03-21">21 mars 2026</time>. <a href="https://bx1.be/categories/news/deux-ans-apres-sa-mise-en-place-ou-en-est-la-strategie-des-hotspots-en-region-bruxelloise/" rel="noopener">Consulter</a> · <a href="../sources/#bx1-2ans">fiche</a></li><li id="ref-4"><cite>Trafic de drogue : le parc Elisabeth traité en hotspot</cite>, <span class="src-pub">BX1</span>, <time datetime="2025-02-14">14 février 2025</time>. <a href="https://bx1.be/categories/reportages/trafic-de-drogue-le-parc-elisabeth-traite-en-hotspot/" rel="noopener">Consulter</a> · <a href="../sources/#bx1-parc">fiche</a></li><li id="ref-5"><cite>Drogue et fusillades à Bruxelles : la stratégie des hotspots prolongée de 6 mois, mais « on ne pourra pas tenir ce rythme pendant 20 ans »</cite>, <span class="src-pub">L&#x27;Avenir</span>, <time datetime="2025-02-12">12 février 2025</time>. <a href="https://www.lavenir.net/regions/bruxelles/2025/02/12/drogue-et-fusillades-a-bruxelles-la-strategie-des-hotspots-prolongee-de-6-mois-mais-on-ne-pourra-pas-tenir-ce-rythme-pendant-20-ans-TAEAZN44ABD27HG5QBGG3FDG3I/" rel="noopener">Consulter</a> · <a href="../sources/#avenir-prolong">fiche</a></li><li id="ref-6"><cite>Contrôle d&#x27;identité, interdiction de rassemblement… : à Schaerbeek, la sécurité renforcée dans le quartier Marbotin</cite>, <span class="src-pub">BX1</span>, <time datetime="2025-11-27">27 novembre 2025</time>. <a href="https://bx1.be/categories/news/controle-didentite-intediction-de-rassemblement-a-schaerbeek-la-securite-renforcee-dans-le-quartier-marbotin/" rel="noopener">Consulter</a> · <a href="../sources/#bx1-marbotin">fiche</a></li><li id="ref-7"><cite>« La situation est devenue inacceptable pour les habitants » : un quartier de Schaerbeek deviendra un hotspot régional en janvier 2026</cite>, <span class="src-pub">La Libre Belgique</span>, <time datetime="2025-11-27">27 novembre 2025</time>. <a href="https://www.lalibre.be/belgique/2025/11/27/la-situation-est-devenue-inacceptable-pour-les-habitants-un-quartier-de-schaerbeek-deviendra-un-hotspot-regional-en-janvier-2026-GXAI7T4I6NF7PHNSZH4K66DBRE/" rel="noopener">Consulter</a> · <a href="../sources/#lalibre-marbotin">fiche</a></li><li id="ref-8"><cite>Près de 50 fusillades depuis la rentrée à Bruxelles : les « sanctions administratives » prolongées dans les 18 hotspots de la région bruxelloise</cite>, <span class="src-pub">La DH</span>, <time datetime="2026-03-17">17 mars 2026</time>. <a href="https://www.dhnet.be/regions/bruxelles/2026/03/17/pres-de-50-fusillades-depuis-la-rentree-les-sanctions-administratives-prolongees-dans-les-18-hotspots-de-la-region-bruxelloise-G4NE2J3L5BD3BABAEYDGXISPIU/" rel="noopener">Consulter</a> · <a href="../sources/#dh-18">fiche</a></li><li id="ref-9"><cite>Lutte contre le trafic de drogue dans la capitale : un 19e hotspot à Bruxelles, voici où il se trouve</cite>, <span class="src-pub">La DH</span>, <time datetime="2026-09-18">18 septembre 2026</time>. <a href="https://www.dhnet.be/regions/bruxelles/2026/09/18/lutte-contre-le-trafic-de-drogue-dans-la-capitale-un-19e-hotspot-a-bruxelles-voici-ou-il-se-trouve-SMEFIOS2KRCM3MOE7VJPXDYFQI/" rel="noopener">Consulter</a> · <a href="../sources/#dh-19">fiche</a></li><li id="ref-10"><cite>Couverture médiatique des hotspots bruxellois et sort des « petits dealers » (dossier annexe)</cite>, <span class="src-pub">ouaisfi.eu (Biologia)</span>, <time datetime="2025-09">septembre 2025</time>. <a href="https://dl.ouaisfi.eu/biologia/posts/2025/09/hotspots-ii-flopgunz/" rel="noopener">Consulter</a> · <a href="../sources/#pdf-petitsdealers">fiche</a></li><li id="ref-11"><cite>Bruxelles : 63 % des fusillades de 2026 ont eu lieu hors des hotspots drogue</cite>, <span class="src-pub">BX1</span>, <time datetime="2026-06-29">29 juin 2026</time>. <a href="https://bx1.be/categories/news/bruxelles-63-des-fusillades-de-2026-ont-eu-lieu-hors-des-hotspots-drogue/" rel="noopener">Consulter</a> · <a href="../sources/#bx1-63">fiche</a></li><li id="ref-12"><cite>Anderlecht : à cause des hotspots, les dealers déplacent leurs activités dans les quartiers voisins</cite>, <span class="src-pub">BX1</span>, <time datetime="2024">2024</time>. <a href="https://bx1.be/categories/news/anderlecht-a-cause-des-hotspots-les-dealers-deplacent-leurs-activites-dans-les-quartiers-voisins/" rel="noopener">Consulter</a> · <a href="../sources/#bx1-deplacement">fiche</a></li><li id="ref-13"><cite>Hotspots II à Bruxelles : Flopgunz</cite>, <span class="src-pub">ouaisfi.eu (Biologia)</span>, <time datetime="2025-09-04">4 septembre 2025</time>. <a href="https://dl.ouaisfi.eu/biologia/posts/2025/09/hotspots-ii-flopgunz/" rel="noopener">Consulter</a> · <a href="../sources/#flopgunz">fiche</a></li><li id="ref-14"><cite>97 fusillades en 2025 à Bruxelles : « Chaque personne qui circule à Bruxelles peut prendre une balle perdue »</cite>, <span class="src-pub">Moustique</span>, <time datetime="2025-12-23">23 décembre 2025</time>. <a href="https://www.moustique.be/notre-epoque/nos-explications/2025/12/23/97-fusillades-en-2025-a-bruxelles-chaque-personne-qui-circule-a-bruxelles-peut-prendre-une-balle-perdue-3ZGC6JZLYNE3VD7PDHJ5J666NI/" rel="noopener">Consulter</a> · <a href="../sources/#moustique-97">fiche</a></li></ol></section></div><nav class="toc" aria-labelledby="toc-title"><h2 id="toc-title">Sur cette page</h2><ol><li><a href="#qu-est-ce-qu-un-hotspot">Qu’est-ce qu’un hotspot ?</a></li><li><a href="#la-carte">La carte</a></li><li><a href="#de-15-a-19-zones">De 15 à 19 zones</a></li><li><a href="#ce-qui-change-dans-un-hotspot">Ce qui change dans un hotspot</a></li><li><a href="#les-19-zones-une-par-une">Les 19 zones, une par une</a></li><li><a href="#ce-que-disent-les-bilans">Ce que disent les bilans</a></li><li><a href="#les-zones-hors-liste">Les zones « hors liste »</a></li></ol></nav></div>
+</article>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<section aria-labelledby="f1"><h2 id="f1">Le site</h2><p>Dossier documentaire indépendant sur le trafic de stupéfiants et les politiques de lutte en Région de Bruxelles-Capitale. Rédigé par <a href="../a-propos/#auteur">Claude</a>, modèle d’IA d’Anthropic, à partir d’un corpus fourni et de recherches complémentaires.</p></section>
+<section aria-labelledby="f2"><h2 id="f2">Dossiers</h2><ul><li><a href="../trafic/">Le trafic</a></li><li><a href="../violences/">Violences armées</a></li><li><a href="../hotspots/">Hotspots &amp; carte</a></li><li><a href="../lutte/">La lutte</a></li><li><a href="../sante/">Santé &amp; réduction des risques</a></li><li><a href="../debats/">Débats</a></li></ul></section>
+<section aria-labelledby="f3"><h2 id="f3">Outils</h2><ul><li><a href="../chronologie/">Chronologie</a></li><li><a href="../chiffres/">Chiffres &amp; données ouvertes</a></li><li><a href="../glossaire/">Glossaire</a></li><li><a href="../sources/">Sources</a></li><li><a href="../a-propos/">Méthode &amp; corrections</a></li></ul></section>
+<section aria-labelledby="f4"><h2 id="f4">Aide</h2><p>Besoin d’écoute ou d’information sur les drogues ? <a href="https://infordrogues.be/" rel="noopener">Infor-Drogues &amp; Addictions</a> : 02 227 52 52 (24 h/24). Urgence : 112.</p></section>
+</div>
+<p class="footer-bottom">Textes sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license">CC BY-NC-SA 4.0</a> · Fonds de carte © contributeurs OpenStreetMap · Aucun traceur, aucun cookie · Dernière mise à jour : <time datetime="2026-09-24">24 septembre 2026</time></p>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/vendor/leaflet/leaflet.js" defer></script><script src="../assets/js/map.js" defer></script>
+</body>
+</html>
