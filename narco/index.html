@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Trafic de Stupéfiants à Bruxelles | Analyse Systémique, Hotspots & Economie Clandestine</title>
+    <meta name="title" content="Trafic de Stupéfiants à Bruxelles | Analyse Systémique, Hotspots & Economie Clandestine">
+    <meta name="description" content="Rapport interactif et analyse systémique du trafic de stupéfiants en Région de Bruxelles-Capitale par Ouais Fieu. Explorez les 19 hotspots, l'épidémie de crack, les 160 fusillades, le blanchiment Hawala et la riposte institutionnelle.">
+    <meta name="keywords" content="trafic de drogues bruxelles, hotspots bruxelles, crack bruxelles, mocro maffia, hawala, blanchiment d'argent, safe brussels, police bruxelles, fusillades bruxelles, cartographie narco bruxelles">
+    <meta name="author" content="Ouais Fieu">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://ouaisfieu.github.io/hotspots/narco/">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hotspots Bruxelles - Ouais Fieu">
+    <meta property="og:url" content="https://ouaisfieu.github.io/hotspots/narco/">
+    <meta property="og:title" content="Trafic de Stupéfiants à Bruxelles : Analyse Systémique & Cartographie Interactive">
+    <meta property="og:description" content="Décryptage complet du marché bruxellois des stupéfiants : 19 hotspots, épidémie de crack, 2,4 Mds € de blanchiment CTIF, circuits Hawala et riposte policière. Par Ouais Fieu.">
+    <meta property="og:locale" content="fr_BE">
+    <meta property="article:published_time" content="2026-09-24T00:00:00+02:00">
+    <meta property="article:modified_time" content="2026-09-24T00:00:00+02:00">
+    <meta property="article:author" content="Ouais Fieu">
+    <meta property="article:section" content="Criminologie & Politiques Publiques">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ouaisfieu.github.io/hotspots/narco/">
+    <meta name="twitter:title" content="Trafic de Stupéfiants à Bruxelles | Rapport Interactif">
+    <meta name="twitter:description" content="Analyse systémique du narcotrafic à Bruxelles : Hotspots, épidémie de crack, fusillades et économie souterraine Hawala. Édité par Ouais Fieu.">
+    <meta name="twitter:creator" content="@ouaisfieu">
+
+    <!-- Chosen Palette: Warm Neutral & Deep Navy (Slate-50 background, Slate-900 primary headers, Slate-700 body text, Warm Terracotta #c2410c and Amber #d97706 accent highlights) -->
+    <!-- Application Structure Plan:
+        L'application est conçue sous la forme d'un tableau de bord décisionnel et exploratoire à 5 vues thématiques synchronisées :
+        1. Tableau de Bord Exécutif : Indique les métriques clés (KPIs), une synthèse globale et un moteur de recherche transversal.
+        2. Criminométrie & Épidémiologie : Analyse croisée des faits policiers, du choc d'offre de la cocaïne et de l'épidémie de crack (avec graphiques Chart.js dynamiques).
+        3. Réseaux & Dynamiques de Violence : Cartographie des acteurs (Mocro Maffia, filière marseillaise), décryptage des 160 fusillades et démonstration de l'effet "Matelas d'eau".
+        4. Économie Souterraine & Hawala : Analyse du blanchiment (CTIF 2,4 Md€), infiltration des PME/immobilier et modélisation étape par étape du réseau Hawala vers Dubaï.
+        5. Riposte & Diagnostic Sanitaire : Répertoire interactif des 19 Hotspots, réformes policières (Fusion 2028, SKY ECC) et mise en relief du goulet d'étranglement de la revalidation (63 places).
+        Cette structure sémantique est enrichie en Schema.org (Report, WebApplication, FAQPage, Person/Author) et optimisée pour l'indexation de l'URL https://ouaisfieu.github.io/hotspots/narco/.
+    -->
+    <!-- Visualization & Content Choices:
+        - Indicateurs clés (KPIs) : Cartes stylisées avec badges colorés pour fixer les ordres de grandeur immédiats.
+        - Graphique 1 (Chart.js Barres/Lignes) : Évolution des résidus de cocaïne et explosion de la distribution des pipes à crack (2017-2024).
+        - Graphique 2 (Chart.js Doughnut) : Répartition de l'impact des fusillades (Hotspots vs Effet Matelas d'eau - 63%).
+        - Graphique 3 (Chart.js Barres groupées) : Le goulet d'étranglement sanitaire (Salles de consommation vs Capacité de revalidation bloquée à 63 lits).
+        - Schéma interactif HTML/CSS : Le cycle de blanchiment d'argent et le mécanisme Hawala Bruxelles-Dubaï.
+        - Matrice filtrable des 19 Hotspots : Recherche en temps réel et détails des mesures administratives par quartier.
+        - CONFIRMATION : Aucun SVG graphique n'est utilisé (utilisation de symboles Unicode et de rendu Canvas natif via Chart.js).
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Report",
+          "@id": "https://ouaisfieu.github.io/hotspots/narco/#report",
+          "headline": "Analyse Systémique du Trafic de Stupéfiants en Région de Bruxelles-Capitale",
+          "name": "Trafic de Stupéfiants à Bruxelles - Rapport Interactif",
+          "description": "Analyse criminologique, épidémiologique et socio-économique globale du marché des stupéfiants à Bruxelles : hotspots, prolifération du crack, violences armées, blanchiment Hawala et riposte policière.",
+          "url": "https://ouaisfieu.github.io/hotspots/narco/",
+          "datePublished": "2026-09-24",
+          "dateModified": "2026-09-24",
+          "inLanguage": "fr-BE",
+          "isAccessibleForFree": "http://schema.org/True",
+          "author": {
+            "@type": "Person",
+            "name": "Ouais Fieu",
+            "url": "https://ouaisfieu.github.io/hotspots/narco/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Ouais Fieu - Investigation & Data Brussels",
+            "url": "https://ouaisfieu.github.io/hotspots/narco/"
+          },
+          "about": [
+            { "@type": "Thing", "name": "Trafic de stupéfiants" },
+            { "@type": "Thing", "name": "Hotspots de sécurité à Bruxelles" },
+            { "@type": "Thing", "name": "Blanchiment d'argent et système Hawala" },
+            { "@type": "Thing", "name": "Épidémie de crack" }
+          ]
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://ouaisfieu.github.io/hotspots/narco/#webapp",
+          "name": "Bruxelles Narco-Hotspots Dashboard",
+          "url": "https://ouaisfieu.github.io/hotspots/narco/",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5 Canvas.",
+          "author": {
+            "@type": "Person",
+            "name": "Ouais Fieu"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://ouaisfieu.github.io/hotspots/narco/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Accueil",
+              "item": "https://ouaisfieu.github.io/hotspots/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Trafic de Drogues à Bruxelles",
+              "item": "https://ouaisfieu.github.io/hotspots/narco/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ouaisfieu.github.io/hotspots/narco/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Combien de Hotspots du trafic de drogue compte la Région de Bruxelles-Capitale ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La Région de Bruxelles-Capitale compte 19 hotspots officiels définis par le Conseil Régional de Sécurité (CORES) et safe.brussels, incluant notamment la Gare du Midi, Peterbos, Ribaucourt, la Galerie Agora, la Porte de Hal et Yser."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qu'est-ce que le système Hawala utilisé par les trafiquants à Bruxelles ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le système Hawala est un réseau de banque clandestine informel basé sur la confiance et des codes cryptés. Il permet de transférer des dizaines de millions d'euros générés par le deal bruxellois directement vers Dubaï ou d'autres places financières sans aucun mouvement bancaire international SWIFT."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quel est l'impact de l'effet 'Matelas d'eau' sur les fusillades à Bruxelles ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'effet matelas d'eau désigne le déplacement de la violence armée hors des 19 hotspots ciblés par la police. Ainsi, 63 % des 160 fusillades répertoriées se déroulent dans des artères résidentielles adjacentes non labellisées comme hotspots."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 360px;
+            }
+        }
+        .tab-btn.active {
+            border-bottom-color: #c2410c;
+            color: #c2410c;
+            font-weight: 700;
+            background-color: #ffffff;
+        }
+        .step-card::after {
+            content: "➔";
+            position: absolute;
+            right: -18px;
+            top: 40%;
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        @media (max-width: 768px) {
+            .step-card::after {
+                content: "↓";
+                right: 48%;
+                top: auto;
+                bottom: -22px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-orange-100 selection:text-orange-900">
+
+    <!-- Screen Reader Navigation Shortcut -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:p-4 focus:bg-orange-600 focus:text-white focus:absolute focus:z-50">
+        Aller au contenu principal
+    </a>
+
+    <!-- Header & Navigation High-Level -->
+    <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between py-4 gap-4">
+                <div class="flex items-center space-x-3">
+                    <span class="text-3xl" aria-hidden="true">⚖️</span>
+                    <div>
+                        <h1 class="text-xl font-bold tracking-tight text-slate-100">
+                            Trafic de Stupéfiants en Région de Bruxelles-Capitale
+                        </h1>
+                        <p class="text-xs text-slate-400 flex items-center gap-2">
+                            <span>Analyse Systémique &amp; Cartographie par</span>
+                            <a href="https://ouaisfieu.github.io/hotspots/narco/" class="text-orange-400 font-semibold hover:underline">Ouais Fieu</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Global Search Input -->
+                <div class="relative w-full md:w-72" role="search">
+                    <label for="globalSearch" class="sr-only">Rechercher dans le rapport</label>
+                    <input type="text" id="globalSearch" placeholder="Rechercher (ex: Peterbos, Hawala, Crack...)" 
+                        class="w-full pl-9 pr-4 py-1.5 bg-slate-800 border border-slate-700 rounded-lg text-sm text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                    <span class="absolute left-3 top-2 text-slate-400 text-xs" aria-hidden="true">🔍</span>
+                </div>
+            </div>
+            
+            <!-- Tab Navigation -->
+            <nav class="flex space-x-1 overflow-x-auto border-t border-slate-800 pt-2 text-xs md:text-sm scrollbar-none" id="navigationTabs" aria-label="Sections du rapport" role="tablist">
+                <button onclick="switchTab('dashboard')" id="tab-dashboard" role="tab" aria-selected="true" aria-controls="view-dashboard" class="tab-btn active px-4 py-2.5 rounded-t-lg font-medium whitespace-nowrap text-slate-300 hover:text-white transition">📊 Vue d'Ensemble</button>
+                <button onclick="switchTab('criminometrie')" id="tab-criminometrie" role="tab" aria-selected="false" aria-controls="view-criminometrie" class="tab-btn px-4 py-2.5 rounded-t-lg font-medium whitespace-nowrap text-slate-300 hover:text-white transition">📈 Criminométrie &amp; Crack</button>
+                <button onclick="switchTab('reseaux')" id="tab-reseaux" role="tab" aria-selected="false" aria-controls="view-reseaux" class="tab-btn px-4 py-2.5 rounded-t-lg font-medium whitespace-nowrap text-slate-300 hover:text-white transition">💣 Réseaux &amp; Violences</button>
+                <button onclick="switchTab('economie')" id="tab-economie" role="tab" aria-selected="false" aria-controls="view-economie" class="tab-btn px-4 py-2.5 rounded-t-lg font-medium whitespace-nowrap text-slate-300 hover:text-white transition">💸 Blanchiment &amp; Hawala</button>
+                <button onclick="switchTab('riposte')" id="tab-riposte" role="tab" aria-selected="false" aria-controls="view-riposte" class="tab-btn px-4 py-2.5 rounded-t-lg font-medium whitespace-nowrap text-slate-300 hover:text-white transition">🛡️ Hotspots &amp; Sanitaire</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main id="main-content" class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+        <!-- Banner Alert Dynamic Context -->
+        <div id="searchAlert" class="hidden mb-6 p-4 bg-orange-50 border-l-4 border-orange-500 rounded-r-lg text-sm text-orange-900 flex justify-between items-center" role="status">
+            <span>Résultats filtrés pour : <strong id="searchQueryDisplay"></strong></span>
+            <button onclick="resetSearch()" class="text-xs bg-orange-200 hover:bg-orange-300 text-orange-900 font-semibold px-2 py-1 rounded">Réinitialiser</button>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TAB 1 : DASHBOARD EXÉCUTIF -->
+        <!-- ========================================== -->
+        <article id="view-dashboard" role="tabpanel" aria-labelledby="tab-dashboard" class="space-y-6">
+            <!-- Introduction Header Section -->
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h2 class="text-xl font-bold text-slate-900 mb-2">Synthèse Stratégique du Marché Bruxellois des Stupéfiants</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    La Région de Bruxelles-Capitale (RBC) est confrontée à une mutation structurelle profonde : autrefois zone de transit secondaire adossée au port d'Anvers, la métropole est devenue un marché de consommation saturé et un théâtre de violences systémiques. L'infiltration des réseaux transnationaux (Mocro Maffia, filières marseillaises) s'accompagne d'une "franchisation" de la violence armée, d'une prolifération du crack liée au surapprovisionnement en cocaïne (+98 % de résidus dans les eaux usées), et du recyclage massif de capitaux criminels dans l'économie légale (2,4 milliards d'euros de transactions suspectes signalées à la justice).
+                </p>
+            </section>
+
+            <!-- KPI Cards Grid -->
+            <section aria-label="Indicateurs Clés" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-orange-300 transition">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold uppercase text-slate-500 tracking-wider">Commerce &amp; Détention</span>
+                        <span class="text-lg" aria-hidden="true">🚔</span>
+                    </div>
+                    <div class="mt-2 flex items-baseline justify-between">
+                        <span class="text-2xl font-extrabold text-slate-900">7 030</span>
+                        <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+11% commerce</span>
+                    </div>
+                    <p class="mt-1 text-xs text-slate-500">Faits de détention (2024). 2 227 faits de commerce enregistrés par la police.</p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-orange-300 transition">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold uppercase text-slate-500 tracking-wider">Incidents Balistiques</span>
+                        <span class="text-lg" aria-hidden="true">💥</span>
+                    </div>
+                    <div class="mt-2 flex items-baseline justify-between">
+                        <span class="text-2xl font-extrabold text-red-600">160</span>
+                        <span class="text-xs font-semibold text-red-600 bg-red-50 px-2 py-0.5 rounded-full">102 en 2025</span>
+                    </div>
+                    <p class="mt-1 text-xs text-slate-500">Fusillades répertoriées (période 2024-2026). Guerre de territoires ("fours").</p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-orange-300 transition">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold uppercase text-slate-500 tracking-wider">Blanchiment (CTIF)</span>
+                        <span class="text-lg" aria-hidden="true">🏦</span>
+                    </div>
+                    <div class="mt-2 flex items-baseline justify-between">
+                        <span class="text-2xl font-extrabold text-slate-900">2,4 Mds €</span>
+                        <span class="text-xs font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">79 211 signalements</span>
+                    </div>
+                    <p class="mt-1 text-xs text-slate-500">Transactions suspectes transmises à la justice en 2023 (PME, Horeca, Hawala).</p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-orange-300 transition">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold uppercase text-slate-500 tracking-wider">Goulet Sanitaire</span>
+                        <span class="text-lg" aria-hidden="true">🏥</span>
+                    </div>
+                    <div class="mt-2 flex items-baseline justify-between">
+                        <span class="text-2xl font-extrabold text-amber-600">63 lits</span>
+                        <span class="text-xs font-semibold text-red-600 bg-red-50 px-2 py-0.5 rounded-full">Capacité figée</span>
+                    </div>
+                    <p class="mt-1 text-xs text-slate-500">Places de post-cure résidentielle à Bruxelles malgré 74% d'usagers de crack chez Transit.</p>
+                </div>
+            </section>
+
+            <!-- Executive Macro Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Core Dynamics Summary -->
+                <section class="lg:col-span-2 bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <span aria-hidden="true">🎯</span> Les 4 Piliers de la Mutation Criminelle
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-slate-900 block mb-1">1. L'Épidémie de Crack &amp; Choc d'Offre</span>
+                            L'engorgement du port d'Anvers (111 tonnes saisies en 2022) a saturé le marché local en cocaïne. La conversion vers le crack bon marché a multiplié par 26 les distributions de pipes d'inhalation depuis 2017 (77 238 distribuées en 2024).
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-slate-900 block mb-1">2. Violence Franchisée &amp; "Soldats Enfants"</span>
+                            Importation des méthodes marseillaises : recrutement sur Snapchat/Telegram de "jobbeurs" mineurs (dès 14 ans) ou de migrants pour exécuter des tirs d'intimidation sur les points de deal rivaux contre de faibles rémunérations.
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-slate-900 block mb-1">3. Recyclage Économique &amp; Finance Hawala</span>
+                            Infiltration systématique de l'Horeca, des commerces de détail (Galerie Agora : 14 commerces scellés et 8M€ cash saisis) et transfert occulte des profits vers Dubaï via des banquiers clandestins Hawala.
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-slate-900 block mb-1">4. Effet "Matelas d'Eau" Intercommunal</span>
+                            La concentration policière sur les 19 hotspots régionaux a stabilisé certains secteurs mais décalé 63 % des fusillades vers les artères résidentielles adjacentes non labellisées.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Executive Actions Quick Access -->
+                <aside class="bg-slate-900 text-white p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-orange-400 uppercase tracking-widest block mb-1">Réponse Institutionnelle</span>
+                        <h3 class="text-lg font-bold text-slate-100 mb-3">Réformes Clés &amp; Leviers</h3>
+                        <ul class="space-y-2.5 text-xs text-slate-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-400 mt-0.5" aria-hidden="true">▪</span>
+                                <span><strong>Zone Policière Unique :</strong> Fusion programmée des 6 zones bruxelloises au 1er janvier 2028 (7 782 agents).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-400 mt-0.5" aria-hidden="true">▪</span>
+                                <span><strong>SKY ECC / Mégaprocès :</strong> 3 684 années de réclusion prononcées dans le complexe Justitia (ancien siège OTAN).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-400 mt-0.5" aria-hidden="true">▪</span>
+                                <span><strong>Dispositif Hotspots :</strong> 19 périmètres d'action prioritaire avec arrêtés anti-alcool 24h/24.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-400 mt-0.5" aria-hidden="true">▪</span>
+                                <span><strong>SCMR &amp; Urgence :</strong> Salles GATE et LINKup (Molenbeek) pour sortir la consommation des rues.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-center">
+                        <button onclick="switchTab('riposte')" class="w-full py-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-xs rounded-lg transition">
+                            Explorer la Riposte Institutionnelle ➔
+                        </button>
+                    </div>
+                </aside>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- TAB 2 : CRIMINOMÉTRIE & ÉPIDÉMIOLOGIE -->
+        <!-- ========================================== -->
+        <article id="view-criminometrie" role="tabpanel" aria-labelledby="tab-criminometrie" class="hidden space-y-6">
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h2 class="text-xl font-bold text-slate-900 mb-2">Criminométrie &amp; Épidémiologie d'un Marché Saturé</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Cette section analyse l'impact mesurable du trafic sur l'espace public et la santé publique à Bruxelles. L'analyse combinée des données policières, des résidus dans les eaux usées et des activités du secteur associatif révèle un choc d'offre massif en cocaïne ayant entraîné une épidémie de crack dévastatrice chez les usagers les plus précaires.
+                </p>
+            </section>
+
+            <!-- Charts Section Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Chart 1: Crack Epidemic & Harm Reduction -->
+                <figure class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="font-bold text-slate-900 text-sm">Explosion du Crack &amp; Réduction des Risques (ASBL Transit)</h3>
+                            <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded">2017-2024</span>
+                        </div>
+                        <figcaption class="text-xs text-slate-500 mb-4">
+                            Progression de la part des usagers de crack reçus chez Transit et volume de pipes d'inhalation distribuées (multiplié par 26 en 7 ans).
+                        </figcaption>
+                        <div class="chart-container">
+                            <canvas id="crackEpidemicChart" aria-label="Graphique montrant l'augmentation de la distribution de pipes et le pourcentage d'usagers de crack" role="img"></canvas>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-3 bg-amber-50 rounded-lg border border-amber-200 text-xs text-amber-900">
+                        <strong>💡 Insight Sanitaire :</strong> En 2024, 74 % des usagers accueillis par l'ASBL Transit consommaient du crack, entraînant la distribution de 77 238 pipes d'inhalation (+22 % vs 2023).
+                    </div>
+                </figure>
+
+                <!-- Chart 2: Police & Wastewater Indicators -->
+                <figure class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="font-bold text-slate-900 text-sm">Indicateurs de Pression Criminelle &amp; Analyse des Eaux Usées</h3>
+                            <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded">RBC / Sciensano</span>
+                        </div>
+                        <figcaption class="text-xs text-slate-500 mb-4">
+                            Augmentation des infractions (+51% Trafic/Fraude depuis 2015) et rebond de +98% de la concentration de cocaïne dans les eaux usées en 2024.
+                        </figcaption>
+                        <div class="chart-container">
+                            <canvas id="policeWastewaterChart" aria-label="Graphique montrant la concentration de résidus de cocaïne et l'évolution des infractions policières" role="img"></canvas>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-3 bg-slate-50 rounded-lg border border-slate-200 text-xs text-slate-800">
+                        <strong>⚖️ Triage Judiciaire :</strong> Face à la saturation des patrouilles, le Parquet de Bruxelles a classé 1 392 affaires de détention sans suite en 2024 pour raisons d'opportunité pénale.
+                    </div>
+                </figure>
+            </div>
+
+            <!-- Detailed Criminometric Data Table -->
+            <section class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden" aria-label="Tableau de données criminométriques">
+                <div class="p-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
+                    <h3 class="font-bold text-slate-900 text-sm">Tableau Synthétique des Indicateurs Criminologiques &amp; Sanitaires (RBC)</h3>
+                    <span class="text-xs text-slate-500">Source: safe.brussels, Sciensano, ASBL Transit (2024)</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs text-slate-700">
+                        <thead class="bg-slate-100 uppercase text-slate-600 font-semibold border-b border-slate-200">
+                            <tr>
+                                <th scope="col" class="p-3">Indicateur Criminologique / Sanitaire</th>
+                                <th scope="col" class="p-3">Volume Enregistré</th>
+                                <th scope="col" class="p-3">Évolution Temporelle</th>
+                                <th scope="col" class="p-3">Implications Opérationnelles</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200">
+                            <tr class="hover:bg-slate-50">
+                                <th scope="row" class="p-3 font-medium text-slate-900">Détention de Stupéfiants</th>
+                                <td class="p-3">7 030 faits</td>
+                                <td class="p-3 text-amber-600 font-semibold">Hausses régulières</td>
+                                <td class="p-3">Saturation continue des services de patrouille de voie publique</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <th scope="row" class="p-3 font-medium text-slate-900">Commerce de Stupéfiants</th>
+                                <td class="p-3">2 227 faits</td>
+                                <td class="p-3 text-red-600 font-semibold">+ 11 % (vs 2023)</td>
+                                <td class="p-3">Pression accrue sur les points de deal ("fours") et gares</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <th scope="row" class="p-3 font-medium text-slate-900">Affaires Classées sans Suite (Opportunité)</th>
+                                <td class="p-3">1 392 dossiers</td>
+                                <td class="p-3 text-slate-500">Prioritisation pénale</td>
+                                <td class="p-3">Abandon relatif des poursuites de consommation pour cibler la grande criminalité</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <th scope="row" class="p-3 font-medium text-slate-900">Signalements "Police-on-web"</th>
+                                <td class="p-3">12 895 faits</td>
+                                <td class="p-3 text-red-600 font-semibold">x 12 (depuis 2015)</td>
+                                <td class="p-3">Digitalisation et explosion des plaintes citoyennes pour nuisances de rue</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <th scope="row" class="p-3 font-medium text-slate-900">Saisies de Cocaïne (Port d'Anvers)</th>
+                                <td class="p-3">111 Tonnes (2022)</td>
+                                <td class="p-3 text-red-600 font-semibold">Niveau historique</td>
+                                <td class="p-3">Inondation logistique des marchés régionaux et chute des prix au détail</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <th scope="row" class="p-3 font-medium text-slate-900">Résidus de Cocaïne (Eaux usées Sciensano)</th>
+                                <td class="p-3">Pic de concentration</td>
+                                <td class="p-3 text-red-600 font-semibold">+ 98 % en 2024</td>
+                                <td class="p-3">Confirmation scientifique de la surconsommation massive à l'échelle métropolitaine</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- TAB 3 : RÉSEAUX & VIOLENCES ARMÉES -->
+        <!-- ========================================== -->
+        <article id="view-reseaux" role="tabpanel" aria-labelledby="tab-reseaux" class="hidden space-y-6">
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h2 class="text-xl font-bold text-slate-900 mb-2">Cartographie des Réseaux, Franchisation &amp; Violences Armées</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Le marché criminel bruxellois a muté d'une logique locale vers un oligopole transnationale hyper-violent. L'analyse des données du parquet montre une stratégie de "franchisation" poussée par des groupes marseillais et néerlandais (Mocro Maffia), recourant à l'envoi de mineurs mercenaires ("soldats enfants") armés de Kalachnikovs pour contrôler les points de vente de rue.
+                </p>
+            </section>
+
+            <!-- Network Dynamics & Waterbed Effect Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Marseillaise vs Mocro Maffia Comparison -->
+                <section class="lg:col-span-2 bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                        <span aria-hidden="true">⚔️</span> Typologie des Réseaux Criminels à Bruxelles
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-50 border-l-4 border-slate-800 rounded-r-lg space-y-2">
+                            <span class="font-bold text-slate-900 text-sm block">La Nébuleuse "Mocro Maffia"</span>
+                            <p class="text-xs text-slate-600">
+                                Ancrée dans les hubs logistiques néerlandais et anversois, elle utilise Bruxelles comme base arrière stratégique pour le blanchiment immobilier, la gestion financière et la redistribution européenne.
+                            </p>
+                            <div class="text-[11px] text-slate-500 font-medium">
+                                • Armement lourd &amp; logistique de haut niveau<br>
+                                • Blanchiment dans les sociétés écrans et l'Horeca
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 border-l-4 border-red-600 rounded-r-lg space-y-2">
+                            <span class="font-bold text-red-900 text-sm block">La Filière Marseillaise &amp; "Franchisation"</span>
+                            <p class="text-xs text-slate-600">
+                                Importation d'un modèle de guerre d'usure pour l'appropriation des points de vente ("fours"). Recrutement via Snapchat/Telegram de "jobbeurs" très jeunes (14-18 ans, voire ciblage dès 9 ans).
+                            </p>
+                            <div class="text-[11px] text-slate-500 font-medium">
+                                • Tirs d'intimidation sur façades et règlements de comptes<br>
+                                • Mercenaires itinérants repartant immédiatement
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Summer 2025 Shootings Sample Matrix -->
+                    <div class="mt-4 pt-4 border-t border-slate-200">
+                        <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2">Échantillon Révélateur d'Incidents Balistiques (Été 2025)</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                            <div class="p-2.5 bg-red-50 border border-red-100 rounded text-slate-800">
+                                <strong>Ixelles (Place Stéphanie - 5 juil) :</strong> Altercation privée dégénérant en tentative de meurtre (1 blessé grave).
+                            </div>
+                            <div class="p-2.5 bg-red-50 border border-red-100 rounded text-slate-800">
+                                <strong>Evere (26 juil) :</strong> Règlement de comptes suspecté (1 décès par balle).
+                            </div>
+                            <div class="p-2.5 bg-red-50 border border-red-100 rounded text-slate-800">
+                                <strong>Anderlecht (Peterbos - 22/30 juil, 7 août) :</strong> Guerre de territoire pour "fours" (1 décès, multiples blessés).
+                            </div>
+                            <div class="p-2.5 bg-red-50 border border-red-100 rounded text-slate-800">
+                                <strong>Molenbeek (17/31 juil, 5-10 août) :</strong> Tirs de sommation et d'intimidation sur façades d'immeubles.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Waterbed Effect Donut Chart & Explanation -->
+                <figure class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Effet "Matelas d'Eau" (Fusillades)</h3>
+                        <figcaption class="text-xs text-slate-500 mb-3">Répartition des 160 fusillades enregistrées entre fin 2024 et fin 2026.</figcaption>
+                        <div class="chart-container" style="height: 220px;">
+                            <canvas id="waterbedChart" aria-label="Graphique circulaire illustrant l'effet matelas d'eau hors hotspots" role="img"></canvas>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg text-xs text-red-900">
+                        <strong>⚠️ Limite du Cantonnage Spatial :</strong> 63 % des incidents par armes à feu se déroulent <em>à l'extérieur</em> des 19 hotspots officiels. La pression policière déplace la violence vers les rues résidentielles adjacentes.
+                    </div>
+                </figure>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- TAB 4 : ÉCONOMIE SOUTERRAINE & HAWALA -->
+        <!-- ========================================== -->
+        <article id="view-economie" role="tabpanel" aria-labelledby="tab-economie" class="hidden space-y-6">
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h2 class="text-xl font-bold text-slate-900 mb-2">Parasitisme Économique, Blanchiment PME &amp; Système Hawala</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Le blanchiment des profits tirés du trafic de drogue menace l'économie légale bruxelloise. La Cellule de traitement des informations financières (CTIF) a transmis pour 2,4 milliards d'euros de dossiers suspectés à la justice en 2023. Les organisations utilisent une double stratégie : le rachat de commerce de détail (Horeca, nuit, Galerie Agora) et l'exfiltration bancaire occulte vers Dubaï via la finance clandestine "Hawala".
+                </p>
+            </section>
+
+            <!-- CTIF Stats Cards Grid -->
+            <section aria-label="Chiffres du Blanchiment" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-xl border border-slate-200 text-center">
+                    <span class="text-xs font-semibold text-slate-500 uppercase">Déclarations de Soupçon (CTIF)</span>
+                    <div class="text-2xl font-black text-slate-900 mt-1">79 211</div>
+                    <span class="text-[11px] text-slate-500">50,7% Banques / 31,7% Établissements de paiement</span>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 text-center">
+                    <span class="text-xs font-semibold text-slate-500 uppercase">Galerie Agora (Saisie 2026)</span>
+                    <div class="text-2xl font-black text-amber-600 mt-1">8,0 M€ Cash</div>
+                    <span class="text-[11px] text-slate-500">14 commerces mis sous scellés judiciaires</span>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 text-center">
+                    <span class="text-xs font-semibold text-slate-500 uppercase">Horeca Bruxelles-Ouest</span>
+                    <div class="text-2xl font-black text-red-600 mt-1">7 Fermetures</div>
+                    <span class="text-[11px] text-slate-500">Établissements servant de façades logistiques</span>
+                </div>
+            </section>
+
+            <!-- Hawala Interactive Circuit Workflow -->
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-slate-900 text-base">Modélisation du Circuit Financier Clandestin "Hawala" (Bruxelles - Dubaï)</h3>
+                    <span class="text-xs bg-slate-900 text-white px-2.5 py-1 rounded-full">Système d'Anonymat Sans Flux SWIFT</span>
+                </div>
+                <p class="text-xs text-slate-600">
+                    Cliquez sur les étapes pour comprendre comment les dizaines de millions d'euros générés dans les rues bruxelloises échappent totalement au système bancaire traditionnel.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative pt-2" role="list">
+                    <!-- Step 1 -->
+                    <button type="button" onclick="highlightHawalaStep(1)" id="hawala-step-1" class="step-card text-left bg-slate-50 p-4 rounded-xl border-2 border-orange-500 cursor-pointer transition hover:bg-orange-50 relative focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        <span class="text-xs font-bold text-orange-600">Étape 1</span>
+                        <h4 class="font-bold text-slate-900 text-xs mt-1">Collecte d'Espèces à Bruxelles</h4>
+                        <p class="text-[11px] text-slate-600 mt-1">Le réseau criminel remet les liquidités du deal de rue à un "hawaladar" (banquier clandestin local).</p>
+                    </button>
+
+                    <!-- Step 2 -->
+                    <button type="button" onclick="highlightHawalaStep(2)" id="hawala-step-2" class="step-card text-left bg-slate-50 p-4 rounded-xl border-2 border-slate-200 cursor-pointer transition hover:bg-orange-50 relative focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        <span class="text-xs font-bold text-slate-400">Étape 2</span>
+                        <h4 class="font-bold text-slate-900 text-xs mt-1">Code Crypté de Confirmation</h4>
+                        <p class="text-[11px] text-slate-600 mt-1">Un code unique (numéro de billet ou message chiffré) est transmis directement au destinataire à Dubaï.</p>
+                    </button>
+
+                    <!-- Step 3 -->
+                    <button type="button" onclick="highlightHawalaStep(3)" id="hawala-step-3" class="step-card text-left bg-slate-50 p-4 rounded-xl border-2 border-slate-200 cursor-pointer transition hover:bg-orange-50 relative focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        <span class="text-xs font-bold text-slate-400">Étape 3</span>
+                        <h4 class="font-bold text-slate-900 text-xs mt-1">Compensation à Dubaï</h4>
+                        <p class="text-[11px] text-slate-600 mt-1">L'hawaladar correspondant à Dubaï verse le montant équivalent en devises locales sans mouvement bancaire international.</p>
+                    </button>
+
+                    <!-- Step 4 -->
+                    <button type="button" onclick="highlightHawalaStep(4)" id="hawala-step-4" class="text-left bg-slate-50 p-4 rounded-xl border-2 border-slate-200 cursor-pointer transition hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        <span class="text-xs font-bold text-slate-400">Étape 4</span>
+                        <h4 class="font-bold text-slate-900 text-xs mt-1">Acquisition Immobilier/Actifs</h4>
+                        <p class="text-[11px] text-slate-600 mt-1">Les fonds sont réinvestis dans l'immobilier de luxe à Dubaï (placé sur liste grise par le GAFI).</p>
+                    </button>
+                </div>
+
+                <!-- Hawala Detail Box -->
+                <div id="hawalaDetailBox" class="p-4 bg-orange-50 rounded-lg border border-orange-200 text-xs text-orange-950 mt-2" role="region" aria-live="polite">
+                    <strong>📌 Zoom Étape 1 :</strong> La remise de numéraire se fait souvent sous couvert d'activités commerciales à haute intensité de cash (salons de coiffure, night shops, location de véhicules de luxe). Le démantèlement en 2024 d'un réseau Hawala bruxellois a révélé le transit de plusieurs centaines de millions d'euros.
+                </div>
+            </section>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- TAB 5 : RIPOSTE INSTITUTIONNELLE & SANITAIRE -->
+        <!-- ========================================== -->
+        <article id="view-riposte" role="tabpanel" aria-labelledby="tab-riposte" class="hidden space-y-6">
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h2 class="text-xl font-bold text-slate-900 mb-2">Riposte Institutionnelle, Réformes &amp; Goulet d'Étranglement Sanitaire</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Face à la crise, les autorités déploient une doctrine à double détente : réarmement judiciaire et sécuritaire (fusion policière 2028, 19 hotspots, mégaprocès SKY ECC) couplé à une politique de réduction des risques (SCMR GATE et LINKup). Cependant, le dispositif bute sur un blocage structurel majeur : l'absence d'investissements dans la revalidation résidentielle post-cure.
+                </p>
+            </section>
+
+            <!-- Hotspots Explorer Section -->
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-base">Répertoire Interactif des 19 "Hotspots" Régionaux</h3>
+                        <p class="text-xs text-slate-500">Périmètres de sécurité prioritaire fixés par le CORES et safe.brussels (Mis à jour sept. 2026)</p>
+                    </div>
+                    <div>
+                        <label for="hotspotFilter" class="sr-only">Filtrer les hotspots</label>
+                        <input type="text" id="hotspotFilter" onkeyup="filterHotspots()" placeholder="Filtrer un hotspot (ex: Midi, Gray, Peterbos)..." 
+                            class="px-3 py-1.5 border border-slate-300 rounded-lg text-xs w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="hotspotsGrid">
+                    <!-- Hotspots Cards rendered by JS -->
+                </div>
+            </section>
+
+            <!-- Security vs Health Dual Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Police Reform & Judicial Block -->
+                <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                        <span aria-hidden="true">🛡️</span> Polices, Parquet &amp; Décryptage SKY ECC
+                    </h3>
+                    <div class="space-y-3 text-xs">
+                        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-slate-900 block">Fusion des 6 Zones de Police (1er Janvier 2028)</span>
+                            Création d'une Zone de Police Unique pour la RBC (7 782 agents théoriques, 9 divisions locales, budget transitoire de 65 M€).
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+                            <span class="font-bold text-slate-900 block">Bilan Quinquennal SKY ECC (Justitia OTAN)</span>
+                            616 595 heures de travail d'enquête PJF, 350 kg de cocaïne et 40,2 M€ d'actifs saisis. 178 décisions judiciaires totalisant <strong>3 684 années de prison</strong>.
+                        </div>
+                        <div class="p-3 bg-red-50 text-red-900 rounded-lg border border-red-200">
+                            <span class="font-bold block">Saturation de la Chaîne Pénale &amp; Prisons</span>
+                            Le Parquet de Bruxelles accuse un déficit de 20 magistrats. La mégaprison de Haren fait face à une surpopulation chronique et à la réintroduction interne de téléphones/drogues.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Health Bottleneck Chart & Analysis -->
+                <figure class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                            <span aria-hidden="true">🏥</span> Le Goulet d'Étranglement de la Revalidation
+                        </h3>
+                        <figcaption class="text-xs text-slate-500 mb-2">
+                            Mise en parallèle du volume annuel de consommations encadrées en salle (GATE / LINKup) face à l'offre de lits de post-cure.
+                        </figcaption>
+                        <div class="chart-container" style="height: 200px;">
+                            <canvas id="healthBottleneckChart" aria-label="Graphique en barres montrant le décalage entre consommations encadrées et lits de post-cure" role="img"></canvas>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-900">
+                        <strong>⚠️ Alerte Féda Bxl :</strong> La capacité d'accueil en revalidation résidentielle (C.A.T.S. Solbosch, etc.) reste dramatiquement bloquée à <strong>63 places</strong> pour toute la région. Faute de lits de post-cure, les usagers pris en charge dans les SCMR sont obligés de retourner à la rue.
+                    </div>
+                </figure>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-8 text-xs mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <div>
+                    <p class="font-bold text-slate-200 text-sm">
+                        Trafic de Stupéfiants en Région de Bruxelles-Capitale
+                    </p>
+                    <p class="text-slate-500">
+                        Analyse systémique, cartographie des hotspots et modélisation des circuits financiers.
+                    </p>
+                </div>
+                <!-- Author Attribution Signature Block -->
+                <div class="bg-slate-800/80 p-3 rounded-lg border border-slate-700 text-center md:text-right">
+                    <p class="text-slate-300 font-medium">Auteur &amp; Éditeur :</p>
+                    <a href="https://ouaisfieu.github.io/hotspots/narco/" class="text-orange-400 font-bold hover:underline text-sm block">
+                        Ouais Fieu
+                    </a>
+                    <span class="text-[10px] text-slate-500">Bruxelles Hotspots Narco • <time datetime="2026-09-24">Septembre 2026</time></span>
+                </div>
+            </div>
+            
+            <hr class="border-slate-800">
+
+            <div class="flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 gap-2">
+                <p>Sources : safe.brussels, Sciensano, Eurotox, CTIF, Parquet de Bruxelles, ASBL Transit &amp; Féda Bxl.</p>
+                <p><a href="https://ouaisfieu.github.io/hotspots/narco/" class="hover:text-slate-300 transition">ouaisfieu.github.io/hotspots/narco/</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic & Interactive Scripts -->
+    <script>
+        // Data Base: Hotspots Array
+        const hotspotsData = [
+            { name: "Gare du Midi / Porte de Hal", zone: "Saint-Gilles / Anderlecht", details: "Zone critique de transit. Arrêtés anti-alcool 24h/24, TFL active, présence policière renforcée." },
+            { name: "Gare du Nord", zone: "Schaerbeek / Saint-Josse", details: "Concentration de précarité et vente de rue. Contrôles d'identité préventifs." },
+            { name: "Cité Peterbos", zone: "Anderlecht", details: "Guerre de territoires pour 'fours'. Contrat de quartier durable de 15 M€ et campagne Dope Talks." },
+            { name: "Ribaucourt / LINKup", zone: "Molenbeek-Saint-Jean", details: "Hotspot historique. Implantation de la salle de consommation LINKup (15 places + 16-24 lits urgence)." },
+            { name: "Yser / Sainctelette", zone: "Bruxelles-Ville", details: "Axe de transit fortement impacté par la consommation de crack en voie publique." },
+            { name: "Place Clémenceau", zone: "Anderlecht", details: "Point de fixation commercial et nartotrafic. Fermetures administratives d'établissements Horeca." },
+            { name: "Matongé / Chaussée d'Ixelles", zone: "Ixelles", details: "Zone de blanchiment commercial (salons de coiffure, night-shops) et vente au détail." },
+            { name: "Quartier Aumale", zone: "Anderlecht", details: "Intégré fin 2024 suite à la dispersion des points de vente depuis Peterbos." },
+            { name: "Quartier Gray", zone: "Ixelles", details: "Intégré en septembre 2026. Zone résidentielle touchée par des fusillades de déplacement." },
+            { name: "Station Jacques Brel", zone: "Anderlecht", details: "Nuisances de rue et micro-deal. Surveillance vidéo mobile." },
+            { name: "Place de Bethléem", zone: "Saint-Gilles", details: "Tension communautaire et affrontements par balles répertoriés." },
+            { name: "Galerie Agora / Hypercentre", zone: "Bruxelles-Ville", details: "Opération majeure sept 2026 : 14 commerces scellés, 8M€ cash saisis." },
+            { name: "Bockstael", zone: "Laeken / Molenbeek", details: "Pôle d'échange des transports en commun avec présence de guetteurs." },
+            { name: "Lemonnier / GATE", zone: "Bruxelles-Ville", details: "Implantation de la 1ère SCMR belge (GATE). Plus de 33 500 actes de consommation encadrés." },
+            { name: "Quartier Maritime", zone: "Molenbeek-Saint-Jean", details: "Entrepôts et logistique de stockage intermédiaire." },
+            { name: "Verboeckhoven (Cage aux Ours)", zone: "Schaerbeek", details: "Arrêtés d'interdiction de vente d'alcool à emporter de 22h à 6h." },
+            { name: "Place Pavillon", zone: "Schaerbeek", details: "Patrouilles pédestres de prévention situationnelle et réaménagement urbain." },
+            { name: "Station Belgica", zone: "Jette / Molenbeek", details: "Point de fixation sous surveillance de la Task Force Locale." },
+            { name: "Mettewie", zone: "Molenbeek-Saint-Jean", details: "Tirs d'intimidation sur façades d'immeubles enregistrés à l'été 2025." }
+        ];
+
+        // Tab Switching Logic with Accessibility Updates
+        function switchTab(tabId) {
+            const views = ['dashboard', 'criminometrie', 'reseaux', 'economie', 'riposte'];
+            views.forEach(v => {
+                const el = document.getElementById(`view-${v}`);
+                const btn = document.getElementById(`tab-${v}`);
+                if (v === tabId) {
+                    el.classList.remove('hidden');
+                    btn.classList.add('active');
+                    btn.setAttribute('aria-selected', 'true');
+                } else {
+                    el.classList.add('hidden');
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Search & Global Filter Logic
+        document.getElementById('globalSearch').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            const alertBox = document.getElementById('searchAlert');
+            const queryDisplay = document.getElementById('searchQueryDisplay');
+
+            if (query.length > 1) {
+                alertBox.classList.remove('hidden');
+                queryDisplay.innerText = query;
+
+                // Auto-switch to hotspot tab if searching for location or show highlights
+                if (['peterbos', 'gray', 'midi', 'aumale', 'gate', 'ribaucourt', 'ixelles'].some(k => query.includes(k))) {
+                    switchTab('riposte');
+                    document.getElementById('hotspotFilter').value = query;
+                    filterHotspots();
+                }
+            } else {
+                alertBox.classList.add('hidden');
+            }
+        });
+
+        function resetSearch() {
+            document.getElementById('globalSearch').value = '';
+            document.getElementById('searchAlert').classList.add('hidden');
+            document.getElementById('hotspotFilter').value = '';
+            filterHotspots();
+            switchTab('dashboard');
+        }
+
+        // Render Hotspots Grid
+        function renderHotspots(items) {
+            const container = document.getElementById('hotspotsGrid');
+            container.innerHTML = '';
+            items.forEach(h => {
+                const card = document.createElement('div');
+                card.className = "p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs space-y-1 hover:border-orange-400 transition";
+                card.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <strong class="text-slate-900 text-sm font-bold">${h.name}</strong>
+                        <span class="bg-orange-100 text-orange-800 text-[10px] font-semibold px-2 py-0.5 rounded-full">${h.zone}</span>
+                    </div>
+                    <p class="text-slate-600">${h.details}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterHotspots() {
+            const val = document.getElementById('hotspotFilter').value.toLowerCase();
+            const filtered = hotspotsData.filter(h => h.name.toLowerCase().includes(val) || h.zone.toLowerCase().includes(val) || h.details.toLowerCase().includes(val));
+            renderHotspots(filtered);
+        }
+
+        // Hawala Interactive Helper
+        function highlightHawalaStep(stepNum) {
+            for (let i = 1; i <= 4; i++) {
+                const card = document.getElementById(`hawala-step-${i}`);
+                if (i === stepNum) {
+                    card.classList.add('border-orange-500', 'bg-orange-50');
+                    card.classList.remove('border-slate-200', 'bg-slate-50');
+                } else {
+                    card.classList.remove('border-orange-500', 'bg-orange-50');
+                    card.classList.add('border-slate-200', 'bg-slate-50');
+                }
+            }
+
+            const details = [
+                "📌 Zoom Étape 1 : La remise de numéraire se fait souvent sous couvert d'activités commerciales à haute intensité de cash (salons de coiffure, night shops, location de véhicules de luxe). Le démantèlement en 2024 d'un réseau Hawala bruxellois a révélé le transit de plusieurs centaines de millions d'euros.",
+                "🔑 Zoom Étape 2 : L'échange repose sur un code de confiance chiffré (ex: numéro de série d'un billet de 5€) transmis via des messageries cryptées. Aucun virement bancaire SWIFT n'est initié.",
+                "💵 Zoom Étape 3 : L'hawaladar partenaire à Dubaï remet le montant en Dirhams ou en Dollars prélevé sur sa réserve locale, percevant une commission occulte au passage.",
+                "🏙️ Zoom Étape 4 : Les capitaux blanchis sont injectés dans le marché immobilier haut de gamme à Dubaï. La Belgique a conclu un accord bilatéral pour faciliter les extraditions et saisies d'actifs aux Émirats."
+            ];
+
+            document.getElementById('hawalaDetailBox').innerHTML = details[stepNum - 1];
+        }
+
+        // Initialize Charts on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderHotspots(hotspotsData);
+
+            // Chart 1: Crack & Harm Reduction
+            const ctx1 = document.getElementById('crackEpidemicChart').getContext('2d');
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['2017', '2022', '2023', '2024'],
+                    datasets: [
+                        {
+                            label: 'Pipes distribuées (ASBL Transit)',
+                            data: [2900, 52000, 63300, 77238],
+                            backgroundColor: 'rgba(194, 65, 12, 0.75)',
+                            borderColor: 'rgb(194, 65, 12)',
+                            borderWidth: 1,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: 'Part des usagers crack (%)',
+                            data: [45, 67, 72, 74],
+                            type: 'line',
+                            borderColor: 'rgb(30, 41, 59)',
+                            backgroundColor: 'rgb(30, 41, 59)',
+                            borderWidth: 2,
+                            pointRadius: 4,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            position: 'left',
+                            title: { display: true, text: 'Pipes distribuées', font: { size: 10 } }
+                        },
+                        y1: {
+                            type: 'linear',
+                            position: 'right',
+                            min: 0,
+                            max: 100,
+                            title: { display: true, text: '% Usagers Crack', font: { size: 10 } },
+                            grid: { drawOnChartArea: false }
+                        }
+                    },
+                    plugins: {
+                        legend: { labels: { font: { size: 11 } } }
+                    }
+                }
+            });
+
+            // Chart 2: Police vs Wastewater
+            const ctx2 = document.getElementById('policeWastewaterChart').getContext('2d');
+            new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: ['2015', '2022', '2023', '2024'],
+                    datasets: [
+                        {
+                            label: 'Indice Résidus Cocaïne (Sciensano)',
+                            data: [100, 180, 140, 277],
+                            borderColor: 'rgb(220, 38, 38)',
+                            backgroundColor: 'rgba(220, 38, 38, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        },
+                        {
+                            label: 'Infractions Trafic & Fraude (PGSP)',
+                            data: [100, 132, 141, 151],
+                            borderColor: 'rgb(30, 58, 138)',
+                            borderWidth: 2,
+                            borderDash: [5, 5]
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': Base 100 (' + context.raw + ')';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Chart 3: Waterbed Effect Donut
+            const ctx3 = document.getElementById('waterbedChart').getContext('2d');
+            new Chart(ctx3, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Hors Hotspots (Matelas d\'eau)', 'À l\'intérieur des 19 Hotspots'],
+                    datasets: [{
+                        data: [63, 37],
+                        backgroundColor: ['#dc2626', '#1e293b'],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { font: { size: 10 } } }
+                    }
+                }
+            });
+
+            // Chart 4: Health Bottleneck
+            const ctx4 = document.getElementById('healthBottleneckChart').getContext('2d');
+            new Chart(ctx4, {
+                type: 'bar',
+                data: {
+                    labels: ['Actes en Salle de Consommation (GATE)', 'Capacité Post-Cure Résidentielle (Féda Bxl)'],
+                    datasets: [{
+                        label: 'Volumes / Capacité',
+                        data: [33559, 63],
+                        backgroundColor: ['#0d9488', '#d97706'],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { type: 'logarithmic', title: { display: true, text: 'Échelle Logarithmique' } }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
