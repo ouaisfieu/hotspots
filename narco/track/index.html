@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="fr-BE" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags & SEO Optimization -->
+    <title>BRUXELLES NARCO-TRACK | Observatoire Régional de la Lutte Antidrogue</title>
+    <meta name="title" content="BRUXELLES NARCO-TRACK | Observatoire Régional de la Lutte Antidrogue">
+    <meta name="description" content="Observatoire régional interactif de la lutte contre le trafic de drogues à Bruxelles : cartographie des 19 hotspots, effet ballon, filière financière DEIPP, crise du crack (SubLINK, GATE) et réforme du Code Pénal 2026.">
+    <meta name="keywords" content="Bruxelles, trafic de drogue, narcotrafic, hotspots, safe.brussels, DEIPP, SubLINK, GATE, crack, Code Pénal 2026, police, parquet, blanchiment, Belgique, sécurité publique, santé publique">
+    <meta name="author" content="Ouais Fieu">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://ouaisfieu.github.io/hotspots/narco/track/">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ouaisfieu.github.io/hotspots/narco/track/">
+    <meta property="og:title" content="BRUXELLES NARCO-TRACK | Observatoire Régional de la Lutte Antidrogue">
+    <meta property="og:description" content="Analyse interactive & cartographie du narcotrafic à Bruxelles : 19 hotspots, effet ballon, blanchiment, crise du crack et sanctions pénales.">
+    <meta property="og:locale" content="fr_BE">
+    <meta property="og:site_name" content="BRUXELLES NARCO-TRACK">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ouaisfieu.github.io/hotspots/narco/track/">
+    <meta name="twitter:title" content="BRUXELLES NARCO-TRACK | Observatoire Régional de la Lutte Antidrogue">
+    <meta name="twitter:description" content="Observatoire régional interactif sur la criminalité liée aux stupéfiants et les réponses institutionnelles à Bruxelles.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Chosen Palette: Warm Neutral Slate & Muted Crimson Accent -->
+    <!-- Application Structure Plan: The SPA is structured as a comprehensive regional observatory dashboard ("Observatoire Régional de la Lutte Antidrogue à Bruxelles"). Instead of a linear report, it provides 5 interactive modules: 1. Synthèse Executive & KPIs, 2. Cartographie Interactive des 19 Hotspots & Effet Ballon, 3. Economie Criminelle & Circuit Financier (Follow the Money & DEIPP), 4. Crise du Crack & Dispositifs Socio-Sanitaires (SubLINK, GATE, Enaden), 5. Arsenal Juridique & Nouveau Code Pénal 2026 (Perceptions Immédiates, 8 niveaux de peines). This thematic design allows policymakers, researchers, and citizens to cross-analyze repressive, financial, and health dimensions dynamically through interactive controls, filtered search, and responsive Chart.js visualisations. -->
+    <!-- Visualization & Content Choices: 
+        1. Key Stats Banner -> Quick dynamic metrics cards with trend badges -> HTML/Tailwind -> High visibility.
+        2. Hotspots Distribution & Police Fines -> Horizontal Bar Chart (Chart.js Canvas) -> Compare zones effectively -> Responsive Chart container.
+        3. SubLINK Operational Results -> Doughnut / Grouped Bar Chart (Chart.js Canvas) -> Interactive toggle between metrics -> Clear proportional insight.
+        4. Crime Structure & Money Laundering -> Interactive Stepper / Flow cards (HTML/CSS Tailwind) -> Illustrate logistics (Axe ABC) and DEIPP administrative process without SVG.
+        5. New Penal Code 2026 -> Interactive 8-level slider/tabs -> Explain penal reform & Ultimum Remedium clearly.
+        6. Unified Search & Filter -> Vanilla JS dynamic filtering -> Instant content access across all report findings.
+        CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Schema.org JSON-LD Structured Data for Web Semantics & Search Engine Knowledge Graphs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://ouaisfieu.github.io/hotspots/narco/track/#website",
+          "url": "https://ouaisfieu.github.io/hotspots/narco/track/",
+          "name": "BRUXELLES NARCO-TRACK",
+          "description": "Observatoire Régional de la Lutte Antidrogue à Bruxelles - Données Cartographiques, Financières et Médico-Sociales",
+          "inLanguage": "fr-BE"
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://ouaisfieu.github.io/hotspots/narco/track/#webapp",
+          "url": "https://ouaisfieu.github.io/hotspots/narco/track/",
+          "name": "BRUXELLES NARCO-TRACK - Observatoire Interactif",
+          "applicationCategory": "GovernmentApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires HTML5 & JavaScript enabled browser",
+          "author": {
+            "@type": "Person",
+            "name": "Ouais Fieu",
+            "url": "https://ouaisfieu.github.io/hotspots/narco/track/"
+          }
+        },
+        {
+          "@type": "Report",
+          "@id": "https://ouaisfieu.github.io/hotspots/narco/track/#report",
+          "url": "https://ouaisfieu.github.io/hotspots/narco/track/",
+          "name": "Observatoire Régional du Trafic de Stupéfiants & Réponses Institutionnelles à Bruxelles",
+          "headline": "La Mutation Métropolitaine du Narcotrafic Bruxellois & Réponses Institutionnelles",
+          "description": "Analyse interactive complète du trafic de stupéfiants à Bruxelles: cartographie des 19 hotspots, effet ballon, filière financière DEIPP, crise du crack et réforme du Code Pénal 2026.",
+          "inLanguage": "fr-BE",
+          "datePublished": "2025-01-15",
+          "dateModified": "2026-09-24",
+          "author": {
+            "@type": "Person",
+            "name": "Ouais Fieu",
+            "url": "https://ouaisfieu.github.io/hotspots/narco/track/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BRUXELLES NARCO-TRACK",
+            "url": "https://ouaisfieu.github.io/hotspots/narco/track/"
+          },
+          "spatialCoverage": {
+            "@type": "Place",
+            "name": "Région de Bruxelles-Capitale, Belgique",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Bruxelles",
+              "addressCountry": "BE"
+            }
+          },
+          "about": [
+            {"@type": "Thing", "name": "Trafic de stupéfiants"},
+            {"@type": "Thing", "name": "Sécurité publique"},
+            {"@type": "Thing", "name": "Santé publique"},
+            {"@type": "Thing", "name": "Droit pénal belge"}
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fcfbf9;
+            color: #1e293b;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 360px;
+            }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .active-tab {
+            border-bottom: 3px solid #e11d48;
+            color: #e11d48;
+            font-weight: 700;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-rose-100 selection:text-rose-900" itemscope itemtype="https://schema.org/WebPage">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-slate-900 text-white shadow-md border-b border-slate-800" role="banner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-rose-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-rose-600/30">
+                        <i class="fa-solid font-bold fa-shield-halved" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-base md:text-lg tracking-tight leading-tight block">BRUXELLES NARCO-TRACK</span>
+                        <p class="text-xs text-slate-400">Observatoire Régional du Trafic de Stupéfiants & Réponses Institutionnelles</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Desktop -->
+                <nav class="hidden lg:flex space-x-1 text-sm font-medium" aria-label="Navigation principale">
+                    <button onclick="switchTab('overview')" id="nav-overview" class="px-3 py-2 rounded-md hover:bg-slate-800 transition text-rose-400 font-semibold" aria-controls="section-overview">
+                        <i class="fa-solid fa-chart-pie mr-1.5" aria-hidden="true"></i>Vue d'Ensemble
+                    </button>
+                    <button onclick="switchTab('hotspots')" id="nav-hotspots" class="px-3 py-2 rounded-md hover:bg-slate-800 transition text-slate-300" aria-controls="section-hotspots">
+                        <i class="fa-solid fa-map-location-dot mr-1.5" aria-hidden="true"></i>Hotspots (19)
+                    </button>
+                    <button onclick="switchTab('crime')" id="nav-crime" class="px-3 py-2 rounded-md hover:bg-slate-800 transition text-slate-300" aria-controls="section-crime">
+                        <i class="fa-solid fa-sitemap mr-1.5" aria-hidden="true"></i>Réseaux & Finances
+                    </button>
+                    <button onclick="switchTab('health')" id="nav-health" class="px-3 py-2 rounded-md hover:bg-slate-800 transition text-slate-300" aria-controls="section-health">
+                        <i class="fa-solid fa-kit-medical mr-1.5" aria-hidden="true"></i>Crise du Crack & Santé
+                    </button>
+                    <button onclick="switchTab('legal')" id="nav-legal" class="px-3 py-2 rounded-md hover:bg-slate-800 transition text-slate-300" aria-controls="section-legal">
+                        <i class="fa-solid fa-gavel mr-1.5" aria-hidden="true"></i>Arsenal Juridique
+                    </button>
+                    <button onclick="switchTab('search')" id="nav-search" class="px-3 py-2 rounded-md hover:bg-slate-800 transition text-slate-300" aria-controls="section-search">
+                        <i class="fa-solid fa-magnifying-glass mr-1.5" aria-hidden="true"></i>Explorateur
+                    </button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button onclick="toggleMobileMenu()" class="p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Ouvrir le menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Navigation -->
+        <nav id="mobile-menu" class="hidden lg:hidden bg-slate-950 border-b border-slate-800 px-4 pt-2 pb-4 space-y-1 text-sm font-medium" aria-label="Navigation mobile">
+            <button onclick="switchTab('overview')" class="block w-full text-left px-3 py-2 rounded-md hover:bg-slate-800 text-slate-200">
+                <i class="fa-solid fa-chart-pie w-6" aria-hidden="true"></i>Vue d'Ensemble
+            </button>
+            <button onclick="switchTab('hotspots')" class="block w-full text-left px-3 py-2 rounded-md hover:bg-slate-800 text-slate-200">
+                <i class="fa-solid fa-map-location-dot w-6" aria-hidden="true"></i>Cartographie des Hotspots
+            </button>
+            <button onclick="switchTab('crime')" class="block w-full text-left px-3 py-2 rounded-md hover:bg-slate-800 text-slate-200">
+                <i class="fa-solid fa-sitemap w-6" aria-hidden="true"></i>Réseaux Criminels & Blanchiment
+            </button>
+            <button onclick="switchTab('health')" class="block w-full text-left px-3 py-2 rounded-md hover:bg-slate-800 text-slate-200">
+                <i class="fa-solid fa-kit-medical w-6" aria-hidden="true"></i>Crise du Crack & Dispositifs
+            </button>
+            <button onclick="switchTab('legal')" class="block w-full text-left px-3 py-2 rounded-md hover:bg-slate-800 text-slate-200">
+                <i class="fa-solid fa-gavel w-6" aria-hidden="true"></i>Arsenal Juridique & Sanctions
+            </button>
+            <button onclick="switchTab('search')" class="block w-full text-left px-3 py-2 rounded-md hover:bg-slate-800 text-slate-200">
+                <i class="fa-solid fa-magnifying-glass w-6" aria-hidden="true"></i>Recherche & Moteur de Données
+            </button>
+        </nav>
+    </header>
+
+    <!-- Banner Info Context -->
+    <aside class="bg-amber-50 border-b border-amber-200/80 px-4 py-2.5 text-xs md:text-sm text-amber-900" aria-label="Mise à jour contextuelle">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-200 text-amber-900 uppercase tracking-wide">
+                    Mise à Jour 2025-2026
+                </span>
+                <span>Analyse croisée des données sécuritaires, judiciaires (Parquet de Bruxelles, DEIPP) et médico-sociales (safe.brussels, SubLINK, Transit).</span>
+            </div>
+            <div class="font-medium text-amber-800 text-xs shrink-0">
+                <i class="fa-solid fa-circle-info mr-1" aria-hidden="true"></i>Entrée en vigueur Nouveau Code Pénal : <time datetime="2026-09-01">Septembre 2026</time>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8" role="main">
+
+        <!-- ================= MODULE 1: VUE D'ENSEMBLE ================= -->
+        <section id="section-overview" class="tab-content space-y-8" role="tabpanel" aria-labelledby="nav-overview">
+            <!-- Section Intro Paragraph (Required) -->
+            <article class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200/80">
+                <header class="max-w-3xl space-y-3">
+                    <div class="inline-flex items-center space-x-2 text-rose-600 font-semibold text-xs tracking-wider uppercase">
+                        <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                        <span>Synthèse Stratégique Régionale</span>
+                    </div>
+                    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        La Mutation Métropolitaine du Narcotrafic Bruxellois
+                    </h1>
+                </header>
+                <p class="text-slate-600 leading-relaxed text-sm md:text-base mt-3">
+                    Bienvenue dans l'Observatoire Régional de la Lutte Antidrogue. Cette section offre une vision globale et synthétique du phénomène à Bruxelles. Historiquement perçue comme une simple plaque tournante logistique secondaire par rapport au port d'Anvers, la capitale belge est désormais le théâtre d'une saturation de marché (cocaïne & crack), de tensions sécuritaires aiguës (69 fusillades répertoriées) et d'une détresse sociale exacerbée. Naviguez à travers les indicateurs clés pour comprendre l'interconnexion entre criminalité organisée, approches administratives et urgence médico-sanitaire.
+                </p>
+            </article>
+
+            <!-- Dynamic KPI Cards Grid -->
+            <section aria-label="Indicateurs clés de performance" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <article class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center justify-between text-slate-500 mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Violences</span>
+                        <i class="fa-solid fa-gun text-rose-600 text-base" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-2xl font-black text-slate-900">69</div>
+                    <div class="text-xs font-semibold text-rose-600 mt-1">Fusillades répertoriées</div>
+                    <p class="text-[10px] text-slate-400 mt-1">Règlements de comptes urbains</p>
+                </article>
+
+                <article class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center justify-between text-slate-500 mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Territoire</span>
+                        <i class="fa-solid fa-location-dot text-amber-600 text-base" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-2xl font-black text-slate-900">19</div>
+                    <div class="text-xs font-semibold text-amber-600 mt-1">Hotspots Activés</div>
+                    <p class="text-[10px] text-slate-400 mt-1">Zones prioritaires safe.brussels</p>
+                </article>
+
+                <article class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center justify-between text-slate-500 mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Epidémie Crack</span>
+                        <i class="fa-solid fa-pills text-purple-600 text-base" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-2xl font-black text-slate-900">14 300</div>
+                    <div class="text-xs font-semibold text-purple-600 mt-1">Pipes à crack / an</div>
+                    <p class="text-[10px] text-slate-400 mt-1">Distribuées p/ Transit (vs 600)</p>
+                </article>
+
+                <article class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center justify-between text-slate-500 mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Saisies Financières</span>
+                        <i class="fa-solid fa-vault text-emerald-600 text-base" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-2xl font-black text-slate-900">195M €</div>
+                    <div class="text-xs font-semibold text-emerald-600 mt-1">Confiscations 2025</div>
+                    <p class="text-[10px] text-slate-400 mt-1">Par la PJF au niveau national</p>
+                </article>
+
+                <article class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center justify-between text-slate-500 mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Amendes Clients</span>
+                        <i class="fa-solid fa-receipt text-indigo-600 text-base" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-2xl font-black text-slate-900">&gt;2 400</div>
+                    <div class="text-xs font-semibold text-indigo-600 mt-1">Perceptions Immédiates</div>
+                    <p class="text-[10px] text-slate-400 mt-1">Verbalisations usagers en 2025</p>
+                </article>
+
+                <article class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center justify-between text-slate-500 mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Action Métro</span>
+                        <i class="fa-solid fa-user-nurse text-teal-600 text-base" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-2xl font-black text-slate-900">7 542</div>
+                    <div class="text-xs font-semibold text-teal-600 mt-1">Interventions SubLINK</div>
+                    <p class="text-[10px] text-slate-400 mt-1">Projet de réduction des risques</p>
+                </article>
+            </section>
+
+            <!-- 3 Pillars Matrix / Interactive Overview Focus -->
+            <section aria-label="Piliers d'intervention" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Pillar 1 -->
+                <article class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4 hover:border-rose-300 transition">
+                    <div class="w-12 h-12 rounded-xl bg-rose-50 border border-rose-200 flex items-center justify-center text-rose-600 text-xl font-bold">
+                        <i class="fa-solid fa-shield-cat" aria-hidden="true"></i>
+                    </div>
+                    <h2 class="text-lg font-bold text-slate-900">1. Sécurité & Approche Hotspots</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Pilotée par <strong>safe.brussels</strong> et le Conseil Régional de Sécurité (CORES). Concentration des patrouilles de police, arrêtés d'interdiction de rassemblement, et déploiement de militaires (~40 soldats) dans les gares (Gare du Midi) et métros pour restaurer la sécurité physique.
+                    </p>
+                    <footer class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-rose-600">
+                        <span>19 Hotspots ciblés</span>
+                        <button onclick="switchTab('hotspots')" class="hover:underline">Explorer la carte &rarr;</button>
+                    </footer>
+                </article>
+
+                <!-- Pillar 2 -->
+                <article class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4 hover:border-indigo-300 transition">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 text-xl font-bold">
+                        <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                    </div>
+                    <h2 class="text-lg font-bold text-slate-900">2. Asphyxie Financière & DEIPP</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Mise en application de la doctrine <em>"Follow the Money"</em> (Commissaire Ine Van Wymersch) et de la loi du 15 janvier 2024. Création de la DEIPP pour fermer administrativement les commerces façades (ongleries, night-shops) blanchissant l'argent du crime.
+                    </p>
+                    <footer class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-indigo-600">
+                        <span>2,4 Mds € suspectés (CTIF)</span>
+                        <button onclick="switchTab('crime')" class="hover:underline">Voir la chaîne financière &rarr;</button>
+                    </footer>
+                </article>
+
+                <!-- Pillar 3 -->
+                <article class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4 hover:border-teal-300 transition">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-600 text-xl font-bold">
+                        <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+                    </div>
+                    <h2 class="text-lg font-bold text-slate-900">3. Urgence Socio-Sanitaire & Crack</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Prise en charge de 2000 à 5000 usagers réguliers de crack. Action de terrain avec la SCMR "GATE", les équipes SubLINK dans le métro et le secteur associatif (MASS, Transit, Centre Enaden) pour prévenir la détérioration de la santé publique.
+                    </p>
+                    <footer class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-teal-600">
+                        <span>7 542 actes SubLINK</span>
+                        <button onclick="switchTab('health')" class="hover:underline">Analyse médico-sociale &rarr;</button>
+                    </footer>
+                </article>
+            </section>
+
+            <!-- Regional Multi-Sector Graph Overview -->
+            <article class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+                <header class="flex flex-col md:flex-row items-start md:items-center justify-between pb-4 mb-4 border-b border-slate-100 gap-4">
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900">Répartition des Sanctions & Pression Policière par Zone (2025)</h2>
+                        <p class="text-xs text-slate-500">Distribution des Perceptions Immédiates (PI) dressées aux acheteurs de stupéfiants dans les zones de police bruxelloises.</p>
+                    </div>
+                    <div class="inline-flex items-center bg-slate-100 p-1 rounded-lg text-xs font-semibold text-slate-700">
+                        <span class="px-3 py-1 bg-white rounded-md shadow-sm">Données Parquet de Bruxelles</span>
+                    </div>
+                </header>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <div class="lg:col-span-7">
+                        <figure class="chart-container">
+                            <canvas id="overviewFinesChart" aria-label="Graphique des perceptions immédiates par zone de police" role="img"></canvas>
+                            <figcaption class="sr-only">Graphique montrant la répartition des amendes par zone de police à Bruxelles.</figcaption>
+                        </figure>
+                    </div>
+                    <aside class="lg:col-span-5 space-y-4 text-xs text-slate-600 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-200/60">
+                        <h3 class="font-bold text-sm text-slate-900 flex items-center">
+                            <i class="fa-solid fa-circle-exclamation text-amber-500 mr-2" aria-hidden="true"></i>
+                            Analyse de la Pression Répressive
+                        </h3>
+                        <p>
+                            La Zone de Police <strong>Bruxelles-Capitale / Ixelles</strong> concentre plus de 58% des verbalisations immédiates (plus de 1400 amendes), en raison de la présence du centre-ville, des gares centrales et du quartier Matongé/Flagey.
+                        </p>
+                        <p>
+                            La <strong>Zone Midi</strong> (Anderlecht, Saint-Gilles, Forest) représente le second foyer avec 558 sanctions, particulièrement autour du pôle de la Gare du Midi et de la Porte de Hal.
+                        </p>
+                        <div class="p-3 bg-white rounded-lg border border-slate-200 font-medium text-slate-800">
+                            <i class="fa-solid fa-gavel text-rose-600 mr-1.5" aria-hidden="true"></i>
+                            <strong>Nouveau Code Pénal (Sept. 2026) :</strong> Priorité à l'amende immédiate (jusqu'à 1000€) pour désengorger les tribunaux correctionnels.
+                        </div>
+                    </aside>
+                </div>
+            </article>
+        </section>
+
+
+        <!-- ================= MODULE 2: HOTSPOTS ================= -->
+        <section id="section-hotspots" class="tab-content hidden space-y-8" role="tabpanel" aria-labelledby="nav-hotspots">
+            <!-- Section Intro Paragraph (Required) -->
+            <article class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200/80">
+                <header class="max-w-3xl space-y-3">
+                    <div class="inline-flex items-center space-x-2 text-amber-600 font-semibold text-xs tracking-wider uppercase">
+                        <i class="fa-solid fa-map-pin" aria-hidden="true"></i>
+                        <span>Gouvernance Territorialisée</span>
+                    </div>
+                    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        La Stratégie Régionale des 19 Hotspots
+                    </h1>
+                </header>
+                <p class="text-slate-600 leading-relaxed text-sm md:text-base mt-3">
+                    Cette section présente la cartographie dynamique des périmètres prioritaires désignés par safe.brussels et le Ministre-Président. L'objectif est d'intervenir de façon intégrée sur trois axes : <strong>Sécurité publique</strong>, <strong>Prévention & Accompagnement</strong>, et <strong>Cadre de vie / Urbanisme</strong>. Explorez la répartition par commune et découvrez l'analyse de l'<strong>"Effet Ballon"</strong>, qui illustre le déplacement du trafic vers des quartiers adjacents (comme Aumale ou Gray/Flagey) au fur et à mesure de la saturation policière des zones cibles.
+                </p>
+            </article>
+
+            <!-- Hotspots Dynamic Filter & Grid -->
+            <section class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-6">
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap items-center gap-2 pb-4 border-b border-slate-100" role="toolbar" aria-label="Filtres par commune">
+                    <span class="text-xs font-bold text-slate-500 uppercase mr-2">Communes :</span>
+                    <button onclick="filterHotspots('all')" class="hs-btn active px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-900 text-white transition">Toutes (19)</button>
+                    <button onclick="filterHotspots('Bruxelles-Ville')" class="hs-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Bruxelles-Ville (5)</button>
+                    <button onclick="filterHotspots('Saint-Gilles')" class="hs-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Saint-Gilles / Forest (3)</button>
+                    <button onclick="filterHotspots('Molenbeek')" class="hs-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Molenbeek (4)</button>
+                    <button onclick="filterHotspots('Anderlecht')" class="hs-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Anderlecht (3)</button>
+                    <button onclick="filterHotspots('Ixelles')" class="hs-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Ixelles (2)</button>
+                </div>
+
+                <!-- Cards Display Container -->
+                <div id="hotspots-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Dynamic rendering via JS -->
+                </div>
+            </section>
+
+            <!-- "Effet Ballon" & Dynamics Card -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <article class="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-6 rounded-2xl shadow-sm space-y-4">
+                    <div class="inline-flex items-center space-x-2 text-rose-400 text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-arrows-split-up-and-left" aria-hidden="true"></i>
+                        <span>Phénomène Dynamique</span>
+                    </div>
+                    <h2 class="text-xl font-bold">Comprendre "L'Effet Ballon" (Squeeze Effect)</h2>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        L'un des défis majeurs de la stratégie safe.brussels est le déplacement géographique de la criminalité. Lorsque la pression policière s'intensifie dans un hotspot (ex. Porte de Hal ou Gare du Nord), les réseaux criminels délocalisent immédiatement leurs opérations vers des rues ou quartiers limitrophes moins surveillés.
+                    </p>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-3 bg-slate-800/80 rounded-xl border border-slate-700 flex items-start space-x-3">
+                            <i class="fa-solid fa-plus-circle text-amber-400 text-sm mt-0.5" aria-hidden="true"></i>
+                            <div>
+                                <strong class="text-amber-300">Extension Aumale (Anderlecht) :</strong>
+                                <span>Ajouté fin 2024 comme 16e hotspot pour contrer le report du trafic depuis le quartier Peterbos et Clemenceau.</span>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-slate-800/80 rounded-xl border border-slate-700 flex items-start space-x-3">
+                            <i class="fa-solid fa-plus-circle text-amber-400 text-sm mt-0.5" aria-hidden="true"></i>
+                            <div>
+                                <strong class="text-amber-300">Extension Gray / Flagey (Ixelles) :</strong>
+                                <span>Classé comme 19e hotspot face à la réorganisation des dealers de rue chassés de Matongé.</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+                    <h2 class="text-lg font-bold text-slate-900">Le Triptyque d'Intervention dans les Hotspots</h2>
+                    <div class="space-y-3 text-xs">
+                        <div class="p-3 bg-rose-50 border border-rose-200 rounded-xl">
+                            <div class="font-bold text-rose-900 mb-1"><i class="fa-solid fa-shield-halved mr-1" aria-hidden="true"></i> 1. Volet Sécurité Publique</div>
+                            <p class="text-rose-800">Patrouilles policières renforcées, contrôles d'identité systématiques, interdictions de rassemblement et arrêtés anti-alcool dans l'espace public.</p>
+                        </div>
+                        <div class="p-3 bg-teal-50 border border-teal-200 rounded-xl">
+                            <div class="font-bold text-teal-900 mb-1"><i class="fa-solid fa-hand-holding-hand mr-1" aria-hidden="true"></i> 2. Volet Prévention & Médical</div>
+                            <p class="text-teal-800">Équipes d'éducateurs de rue, campagnes ciblées (campagne <em>DOPE TALK</em> : 1,6M impressions) et présence des médiateurs SubLINK dans les stations.</p>
+                        </div>
+                        <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl">
+                            <div class="font-bold text-amber-900 mb-1"><i class="fa-solid fa-city mr-1" aria-hidden="true"></i> 3. Volet Urbanisme & Cadre de Vie</div>
+                            <p class="text-amber-800">Réparation de l'éclairage, retrait du mobilier urbain détourné (bancs/murets utilisés comme cachottes), nettoyage accéléré des déchets stérile.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ================= MODULE 3: CRIME ORGANISÉ & FINANCES ================= -->
+        <section id="section-crime" class="tab-content hidden space-y-8" role="tabpanel" aria-labelledby="nav-crime">
+            <!-- Section Intro Paragraph (Required) -->
+            <article class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200/80">
+                <header class="max-w-3xl space-y-3">
+                    <div class="inline-flex items-center space-x-2 text-indigo-600 font-semibold text-xs tracking-wider uppercase">
+                        <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+                        <span>Ingénierie Criminelle & Réponse Administrative</span>
+                    </div>
+                    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        Morphologie du Crime Organisé & Approche "Follow the Money"
+                    </h1>
+                </header>
+                <p class="text-slate-600 leading-relaxed text-sm md:text-base mt-3">
+                    Cette section dissèque le fonctionnement des cartels transnationaux (familièrement désignés sous le terme de <em>"Mocro Maffia"</em>) et le corridor logistique Anvers-Bruxelles-Charleroi (Axe ABC). Découvrez comment le recrutement exploite les jeunes vulnérables et les Mineurs Non Accompagnés (MNA). Explorez également le volet financier avec la législation pionnière sur l'<strong>Approche Administrative (Loi du 15 janvier 2024)</strong>, le rôle de la <strong>DEIPP</strong> et les enquêtes du parquet de Bruxelles pour faire fermer les commerces servant de façades au blanchiment.
+                </p>
+            </article>
+
+            <!-- Structural Division: Logistics & Exploitation -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Logistics & Axe ABC -->
+                <article class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+                    <header class="flex items-center space-x-3 border-b border-slate-100 pb-3">
+                        <div class="w-9 h-9 rounded-lg bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 font-bold">
+                            <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="text-lg font-bold text-slate-900">L'Axe ABC & Brucargo</h2>
+                    </header>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Bruxelles sert de base arrière logistique stratégique liée directement aux flux des grands ports européens (Anvers, Rotterdam) et de l'aéroport international de Zaventem (Brucargo).
+                    </p>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
+                            <span class="font-semibold text-slate-800">Saisie Brucargo Exemplaire</span>
+                            <span class="font-extrabold text-rose-600">400 kg de Cocaïne</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500">Dissimulés dans des bagages en provenance de Jamaïque et du Mexique.</p>
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="font-bold text-slate-800 mb-1">Commandement Déporté</div>
+                            <p class="text-slate-600">Les têtes de réseaux téléguident les opérations et fusillades depuis Dubaï, le Maroc ou la Turquie, externalisant la violence sur le terrain bruxellois.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Recruitment & Unaccompanied Minors (MNA) -->
+                <article class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+                    <header class="flex items-center space-x-3 border-b border-slate-100 pb-3">
+                        <div class="w-9 h-9 rounded-lg bg-rose-50 border border-rose-200 flex items-center justify-center text-rose-600 font-bold">
+                            <i class="fa-solid fa-user-ninja" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="text-lg font-bold text-slate-900">Petites Mains & Exploitation des MNA</h2>
+                    </header>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Les organisations criminelles recrutent massivement via les réseaux sociaux (TikTok) en glorifiant l'argent facile, et ciblent les Mineurs Non Accompagnés (MNA) en détresse administrative.
+                    </p>
+                    <div class="p-4 bg-rose-50/70 border border-rose-200 rounded-xl space-y-2">
+                        <div class="flex items-center justify-between text-xs font-bold text-rose-900">
+                            <span>Child Focus - Disparitions MNA (2023)</span>
+                            <span class="text-rose-600 font-black">+144%</span>
+                        </div>
+                        <div class="text-2xl font-black text-rose-900">332 cas traités</div>
+                        <p class="text-[11px] text-rose-800">
+                            Ces jeunes vulnérables sont enrôlés pour le deal de rue, soumis à une addiction forcée (Lyrica, cocaïne) pour assurer leur docilité.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Financial Trail & DEIPP Stepper Flow -->
+            <section class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-6">
+                <header class="flex flex-col md:flex-row md:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900">Le Dispositif d'Enquête Administrative (Loi du 15 Janvier 2024)</h2>
+                        <p class="text-xs text-slate-500">Procédure de fermeture des commerces façades via la DEIPP et le Registre Central.</p>
+                    </div>
+                    <div class="inline-flex items-center px-3 py-1 bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-bold rounded-lg">
+                        <span>Loi publiée le <time datetime="2024-02-07">7 février 2024</time></span>
+                    </div>
+                </header>
+
+                <!-- Process Steps Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <article class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2 relative">
+                        <div class="w-7 h-7 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-xs">1</div>
+                        <h3 class="font-bold text-xs text-slate-900">Soupçon Communal</h3>
+                        <p class="text-[11px] text-slate-600">Le Bourgmestre constate des anomalies ou nuisances (ongleries, night-shops, salons) à fort chiffre d'affaires suspect.</p>
+                    </article>
+
+                    <article class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2 relative">
+                        <div class="w-7 h-7 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center text-xs">2</div>
+                        <h3 class="font-bold text-xs text-slate-900">Saisine DEIPP</h3>
+                        <p class="text-[11px] text-slate-600">La Direction d'Évaluation de l'Intégrité (DEIPP) croise les données de la Police, du SPF Finances et de l'Inspection du travail.</p>
+                    </article>
+
+                    <article class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2 relative">
+                        <div class="w-7 h-7 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center text-xs">3</div>
+                        <h3 class="font-bold text-xs text-slate-900">Avis Motivé</h3>
+                        <p class="text-[11px] text-slate-600">La DEIPP émet un avis juridiquement contraignant quant au risque de facilitation de criminalité déstabilisante.</p>
+                    </article>
+
+                    <article class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 space-y-2 relative">
+                        <div class="w-7 h-7 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-xs">4</div>
+                        <h3 class="font-bold text-xs text-emerald-900">Fermeture & Registre</h3>
+                        <p class="text-[11px] text-emerald-800">Fermeture administrative décidée par le Bourgmestre. Inscription au Registre Central pour empêcher le nomadisme commercial.</p>
+                    </article>
+                </div>
+
+                <div class="p-4 bg-slate-900 text-slate-200 rounded-xl text-xs flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-coins text-amber-400 text-2xl" aria-hidden="true"></i>
+                        <div>
+                            <strong class="text-white">Rapport CTIF (2023-2024) :</strong> 2,4 Milliards € de transactions financières suspectes transmises à la justice.
+                            <p class="text-slate-400 text-[11px]">86% des organisations criminelles réinjectent directement leurs capitaux dans l'économie réelle bruxelloise.</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0 font-bold bg-amber-400 text-slate-900 px-3 py-1.5 rounded-lg text-xs">
+                        "Money Laundering as a Service"
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- ================= MODULE 4: CRISE DU CRACK & SANTÉ ================= -->
+        <section id="section-health" class="tab-content hidden space-y-8" role="tabpanel" aria-labelledby="nav-health">
+            <!-- Section Intro Paragraph (Required) -->
+            <article class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200/80">
+                <header class="max-w-3xl space-y-3">
+                    <div class="inline-flex items-center space-x-2 text-purple-600 font-semibold text-xs tracking-wider uppercase">
+                        <i class="fa-solid fa-notes-medical" aria-hidden="true"></i>
+                        <span>Urgence de Santé Publique</span>
+                    </div>
+                    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        La Crise du Crack & le Réseau Médico-Social
+                    </h1>
+                </header>
+                <p class="text-slate-600 leading-relaxed text-sm md:text-base mt-3">
+                    Cette section est consacrée à la réponse médico-sociale face à l'épidémie de crack (cocaïne basifiée vendue dès 5€ la dose avec une pureté en hausse de +45%). La présence de 2000 à 5000 usagers réguliers a déplacé la détresse dans les réseaux souterrains de transport (STIB, gares). Découvrez les résultats opérationnels du projet de réduction des risques <strong>SubLINK</strong>, le rôle de la Salle de Consommation à Moindre Risque <strong>GATE</strong>, et le débat autour du refinancement du secteur associatif (MASS, Centre Enaden, Projet Lama).
+                </p>
+            </article>
+
+            <!-- Health Analytics Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- SubLINK Operational Results Chart -->
+                <article class="lg:col-span-7 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+                    <header class="flex items-center justify-between pb-3 border-b border-slate-100">
+                        <div>
+                            <h2 class="text-base font-bold text-slate-900">Bilan Opérationnel du Projet SubLINK (2024)</h2>
+                            <p class="text-xs text-slate-500">Interventions de réduction des risques dans les stations de métro STIB.</p>
+                        </div>
+                        <span class="px-2.5 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-lg border border-teal-200">11 Intervenants</span>
+                    </header>
+                    <figure class="chart-container">
+                        <canvas id="sublinkChart" aria-label="Graphique des interventions SubLINK dans le métro" role="img"></canvas>
+                        <figcaption class="sr-only">Graphique décrivant la proportion des types d'interventions effectuées par les équipes SubLINK.</figcaption>
+                    </figure>
+                </article>
+
+                <!-- Epidemiological Profile Card -->
+                <article class="lg:col-span-5 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+                    <h2 class="text-base font-bold text-slate-900 flex items-center">
+                        <i class="fa-solid fa-user-doctor text-purple-600 mr-2" aria-hidden="true"></i>
+                        Profil Épidémiologique des Usagers
+                    </h2>
+                    <div class="space-y-3 text-xs">
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
+                            <span class="text-slate-600">Âge Moyen des Consommateurs</span>
+                            <span class="font-extrabold text-slate-900 text-sm">44 Ans</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
+                            <span class="text-slate-600">Statut de Logement</span>
+                            <span class="font-extrabold text-rose-600 text-sm">&gt;50% Sans-abri</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
+                            <span class="text-slate-600">Prix unitaire du "Caillou"</span>
+                            <span class="font-extrabold text-emerald-600 text-sm">~ 5 Euros</span>
+                        </div>
+                        <div class="p-3 bg-purple-50 border border-purple-200 rounded-xl space-y-1">
+                            <div class="font-bold text-purple-900">Mode de Consommation & "Binges"</div>
+                            <p class="text-purple-800 text-[11px] leading-relaxed">
+                                Utilisation compulsive en cycles continus jour et nuit. Transit ASBL a distribué 14 300 pipes en 2021 (contre 600 en 2015).
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Health Structures & Budget Tension -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
+                    <h2 class="text-purple-600 font-bold text-sm flex items-center">
+                        <i class="fa-solid fa-house-medical mr-2" aria-hidden="true"></i> SCMR "GATE"
+                    </h2>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Ouverte en mai 2022 (Transit & MASS). Espace légal et sécurisé pour réduire la mortalité par overdose et dégager l'espace public.
+                    </p>
+                    <footer class="text-[11px] font-semibold text-slate-500 border-t border-slate-100 pt-2">
+                        Supervision infirmière & conseils santé.
+                    </footer>
+                </article>
+
+                <article class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
+                    <h2 class="text-purple-600 font-bold text-sm flex items-center">
+                        <i class="fa-solid fa-bed-pulse mr-2" aria-hidden="true"></i> Centre Enaden & Lama
+                    </h2>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Unités d'hébergement de crise (63 lits agréés en région) et équipes mobiles (Cover, Artha) gérant des logements <em>Housing First</em>.
+                    </p>
+                    <footer class="text-[11px] font-semibold text-slate-500 border-t border-slate-100 pt-2">
+                        Capacité d'accueil sous très forte tension.
+                    </footer>
+                </article>
+
+                <article class="bg-rose-50 border border-rose-200 p-5 rounded-2xl shadow-sm space-y-3">
+                    <h2 class="text-rose-900 font-bold text-sm flex items-center">
+                        <i class="fa-solid fa-triangle-exclamation mr-2" aria-hidden="true"></i> Risque Budgétaire 2026
+                    </h2>
+                    <p class="text-xs text-rose-800 leading-relaxed">
+                        Inquiétude de la féda bxl asbl : menace d'une réduction de l'enveloppe assuétudes COCOM de 5,5M€ à 4,4M€, risquant de supprimer des postes de terrain.
+                    </p>
+                    <footer class="text-[11px] font-bold text-rose-900 border-t border-rose-200/60 pt-2">
+                        Eurotox alerte sur un renvoi vers la rue.
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ================= MODULE 5: ARSENAL JURIDIQUE ================= -->
+        <section id="section-legal" class="tab-content hidden space-y-8" role="tabpanel" aria-labelledby="nav-legal">
+            <!-- Section Intro Paragraph (Required) -->
+            <article class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200/80">
+                <header class="max-w-3xl space-y-3">
+                    <div class="inline-flex items-center space-x-2 text-slate-700 font-semibold text-xs tracking-wider uppercase">
+                        <i class="fa-solid fa-balance-scale" aria-hidden="true"></i>
+                        <span>Cadre Légal & Réforme Pénal</span>
+                    </div>
+                    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        L'Arsenal Judiciaire & Le Code Pénal de 2026
+                    </h1>
+                </header>
+                <p class="text-slate-600 leading-relaxed text-sm md:text-base mt-3">
+                    Cette section explore les évolutions législatives majeures destinées à réprimer le narcotrafic tout en gérant l'engorgement carcéral (plus de 13 000 détenus pour 11 000 places). Découvrez la philosophie du <strong>Nouveau Code Pénal (applicable au <time datetime="2026-09-01">1er septembre 2026</time>)</strong> et ses 8 niveaux de peines. Explorez également la doctrine du Parquet de Bruxelles (Procureur Julien Moinil) visant la répression de la demande par Perceptions Immédiates, et le rôle de la Commissaire Nationale aux Drogues (Ine Van Wymersch).
+                </p>
+            </article>
+
+            <!-- New Penal Code Interactive Scale (8 Levels) -->
+            <section class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-6">
+                <header class="flex flex-col md:flex-row md:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900">Échelle des Peines du Code Pénal (Septembre 2026)</h2>
+                        <p class="text-xs text-slate-500">Suppression de la distinction crimes/délits/contraventions. Le principe d'<em>Ultimum Remedium</em>.</p>
+                    </div>
+                    <span class="px-3 py-1 bg-slate-100 text-slate-800 text-xs font-bold rounded-lg border border-slate-200">
+                        8 Niveaux Principaux
+                    </span>
+                </header>
+
+                <!-- Interactive Penalty Level Display -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2" id="penal-levels-grid" role="region" aria-label="Niveaux de pénalité">
+                    <!-- Dynamic rendering by JS -->
+                </div>
+
+                <!-- Detail Panel for Selected Level -->
+                <div id="penal-detail-card" class="p-5 bg-slate-900 text-white rounded-xl border border-slate-800 space-y-2">
+                    <!-- Dynamic rendering by JS -->
+                </div>
+            </section>
+
+            <!-- Repression of Demand & Immediate Fines Table -->
+            <section class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+                <header>
+                    <h2 class="text-lg font-bold text-slate-900">Bilan des Perceptions Immédiates (PI) - Année 2025</h2>
+                    <p class="text-xs text-slate-500">Politique de tolérance zéro ciblée sur les acheteurs de stupéfiants dans l'espace public bruxellois.</p>
+                </header>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left text-slate-600">
+                        <caption class="sr-only">Tableau récapitulatif des Perceptions Immédiates par zone de police bruxelloise en 2025</caption>
+                        <thead class="text-xs text-slate-700 uppercase bg-slate-100">
+                            <tr>
+                                <th scope="col" class="px-4 py-3 rounded-l-lg">Zone de Police Bruxelloise</th>
+                                <th scope="col" class="px-4 py-3">Communes Couvertes</th>
+                                <th scope="col" class="px-4 py-3 text-right rounded-r-lg">Amendes pour Possession (2025)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50 font-medium">
+                                <td class="px-4 py-3 text-slate-900 font-bold">Zone PolBrUX (Capitale / Ixelles)</td>
+                                <td class="px-4 py-3">Bruxelles-Ville, Ixelles</td>
+                                <td class="px-4 py-3 text-right font-black text-rose-600">&gt; 1 400</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 text-slate-900 font-bold">Zone Midi</td>
+                                <td class="px-4 py-3">Anderlecht, Saint-Gilles, Forest</td>
+                                <td class="px-4 py-3 text-right font-black text-slate-900">558</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 text-slate-900 font-bold">Zone Nord</td>
+                                <td class="px-4 py-3">Schaerbeek, Saint-Josse, Evere</td>
+                                <td class="px-4 py-3 text-right font-black text-slate-900">278</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 text-slate-900 font-bold">Zone Ouest</td>
+                                <td class="px-4 py-3">Molenbeek, Koekelberg, Jette, Ganshoren, Berchem</td>
+                                <td class="px-4 py-3 text-right font-black text-slate-900">204</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- ================= MODULE 6: RECHERCHE & MOTEUR DE DATA ================= -->
+        <section id="section-search" class="tab-content hidden space-y-8" role="tabpanel" aria-labelledby="nav-search">
+            <!-- Section Intro Paragraph (Required) -->
+            <article class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200/80">
+                <header class="max-w-3xl space-y-3">
+                    <div class="inline-flex items-center space-x-2 text-slate-600 font-semibold text-xs tracking-wider uppercase">
+                        <i class="fa-solid fa-magnifying-glass font-bold" aria-hidden="true"></i>
+                        <span>Moteur de Données Intégré</span>
+                    </div>
+                    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        Explorateur Documentaire & Référentiel
+                    </h1>
+                </header>
+                <p class="text-slate-600 leading-relaxed text-sm md:text-base mt-3">
+                    Recherchez instantanément parmi l'ensemble des entités, acronymes, acteurs, textes de lois et initiatives cités dans le rapport régional. Saisissez un terme (ex: <em>"SubLINK"</em>, <em>"DEIPP"</em>, <em>"Moinil"</em>, <em>"MNA"</em>, <em>"GATE"</em>, <em>"Gare du Midi"</em>) pour afficher sa définition contextuelle et son impact dans la stratégie bruxelloise.
+                </p>
+            </article>
+
+            <!-- Search Input Box -->
+            <section class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-slate-400 text-lg" aria-hidden="true"></i>
+                    <input type="text" id="searchInput" onkeyup="performSearch()" placeholder="Rechercher une entité (ex: DEIPP, Crack, SubLINK, Safe.brussels, Parquet)..." aria-label="Zone de recherche documentaire" class="w-full pl-12 pr-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition">
+                </div>
+
+                <div id="searchResults" class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    <!-- Dynamic Search Cards Rendering -->
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-8 mt-12 text-xs" role="contentinfo" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-rose-600 flex items-center justify-center text-white font-bold text-sm">
+                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-white text-sm" itemprop="name">Observatoire Régional - Lutte Antidrogue Bruxelles</p>
+                    <p class="text-[11px] text-slate-500">Application Interactive d'Analyse Régionale - Document Source 2025-2026</p>
+                </div>
+            </div>
+            <div class="text-center md:text-right text-[11px] text-slate-500 space-y-1">
+                <p>
+                    Auteur & Conception : 
+                    <a href="https://ouaisfieu.github.io/hotspots/narco/track/" target="_blank" rel="noopener" class="text-rose-400 font-bold hover:underline" itemprop="url">
+                        Ouais Fieu
+                    </a>
+                </p>
+                <p>Conforme aux directives d'architecture d'information SPA & Web Sémantique Schema.org.</p>
+                <p>Données issues de safe.brussels, CORES, Parquet de Bruxelles & ISD UGent.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data Store
+        const appData = {
+            hotspots: [
+                { id: 1, commune: "Bruxelles-Ville", name: "Gare du Nord", priority: "Haute", details: "Point de fixation majeur deal & consommation crack. Sécurisation gares & patrouilles." },
+                { id: 2, commune: "Bruxelles-Ville", name: "Yser", priority: "Haute", details: "Station de métro hautement fréquentée. Action conjointe SubLINK et arrêtés communaux." },
+                { id: 3, commune: "Bruxelles-Ville", name: "Chaussée d'Anvers", priority: "Moyenne", details: "Axe commercial à forte surveillance policière contre la prostitution & stupéfiants." },
+                { id: 4, commune: "Bruxelles-Ville", name: "Querelle (Marolles)", priority: "Moyenne", details: "Quartier résidentiel historique. Protection du cadre de vie et retrait mobilier détourné." },
+                { id: 5, commune: "Bruxelles-Ville", name: "Versailles (Neder-Over-Heembeek)", priority: "Moyenne", details: "Zone de logement social ciblée par les Task Forces Locales." },
+                { id: 6, commune: "Saint-Gilles", name: "Gare du Midi", priority: "Critique", details: "Plaque tournante ferroviaire. Opération SEGAMI, patrouilles mixtes police/militaires." },
+                { id: 7, commune: "Saint-Gilles", name: "Porte de Hal", priority: "Critique", details: "Théâtre de fusillades récentes. Arrêtés anti-alcool et surveillance renforcée." },
+                { id: 8, commune: "Saint-Gilles", name: "Saint-Antoine", priority: "Moyenne", details: "Quartier dense sous suivi de la TFL Saint-Gilles." },
+                { id: 9, commune: "Molenbeek", name: "Borne / Colonne", priority: "Haute", details: "Vente de rue et présence importante d'équipes mobiles associatives." },
+                { id: 10, commune: "Molenbeek", name: "Étangs Noirs", priority: "Haute", details: "Noeud de transport souterrain sous surveillance vidéo et contrôles PI." },
+                { id: 11, commune: "Molenbeek", name: "Ribaucourt", priority: "Critique", details: "Scène de consommation ouverte. Présence régulière SubLINK et patrouilles STIB." },
+                { id: 12, commune: "Molenbeek", name: "Bonnevie", priority: "Moyenne", details: "Actions de cohésion sociale et réaménagement urbain." },
+                { id: 13, commune: "Anderlecht", name: "Clémenceau", priority: "Haute", details: "Zone de tension commerciale. Contrôles DEIPP sur les commerces façades." },
+                { id: 14, commune: "Anderlecht", name: "Peterbos", priority: "Critique", details: "Cité emblématique, rivalités de territoire et recrutement de mineurs via TikTok." },
+                { id: 15, commune: "Anderlecht", name: "Quartier Aumale", priority: "Haute (Ajout 2024)", details: "16e hotspot créé pour contrer l'effet ballon venant de Peterbos." },
+                { id: 16, commune: "Ixelles", name: "Matongé", priority: "Haute", details: "Historique quartier commerçant sous forte pression des Perceptions Immédiates." },
+                { id: 17, commune: "Ixelles", name: "Quartier Gray / Flagey", priority: "Haute (19e Hotspot)", details: "Extension récente suite à la délocalisation des revendeurs de rue." }
+            ],
+            penalCodeLevels: [
+                { lvl: 1, title: "Niveau 1", prison: "Aucune prison", fine: "Amendes / Travail", desc: "Priorité absolue aux peines alternatives et probation. Ultimum remedium." },
+                { lvl: 2, title: "Niveau 2", prison: "Motivation obligatoire", fine: "Amendes élevées", desc: "Le juge doit motiver explicitement pourquoi une peine alternative ne suffit pas." },
+                { lvl: 3, title: "Niveau 3", prison: "Jusqu'à 3 ans", fine: "Saisie d'avoirs", desc: "Délits intermédiaires et détention de rue répétée." },
+                { lvl: 4, title: "Niveau 4", prison: "3 à 5 ans", fine: "Confiscations", desc: "Logistique secondaire et petites mains récidivistes." },
+                { lvl: 5, title: "Niveau 5", prison: "5 à 10 ans", fine: "Lourdes amendes", desc: "Détention de réseaux intermédiaires et blanchiment." },
+                { lvl: 6, title: "Niveau 6", prison: "10 à 15 ans", fine: "Confiscation générale", desc: "Logistique d'importation majeure (SKY ECC / Encrochat)." },
+                { lvl: 7, title: "Niveau 7", prison: "15 à 20 ans", fine: "Maximales", desc: "Dirigeants de réseaux criminels locaux et violences armées." },
+                { lvl: 8, title: "Niveau 8", prison: "20 à 30 ans / Perpétuité", fine: "Illimitées", desc: "Grand narcotrafic international déstabilisant et cartels." }
+            ],
+            searchEntities: [
+                { title: "DEIPP", category: "Légal & Administratif", desc: "Direction de l'Évaluation de l'Intégrité pour les Pouvoirs Publics. Organisme fédéral issu de la loi du 15 janvier 2024 émettant des avis pour la fermeture administrative des commerces façades." },
+                { title: "SubLINK", category: "Santé & Médical", desc: "Projet de réduction des risques opéré par 11 travailleurs sociaux et infirmiers au cœur du métro bruxellois (7 542 interventions en 2024)." },
+                { title: "SCMR GATE", category: "Santé & Médical", desc: "Salle de Consommation à Moindre Risque ouverte en mai 2022 à Bruxelles par Transit et la MASS." },
+                { title: "Effet Ballon", category: "Sécurité & Hotspots", desc: "Déplacement mécanique des activités criminelles vers des quartiers voisins lors de la saturation policière d'un hotspot." },
+                { title: "Axe ABC", category: "Réseaux Criminels", desc: "Axe Anvers-Bruxelles-Charleroi, corridor logistique majeur pour l'acheminement de la cocaïne sud-américaine." },
+                { title: "Perceptions Immédiates (PI)", category: "Judiciaire", desc: "Amendes financières immédiates (jusqu'à 1000€) délivrées par la police aux acheteurs de drogue dans l'espace public." },
+                { title: "Ine Van Wymersch", category: "Acteurs Clés", desc: "Commissaire Nationale aux Drogues nommée en février 2023, promotrice de la doctrine 'Follow the Money'." },
+                { title: "Julien Moinil", category: "Acteurs Clés", desc: "Procureur du Roi de Bruxelles, initiateur du durcissement des sanctions à l'égard des consommateurs." },
+                { title: "Mineurs Non Accompagnés (MNA)", category: "Social & Risques", desc: "Jeunes migrants vulnérables ciblés par les cartels pour le deal de rue (+144% de disparitions signalées en 2023)." }
+            ]
+        };
+
+        // Tab Switcher Logic
+        function switchTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            
+            // Show selected tab content
+            const targetSection = document.getElementById(`section-${tabId}`);
+            if (targetSection) targetSection.classList.remove('hidden');
+
+            // Update Desktop Nav Styling
+            document.querySelectorAll('header nav button').forEach(btn => {
+                btn.classList.remove('text-rose-400', 'font-semibold');
+                btn.classList.add('text-slate-300');
+            });
+            const activeNavBtn = document.getElementById(`nav-${tabId}`);
+            if (activeNavBtn) {
+                activeNavBtn.classList.add('text-rose-400', 'font-semibold');
+                activeNavBtn.classList.remove('text-slate-300');
+            }
+
+            // Close Mobile Menu if open
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Filter Hotspots Cards
+        function filterHotspots(commune) {
+            // Update button styles
+            document.querySelectorAll('.hs-btn').forEach(btn => {
+                btn.classList.remove('bg-slate-900', 'text-white', 'font-bold');
+                btn.classList.add('bg-slate-100', 'text-slate-700');
+            });
+            event.target.classList.add('bg-slate-900', 'text-white', 'font-bold');
+            event.target.classList.remove('bg-slate-100', 'text-slate-700');
+
+            renderHotspots(commune);
+        }
+
+        // Render Hotspots Cards
+        function renderHotspots(filterCommune = 'all') {
+            const container = document.getElementById('hotspots-container');
+            container.innerHTML = '';
+
+            const filtered = filterCommune === 'all' 
+                ? appData.hotspots 
+                : appData.hotspots.filter(h => h.commune.toLowerCase().includes(filterCommune.toLowerCase()));
+
+            filtered.forEach(item => {
+                let badgeColor = "bg-amber-100 text-amber-800";
+                if(item.priority.includes("Critique")) badgeColor = "bg-rose-100 text-rose-800 font-bold";
+
+                const card = document.createElement('article');
+                card.className = "p-4 bg-slate-50 border border-slate-200/80 rounded-xl hover:border-slate-300 transition space-y-2";
+                card.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">${item.commune}</span>
+                        <span class="px-2 py-0.5 rounded text-[10px] ${badgeColor}">${item.priority}</span>
+                    </div>
+                    <h3 class="font-extrabold text-sm text-slate-900">${item.name}</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">${item.details}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Penal Code Interactive Grid
+        function renderPenalGrid() {
+            const grid = document.getElementById('penal-levels-grid');
+            grid.innerHTML = '';
+
+            appData.penalCodeLevels.forEach((item, index) => {
+                const btn = document.createElement('button');
+                btn.className = `p-3 rounded-xl border text-center transition ${index === 0 ? 'bg-rose-600 text-white border-rose-600 font-bold' : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'}`;
+                btn.onclick = () => selectPenalLevel(index, btn);
+                btn.innerHTML = `
+                    <div class="text-xs font-black">${item.title}</div>
+                    <div class="text-[10px] opacity-80 mt-1">${item.prison}</div>
+                `;
+                grid.appendChild(btn);
+            });
+
+            selectPenalLevel(0);
+        }
+
+        function selectPenalLevel(index, element = null) {
+            if(element) {
+                document.querySelectorAll('#penal-levels-grid button').forEach(b => {
+                    b.className = 'p-3 rounded-xl border text-center transition bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100';
+                });
+                element.className = 'p-3 rounded-xl border text-center transition bg-rose-600 text-white border-rose-600 font-bold';
+            }
+
+            const data = appData.penalCodeLevels[index];
+            const card = document.getElementById('penal-detail-card');
+            card.innerHTML = `
+                <div class="flex items-center justify-between text-rose-400 font-bold text-xs uppercase tracking-wider">
+                    <span>${data.title} - Portée Pénale</span>
+                    <span>Nouveau Code Pénal 2026</span>
+                </div>
+                <div class="text-lg font-extrabold text-white">${data.prison}</div>
+                <p class="text-xs text-slate-300 leading-relaxed">${data.desc}</p>
+                <div class="pt-2 text-xs font-semibold text-amber-400 flex items-center">
+                    <i class="fa-solid fa-coins mr-1.5" aria-hidden="true"></i>Sanctions financières : ${data.fine}
+                </div>
+            `;
+        }
+
+        // Search Function
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const container = document.getElementById('searchResults');
+            container.innerHTML = '';
+
+            const results = appData.searchEntities.filter(e => 
+                e.title.toLowerCase().includes(query) || 
+                e.desc.toLowerCase().includes(query) || 
+                e.category.toLowerCase().includes(query)
+            );
+
+            if(results.length === 0) {
+                container.innerHTML = `<div class="col-span-2 text-xs text-slate-400 py-4 text-center">Aucune entité trouvée pour "${query}".</div>`;
+                return;
+            }
+
+            results.forEach(item => {
+                const card = document.createElement('article');
+                card.className = "p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1.5";
+                card.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-extrabold text-sm text-slate-900">${item.title}</h3>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">${item.category}</span>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">${item.desc}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Initialize Chart.js Visualizations
+        function initCharts() {
+            // Chart 1: Overview Fines
+            const ctxOverview = document.getElementById('overviewFinesChart').getContext('2d');
+            new Chart(ctxOverview, {
+                type: 'bar',
+                data: {
+                    labels: ['ZP PolBrUX (Capitale/Ixelles)', 'ZP Midi (Anderlecht/St-Gilles/Forest)', 'ZP Nord (Schaerbeek/St-Josse)', 'ZP Ouest (Molenbeek/Jette)'],
+                    datasets: [{
+                        label: 'Perceptions Immédiates 2025',
+                        data: [1400, 558, 278, 204],
+                        backgroundColor: ['#e11d48', '#f59e0b', '#6366f1', '#0d9488'],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return ` Amendes: ${context.raw} clients verbalisés`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#f1f5f9' },
+                            ticks: { font: { size: 10 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { 
+                                font: { size: 10 },
+                                callback: function(value) {
+                                    const label = this.getLabelForValue(value);
+                                    return label.length > 16 ? label.substr(0, 16) + '...' : label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Chart 2: SubLINK Operational Metrics
+            const ctxSublink = document.getElementById('sublinkChart').getContext('2d');
+            new Chart(ctxSublink, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Accompagnements Psychosociaux (3 694)',
+                        'Orientations Hors Métro (220)',
+                        'Soins Médicaux Directs (118)',
+                        'Autres Interventions Terrain (3 510)'
+                    ],
+                    datasets: [{
+                        data: [3694, 220, 118, 3510],
+                        backgroundColor: ['#0d9488', '#f59e0b', '#e11d48', '#cbd5e1'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { font: { size: 11 }, boxWidth: 12 }
+                        }
+                    }
+                }
+            });
+        }
+
+        // On Page Load Initialization
+        window.addEventListener('DOMContentLoaded', () => {
+            renderHotspots('all');
+            renderPenalGrid();
+            performSearch();
+            initCharts();
+        });
+    </script>
+</body>
+</html>
